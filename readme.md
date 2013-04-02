@@ -1,7 +1,7 @@
 # ChrisLTD.com
 ### Version 2.0 | By [Chris Johnson](http://chrisltd.com)
 
-This is the code for my Jekyll powered portfolio site and blog.
+This is the code for my [Jekyll](https://github.com/mojombo/jekyll) powered portfolio site and blog. Uses [Liquid templates](https://github.com/shopify/liquid/wiki/liquid-for-designers).
 
 ## YAML Front Matter
 * Use "class" variable to add a class to the body tag, also used for loading javascript in the default layout, and menu highlighting
