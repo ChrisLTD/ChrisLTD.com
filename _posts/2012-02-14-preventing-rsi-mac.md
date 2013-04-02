@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Preventing Repetitive Strain Injury (RSI) on a Mac
-class: blog
 ---
 *I am not a medical doctor, and have no medical training. The advice in this post should not be taken as a substitute for obtaining professional medical treatment.*
 
