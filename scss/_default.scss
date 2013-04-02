@@ -50,6 +50,8 @@ h3 { margin: .9em 0;  }
   .menu_toggle { color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.3); @include prefixer(border-radius, 3px); box-shadow: 0 1px 2px rgba(0,0,0,.1); background: $orange;  }
 }
 
+.logo:before { color: #fff; font-style: italic; font-size: 200%; } /* For IE8 and older */
+
 pre, code { font-family: $monospace; }
 
 pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
@@ -186,7 +188,10 @@ form.wufoo {
   b { display: none; }
 }
 
-.logo { display: inline-block; }
+.logo { display: inline-block; 
+	.lt-ie9 &:before { content:attr(data-content); } 
+	.lt-ie9 & img { display: none; } 
+}
 
 .main_nav { 
   ul { @include horizontal_list; 
@@ -196,6 +201,7 @@ form.wufoo {
       @include respond-to("desktop"){ padding: 30px 20px; }
     }
   }
+  .lt-ie8 & li { float: left; }
 }
 
 .social_icons { @include horizontal_list;
@@ -220,6 +226,7 @@ form.wufoo {
 }
 
 .cycle-slideshow { width: 100%;
+	.slide { width: 100%; }
 	.cycle-pager { text-align: center;
 		@include respond-to("tablet"){ position: absolute; right: 0; bottom: 0; z-index: 999; } 
 		span { cursor: pointer; display: inline-block; padding: 5px; }
@@ -268,8 +275,11 @@ form.wufoo {
     .tagline { display: block; position: absolute; top: 57px; left: 161px; } 
     .main_nav { padding: 0; float: right; }
   } 
+	.lt-ie9 & { 
+		.main_nav {	display: block; }
+	}
+	.lt-ie8 & .container { text-align: left; }  
 }
-.lt-ie9 #header .main_nav { display: block; }
 
 [role="main"]{ padding-top: 15px; padding-bottom: 5px; }
 
@@ -295,4 +305,5 @@ form.wufoo {
 	.footer_nav { margin-bottom: 20px; 
 		@include respond-to("tablet"){ display: none; }
 	}
+	.lt-ie8 & .social_icons { display: none; }  
 }

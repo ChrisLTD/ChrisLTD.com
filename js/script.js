@@ -8,7 +8,7 @@ $(function(){
 if(!$('html').hasClass('lt-ie9')){
 	
 	// Add menu toggle to the top of the page
-	$('header > .container').prepend('<a class="menu_toggle" data-toggle=".main_nav" title="Show/Hide Menu"><i class="ss-icon ss-standard ss-rows"></i><b>Show/Hide Menu</b></a>');  
+	$('#header > .container').prepend('<a class="menu_toggle" data-toggle=".main_nav" title="Show/Hide Menu"><i class="ss-icon ss-standard ss-rows"></i><b>Show/Hide Menu</b></a>');  
 	
 	// Initialize source code highlighting
 	hljs.tabReplace = '  ';
