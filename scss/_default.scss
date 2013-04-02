@@ -139,7 +139,9 @@ blockquote { font-size: 90%; color: lighten($bodycolor, 15%); margin-left: 1.4em
 }
 
 .contact_map { margin: 1em 0; padding: 2em 0; text-align: center; background-position: top center; @include background-image-retina("../img/contact_map", jpg, 500px, 340px);
-	.contact_map_box { display: inline-block; margin: 0 auto; padding: 1em; text-align: left; background: rgba(255,255,255,.75); line-height: 2; }
+	.contact_map_box { display: inline-block; margin: 0 auto; padding: 1em; text-align: left; background: rgba(255,255,255,.75); line-height: 2; 
+		.lt-ie9 & { background: #fff; }
+	}
 	span { color: $orange; vertical-align: middle; margin-right: 4px; }
 }
 
@@ -267,6 +269,7 @@ form.wufoo {
     .main_nav { padding: 0; float: right; }
   } 
 }
+.lt-ie9 #header .main_nav { display: block; }
 
 [role="main"]{ padding-top: 15px; padding-bottom: 5px; }
 
