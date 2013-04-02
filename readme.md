@@ -4,12 +4,14 @@
 This is the code for my Jekyll powered portfolio site and blog.
 
 ## YAML Front Matter
-* Use "draft" variable to keep a post from being published to the index
 * Use "comments" variable to add disqus comments
 * Use "class" variable to add a class to the body tag
+* Use "date" variable set to the future for drafts `date: 3033-09-09 06:66:00 +1000`
 
 ## Local testing
-Generate and turn on server: `jekyll --server`
+Generate and turn on server: `jekyll --server --future'
+
+The future switch shows posts dated well into the future.
 
 ## Personal Notes
 * I had to add `{{ content | replace: '&amp;', '&' }}` to the post template to fix the problem where ampersands in links were killing the parser. This means that all ampersands in links should use the html entity `&amp;`.

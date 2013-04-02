@@ -6,4 +6,6 @@ permalink: /blog/:year/:month/:title
 
 exclude: resources, deploy.sh, deploy_example.sh, Gemfile.lock, Gemfile, readme.md
 
+future: false
+
 url: http://chrisltd.com
