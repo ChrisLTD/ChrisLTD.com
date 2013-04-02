@@ -14,5 +14,5 @@ Generate and turn on server: `jekyll --server`
 ## Personal Notes
 * I had to add `{{ content | replace: '&amp;', '&' }}` to the post template to fix the problem where ampersands in links were killing the parser. This means that all ampersands in links should use the html entity `&amp;`.
 * Server paths hardcoded in: blog/feed/index.php and chrisltd_mint/feeder/index.php
-* Touch/update rebuild.txt to regenerate site
-* Make sure dropbox is running `/usr/local/bin/python2.7 /home/yoeyo/bin/dropbox.py status` or `~/.dropbox-dist/dropboxd`
+* Run `sh deploy.sh` to generate then rsync the site to the server
+* There should be a fonts directory with symbolset's ss-social and ss-standard on the server. These are not in the git repo for copyright purposes.
