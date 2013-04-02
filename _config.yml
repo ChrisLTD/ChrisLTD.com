@@ -9,3 +9,7 @@ exclude: resources, deploy.sh, deploy_example.sh, Gemfile.lock, Gemfile, readme.
 future: false
 
 url: http://chrisltd.com
+
+feed_url: /blog/feed/
+
+assets_version: 1
