@@ -4,9 +4,9 @@
 This is the code for my Jekyll powered portfolio site and blog.
 
 ## YAML Front Matter
-* Use "comments" variable to add disqus comments
-* Use "class" variable to add a class to the body tag
+* Use "class" variable to add a class to the body tag, also used for loading javascript in the default layout, and menu highlighting
 * Use "date" variable set to the future for drafts `date: 3033-09-09 06:66:00 +1000`
+* Use "comments" variable to add disqus comments
 
 ## Local testing
 Generate and turn on server: `jekyll --server --future'
