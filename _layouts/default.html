@@ -21,7 +21,7 @@
  
   <meta name="viewport" content="width=device-width">
   
-	<link rel="alternate" type="application/rss+xml" title="Chris Johnson's Blog" href="/blog/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Chris Johnson's Blog Feed" href="/blog/feed/">
   
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,16 +37,18 @@
 
 <body class="{{ page.class }} {{ post.class }}">
 
+	<div id="accessibility" class="hide">
+    <a href="#main">Skip to content</a>
+  </div>
+
   <div id="wrapper">
     <header id="header">
       <div class="container">
           
-        <a class="menu_toggle" data-toggle=".main_nav" title="Show/Hide Menu"><i class="ss-icon ss-standard ss-rows"></i><b>Show/Hide Menu</b></a>
-
         <a href="/" class="logo"><img src="/img/logo@2x.png" width="330" alt="Chris Johnson"></a>
         <div class="tagline">Developer &amp; Designer</div>
 
-        <nav class="main_nav">
+        <nav class="main_nav" role="navigation">
           <ul>
 <li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li><li><a href="/portfolio.html" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li><li><a href="/projects.html" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li><li><a href="/blog" class="{% if page.class == 'blog' or post.class == 'blog' %}active{% endif %}">Blog</a></li><li><a href="/about.html" class="{% if page.class == 'about' %}active{% endif %}">About</a></li> 
           </ul>
@@ -55,7 +57,7 @@
       </div><!--/.container-->
     </header>
 
-    <div role="main">
+    <div role="main" id="main">
 			<div class="container">
         
         {{ content }}
