@@ -54,11 +54,24 @@ class: about
 		</div>
 		
 		<h2>Contact me</h2>
-		
-		<div id="wufoo-z7x3k1">
-			Contact me through my <a href="http://chrisltd.wufoo.com/forms/z7x3k1">online form</a>.
-		</div>
-		<script src="js/wufoo-form.js"></script>
+			<form class="wufoo" enctype="multipart/form-data" method="post" action="https://chrisltd.wufoo.com/forms/z7x3k1/#public">
+				<label for="Field17">Name <i class="alert">*</i></label>
+				<input id="Field17" name="Field17" type="text" class="text_input" value="" maxlength="255" tabindex="1" onkeyup="" required>
+				
+				<label for="Field11">Email<i class="alert">*</i></label>
+				<input id="Field11" name="Field11" type="email" spellcheck="false" class="text_input" value="" maxlength="255" tabindex="2" required> 
+				
+				<label for="Field15">Message<i class="alert">*</i></label>
+				<textarea id="Field15" name="Field15" class="text_input" spellcheck="true" tabindex="3" onkeyup="" required></textarea>
+				<br>
+				<input name="saveForm" class="button" type="submit" value="Submit">
+				
+				<div class="remove">
+					<label for="comment">Do Not Fill This Out</label>
+					<textarea name="comment" id="comment" rows="1" cols="1" autocomplete="off"></textarea>
+					<input type="hidden" id="idstamp" name="idstamp" value="dLWXT1kem80XJKLSKrzpoGu7kVwlvqMG0dQu0PI/+Y8=" autocomplete="off">
+				</div>
+			</form> 
 		
 	</div>
 	
