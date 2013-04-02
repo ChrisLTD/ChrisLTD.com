@@ -27,7 +27,7 @@ include('../../../chrisltd_mint/feeder/index.php');
      <link href="<?php $BirdFeeder->seed('{{ post.title }}', '{{ site.url }}{{ post.url }}'); ?>"/>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
      <id>{{ site.url }}{{ post.id }}</id>
-     <content type="html">{{ post.content | remove_footnote_link | xml_escape }}</content>
+     <content type="html">{{ post.content | remove_footnote_link | relative_urls_to_absolute | xml_escape }}</content>
    </entry>
   {% endunless %}
  {% endfor %}
