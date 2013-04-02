@@ -1,0 +1,31 @@
+@mixin nav_fade_in {
+	0%   { opacity: 0; @include prefixer(animation-timing-function, ease-in); }
+	100% { opacity: 1; @include prefixer(animation-timing-function, ease-in); }
+}
+
+@-webkit-keyframes nav_fade_in {
+	@include nav_fade_in;
+}
+
+@-moz-keyframes nav_fade_in {
+	@include nav_fade_in;
+}
+
+@keyframes nav_fade_in {
+	@include nav_fade_in;
+}
+
+
+@include respond-to("tablet"){
+
+	$i: 1;
+	@while $i <= 5 {
+
+		.home .main_nav ul li:nth-child(#{$i}) a { 
+			@include prefixer(animation, nav_fade_in 750ms (250ms * $i) both);
+		}
+
+		$i: $i + 1;
+	}
+
+}

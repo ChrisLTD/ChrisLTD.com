@@ -1,0 +1,49 @@
+.hide { @include hide; }
+
+.desktop_only { display: none; 
+	@include respond-to("tablet"){ display: block; }
+}
+
+.remove { display: none; }
+
+.reset { margin: 0; padding:0; border: 0; list-style: none; }
+
+.floatright { float: right; } 
+
+.floatleft { float: left; } 
+
+.alignright { float: right; margin: 0 0 10px 10px; } 
+
+.alignleft { float: left; margin: 0 10px 10px 0; } 
+
+.textcenter { text-align: center; }
+
+.textright { text-align: right; }
+
+.textleft { text-align: left; }
+
+.sans { font-family: $sans; }
+
+.serif { font-family: $serif; }
+
+.caps { text-transform: uppercase; letter-spacing: 1px; }
+
+.ir { @include ir; }
+
+.clearboth { clear: both; } 
+
+.clearfix { @include clearfix; }
+
+.horizontal_list { @include horizontal_list; }
+
+.vertical_list { @include vertical_list; }
+
+.rounded { @include prefixer(border-radius, 3px); }
+
+@include respond-to("tablet"){ 
+  .two_col_text { @include prefixer(column-count, 2); }
+  .three_col_text { @include prefixer(column-count, 3); }
+  .four_col_text { @include prefixer(column-count, 4); }
+}
+
+.full_width { width: 100%; }

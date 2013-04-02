@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+class: blog
+---
+
+{% for post in site.posts limit:10 %}
+
+  {% unless post.draft %}
+
+	<article>
+
+		<h1><a href="{{ post.url }}">{{ post.title }}</a> <span class="inner_subhead">{{ post.date | date: "%m/%d/%Y" }}</span></h1>
+
+		{{ post.content }}
+
+	</article>
+    
+  {% endunless %}
+
+{% endfor %}
+
+<div class="blog_navigation">
+	<a href="/blog/archive.html" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
+</div>

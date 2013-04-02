@@ -1,0 +1,19 @@
+---
+layout: default
+title: Draft Posts
+class: blog
+---
+
+<h1 class="alert">{{ page.title }}</h1>
+
+<ul class="link_list">
+{% for post in site.posts %}
+  {% if post.draft %}
+	<li>
+		<a href="{{ post.url }}">
+			<h3><b>{{ post.title }}</b> <span class="inner_subhead">{{ post.date | date: "%m/%d/%Y" }}</span></h3>
+		</a>
+	</li>
+  {% endif %}
+{% endfor %}
+</ul>

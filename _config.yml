@@ -1,0 +1,7 @@
+source: .
+
+permalink: /blog/:year/:month/:title
+
+exclude: resources
+
+url: http://chrisltd.com

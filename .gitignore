@@ -1,0 +1,9 @@
+.DS_Store
+resources/*
+.sass-cache*
+styles.css
+*-ck.js
+_site/*
+*.zip
+fonts/*
+deploy.sh
