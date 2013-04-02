@@ -4,6 +4,6 @@ plugins:     ./_plugins
 
 permalink: /blog/:year/:month/:title
 
-exclude: resources
+exclude: resources, deploy.sh, deploy_example.sh, Gemfile.lock, Gemfile, readme.md
 
 url: http://chrisltd.com
