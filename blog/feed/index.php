@@ -27,7 +27,7 @@ echo '<?xml version="1.0" encoding="utf-8"?'.">\r";
      <link href="<?php $BirdFeeder->seed('{{ post.title }}', '{{ site.url }}{{ post.url }}'); ?>"/>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
      <id>{{ site.url }}{{ post.id }}</id>
-     <content type="html">{{ post.content | xml_escape }}</content>
+     <content type="html">{{ post.content | remove_footnote_link | xml_escape }}</content>
    </entry>
   {% endunless %}
  {% endfor %}

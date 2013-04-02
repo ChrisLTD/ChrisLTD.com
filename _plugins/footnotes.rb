@@ -6,20 +6,10 @@
 #
 # http://syeong.jcsg.com/2012/07/07/octopress-footnote-problem/
 #
-# Example Usage
-# {% if index %}
-#   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-#   {% if excerpted == 'true' %}
+# Example Usage:
 #   <div class="entry-content">{{ content | excerpt | remove_footnote_link }}</div>
-#     <footer>
-#       <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
-#     </footer>
-#   {% else %}
 #   <div class="entry-content">{{ content | excerpt | rename_footnote_link }}</div>
-#   {% endif %}
-# {% else %}
-# <div class="entry-content">{{ content }}</div>
-# {% endif %}
+
 module FootnoteLiquidFilters
 	# Appends a random integer to the footnote reference link
 	#     Note, this is a hackish workaround (not foolproof if the same random
@@ -29,9 +19,9 @@ module FootnoteLiquidFilters
 		input.gsub(/fn:\d+/, '\0-'+"#{random}").gsub(/fnref:\d+/, '\0-'+"#{random}")
 	end
 	# Removes footnote links entirely
-# 	def remove_footnote_link(input)
-# 		input.gsub(/href\=\"#fn:\d+\"/, '').gsub(/href\=\"#fnref:\d+\"/, '')
-# 	end
+	def remove_footnote_link(input)
+		input.gsub(/ href='#(fn|fnref):\d+'/, '')
+	end
 end
 	
 Liquid::Template.register_filter FootnoteLiquidFilters
