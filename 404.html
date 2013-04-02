@@ -1,0 +1,14 @@
+---
+layout: default
+class: error404
+---
+
+<h1 class="textcenter">Sorry, that page doesn’t exist!</h1>
+
+<p class="textcenter">Head over to the <a href="/">homepage</a>, or try searching the site:</p> 
+
+<form action="//google.com/search" method="get" class="textcenter">
+	<input type="hidden" name="q" value="site:{{ site.url | replace: 'http://', '' }}"> <input type="search" class="text_input" name="q"> <input type="submit" value="Search" class="button">
+</form>
+
+<br>
