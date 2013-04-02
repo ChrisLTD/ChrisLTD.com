@@ -16,6 +16,9 @@ GEM
     liquid (2.5.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    oyster (0.9.5)
+    packr (3.2.1)
+      oyster (>= 0.9.5)
     posix-spawn (0.3.6)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
@@ -29,4 +32,5 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  packr
   sass

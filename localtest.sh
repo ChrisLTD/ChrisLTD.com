@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sass scss/styles.scss css/styles.css --style compressed --no-cache
+sh compileassets.sh
 jekyll --server --future
