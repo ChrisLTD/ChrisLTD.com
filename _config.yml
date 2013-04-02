@@ -1,4 +1,6 @@
 source: .
+destination: ./_site
+plugins:     ./_plugins
 
 permalink: /blog/:year/:month/:title
 
