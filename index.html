@@ -61,7 +61,7 @@ class: home
 							{% unless post.draft %}
 							<li>
 								<a href="{{ post.url }}">
-									<h3><b>{{ post.title }}</b> <span class="inner_subhead">{{ post.date | date: "%m/%d/%Y" }}</span></h3>
+									<h3><b>{{ post.title }}</b> <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span></h3>
 									{{ post.content | strip_html | truncatewords: 16, ' &hellip;' }}
 								</a>
 							</li>
