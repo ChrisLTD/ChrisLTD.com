@@ -9,7 +9,7 @@ This is the code for my [Jekyll](https://github.com/mojombo/jekyll) powered port
 * Use "comments" variable to add disqus comments
 
 ## Local testing
-Compress JS, Compile SCSS, generate the site, and turn on server: `sh localtest.sh'
+Compress JS, Compile SCSS, generate the site, and turn on server: `sh test.sh'
 
 The future switch shows posts dated well into the future.
 
