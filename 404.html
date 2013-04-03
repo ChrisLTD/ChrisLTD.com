@@ -4,12 +4,18 @@ class: error404
 title: '404 Error: Page Not Found'
 ---
 
-<h1 class="textcenter">Sorry, that page doesn’t exist!</h1>
+<div class="textcenter">
 
-<p class="textcenter">Head over to the <a href="/">homepage</a>, or try searching the site:</p> 
+	<h1>Sorry, that page has vanished!</h1>
 
-<form action="//google.com/search" method="get" class="textcenter">
-	<input type="hidden" name="q" value="site:{{ site.url | replace: 'http://', '' }}"> <input type="search" class="text_input" name="q"> <input type="submit" value="Search" class="button">
-</form>
+	<img src="/img/404.gif" title="Source: http://gifmovie.tumblr.com" class="rounded">
 
-<br>
+	<p>Head over to the <a href="/">homepage</a>, or try searching the site:</p> 
+
+	<form action="//google.com/search" method="get">
+	<input type="hidden" name="q" value="site:chrisltd.com"> <input type="search" class="text_input" name="q"> <input type="submit" value="Search" class="button">
+	</form>
+
+	<br>
+
+</div>
