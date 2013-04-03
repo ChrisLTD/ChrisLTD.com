@@ -12,9 +12,9 @@ Just as an example, I took a video of what happens every time you load up Gears 
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/b-yGiqdPQPw" frameborder="0" allowfullscreen="yes">http://www.youtube.com/v/b-yGiqdPQPw</iframe>
 
-It takes nearly 50 seconds to get to the start screen. First you’re shown the logo for Epic Games and then for Microsoft Studios [^picking]. After that you still have to press start and wait another 15 seconds while more stuff loads before you can actually do something.
+It takes nearly 50 seconds to get to the start screen. First you’re shown the logo for Epic Games and then for Microsoft Studios[^picking]. After that you still have to press start and wait another 15 seconds while more stuff loads before you can actually do something.
 
-In Thomas’s post he mentions that splash screens are often used to give the user some indication the application is loading before the entire UI is ready. In most games I’m fairly sure that is not the reason. First of all, you’re not just shown a static splash image you’re shown a movie, which would steal precious computing power from loading the game. Second, most games load the heavy duty stuff after you select something from the game’s main menu [^load]. My hunch is that we’re forced to wait so they can advertise to us, and nothing more.
+In Thomas’s post he mentions that splash screens are often used to give the user some indication the application is loading before the entire UI is ready. In most games I’m fairly sure that is not the reason. First of all, you’re not just shown a static splash image you’re shown a movie, which would steal precious computing power from loading the game. Second, most games load the heavy duty stuff after you select something from the game’s main menu[^load]. My hunch is that we’re forced to wait so they can advertise to us, and nothing more.
 
 Game makers (and the people behind DVDs and Blurays for that matter) should just show us these splash videos once. Or at least always make them skippable. It’s not like their name isn’t also on the game box or at the bottom of the menu screens. Let us spend more of our free time playing your game.
 

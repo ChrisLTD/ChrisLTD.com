@@ -12,13 +12,13 @@ And put this in the *Change to* field:
 
 When you're done, this is what the dialog box should look like:
 
-<img src="/blog/images/2012/03/indesign-find-change-widow.png" alt="Adobe InDesign Find/Change dialogue">
+![Adobe InDesign Find/Change dialogue](/blog/images/2012/03/indesign-find-change-widow.png)
 
 ## What’s a widow and why should I care?
 
 A widow is a short word by itself on the last line of a paragraph. Widows can adversely affect the readability of your documents by creating awkward white space between paragraphs. Here’s an example:
 
-<img src="/blog/images/2012/03/widow-example.png" alt="Example of a paragraph with a widow">
+![Example of a paragraph with a widow](/blog/images/2012/03/widow-example.png)
 
 Finding and getting rid of widows in your files can take a long time, especially with lots of content. Automating the process can save time and reduce the likelihood you’ll overlook a widow. 
 
@@ -28,7 +28,7 @@ This regular expression will find the last two words of a paragraph and replace 
 
 Here’s what the above example would look like after being run through the Find/Change:
 
-<img src="/blog/images/2012/03/widow-example-fixed.png" alt="Example of a paragraph with a fixed widow">
+![Example of a paragraph with a fixed widow](/blog/images/2012/03/widow-example-fixed.png)
 
 The regular expression will also only match words that are up six characters or less and have punctuation (.!?) after them. Longer words should look fine on a line by themselves. It checks for punctuation because you may not want to worry about widows in text that isn’t made up of proper sentences, like a headline or other large display type.
 
