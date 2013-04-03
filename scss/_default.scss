@@ -42,7 +42,7 @@ h3 { margin: .9em 0;  }
 
 .alert { color: red; }
 
-@mixin img_border { border: 1px solid rgba(0,0,0,.07); @include prefixer(box-sizing, border-box);  }
+@mixin img_border { border: 1px solid $faintest_gray; @include prefixer(box-sizing, border-box);  }
 .img_border { @include img_border; }
 
 @mixin padded_border { @include img_border; padding: 5px; @include prefixer(border-radius, 3px); background: #fff; }
@@ -157,20 +157,20 @@ blockquote { font-size: 90%; color: lighten($bodycolor, 15%); margin-left: 1.4em
 }
 
 .icon_list { 
-	a { background: #000; font-weight: bold; color: #fff; text-decoration: none;  -webkit-font-smoothing: antialiased; @include prefixer(border-radius, 4em); line-height: 1; 
+	a { background: $gray; font-weight: bold; color: #fff; text-decoration: none;  -webkit-font-smoothing: antialiased; @include prefixer(border-radius, 4em); line-height: 1; 
 		&:hover { text-shadow: 0px 0px 2px rgba(0,0,0,1); }
-		&.rwd { background:url(../img/icon_rwd.gif);}
-		&.html5 { background:url(../img/icon_html5.gif);}
-            &.jquery { background:url(../img/icon_jquery.gif);}
-		&.sass { background: #ce4dd6;}
-		&.git { background:url(../img/icon_git.gif);}
-		&.photoshop { background: #2c1a77; color: #9bc8fd;}
-		&.illustrator { background: #574220; color: #f9c253;}
-		&.wordpress { background:url(../img/icon_wordpress.gif);}
-		&.drupal { background:url(../img/icon_drupal.gif);}
-            &.ee { background:url(../img/icon_ee.gif);}
-		&.rails { background:url(../img/icon_rails.jpg);}
-		&.django { background: #092e20;}
+		&.rwd { background: $rwd_color url(../img/icon_rwd.gif);}
+		&.html5 { background: $html5_color url(../img/icon_html5.gif);}
+		&.jquery { background: $jquery_color url(../img/icon_jquery.gif);}
+		&.sass { background: $sass_color;}
+		&.git { background: $git_color url(../img/icon_git.gif);}
+		&.photoshop { background: $photoshop_color; color: #9bc8fd;}
+		&.illustrator { background: $illustrator_color; color: #f9c253;}
+		&.wordpress { background: $wordpress_color url(../img/icon_wordpress.gif);}
+		&.drupal { background: $drupal_color url(../img/icon_drupal.gif);}
+		&.ee { background: $ee_color url(../img/icon_ee.gif);}
+		&.rails { background: $rails_color url(../img/icon_rails.jpg);}
+		&.django { background: $django_color; }
 	}
 }
 
@@ -181,6 +181,18 @@ blockquote { font-size: 90%; color: lighten($bodycolor, 15%); margin-left: 1.4em
   img { z-index: 1; position: relative; width: 100%; }
   h2 { margin: .15em 0; z-index: 2; position: relative; padding-left: 10px; padding-right: 10px; }
   p { font-size: 80%; color: $bodycolor; margin: .15em 0 1em; padding-left: 10px; padding-right: 10px; }
+}
+
+.language_icon { -webkit-font-smoothing: antialiased; line-height: 80px; background: $gray; color: rgba(0,0,0,.2); font-size: 130px; overflow: hidden; text-indent: -10px;
+	&.js { @include vertical_gradient(lighten($js_color, 10%), darken($js_color, 10%)); }
+	&.php { @include vertical_gradient(lighten($php_color, 10%), darken($php_color, 10%)); }
+	/* Disabled until needed */
+/* 
+	&.ruby { @include vertical_gradient(lighten($ruby_color, 10%), darken($ruby_color, 10%)); }
+	&.objc { @include vertical_gradient(lighten($objc_color, 10%), darken($objc_color, 10%)); }
+	&.python { @include vertical_gradient(lighten($python_color, 10%), darken($python_color, 10%)); }
+	&.html5 { @include vertical_gradient(lighten($html_color, 10%), darken($html_color, 10%)); }
+ */
 }
 
 form.wufoo { 
@@ -257,6 +269,10 @@ form.wufoo {
 .centered_blocks { @include centered_list;
 	li { margin: $gutter; }
 	a { width: 200px; height: 400px; display: block; }
+}
+
+.language_icon {
+	height: 120px; width: 200px;
 }
 
 /* LAYOUT

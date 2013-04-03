@@ -10,8 +10,29 @@ $orange: #d74824;
 $gray: #373133;
 $light_gray: #9da4a8;
 $faint_gray: #d6d6d6;
+$faintest_gray: rgba(0,0,0,.07);
+
+$rwd_color: #5c0102;
+$html5_color: #df4e28;
+$jquery_color: #1d69ad;
+$sass_color: #ce4dd6;
+$git_color: #e95235;
+$photoshop_color: #2c1a77;
+$illustrator_color: #574220;
+$wordpress_color: #464646;
+$drupal_color: #195ea0;
+$ee_color: #27333c;
+$rails_color: #5c0102;
+$django_color: #092e20;
+$html_color: $html5_color;
+$js_color: $jquery_color;
+$php_color: #666699;
+$ruby_color: $rails_color;
+$python_color: $django_color;
+$objc_color: #7B3F00;
 
 $max_width: 1000px;
 $col: 82px;
 $gutter: 20px;
 $button_input_padding: 4px 9px;
+

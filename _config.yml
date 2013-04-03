@@ -16,4 +16,4 @@ url: http://chrisltd.com
 
 # Custom
 feed_url: /blog/feed/
-assets_version: 1 # used to rev css and js files
+assets_version: 2 # used to rev css and js files
