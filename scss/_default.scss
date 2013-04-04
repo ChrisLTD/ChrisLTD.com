@@ -50,8 +50,8 @@ h3 { margin: .9em 0;  }
 
 #header { -webkit-font-smoothing: antialiased; 
   .tagline { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); letter-spacing: 1px; }
-  .main_nav a { color: #fff; text-decoration: none; font-family: $sans; text-transform: uppercase; font-weight: bold; @include prefixer(transition, color 500ms ease-out); @include prefixer(border-radius, 4px); font-size: 90%;
-  	@include respond-to("tablet"){ @include prefixer(border-radius, 0); font-size: 100%; }
+  .main_nav a { color: #fff; text-decoration: none; font-family: $sans; text-transform: uppercase; font-weight: bold; @include prefixer(transition, color 500ms ease-out); @include prefixer(border-radius, 4px);
+  	@include respond-to("tablet"){ @include prefixer(border-radius, 0); }
     &:hover, &.active { background: $offwhite; color: $orange; @include box_shadow(0, 1px, 0, $offwhite); }
   }
 }
