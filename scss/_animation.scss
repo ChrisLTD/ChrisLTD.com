@@ -16,16 +16,12 @@
 }
 
 
-@include respond-to("tablet"){
+$i: 1;
+@while $i <= 5 {
 
-	$i: 1;
-	@while $i <= 5 {
-
-		.home .main_nav ul li:nth-child(#{$i}) a { 
-			@include prefixer(animation, nav_fade_in 750ms (250ms * $i) both);
-		}
-
-		$i: $i + 1;
+	.home .main_nav ul li:nth-child(#{$i}) a { 
+		@include prefixer(animation, nav_fade_in 750ms (250ms * $i) both);
 	}
 
+	$i: $i + 1;
 }
