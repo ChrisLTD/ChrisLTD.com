@@ -92,7 +92,7 @@ blockquote { font-size: 90%; color: lighten($bodycolor, 15%); margin-left: 1.4em
 		img { @include padded_border; }
 	}
 	article + article { border-top: 3px solid rgba($orange, .2); padding-top: 1em;  }
-	[rel="footnote"], [rev="footnote"] { text-decoration: none; 
+	[rel="footnote"], [rev="footnote"] { text-decoration: none; margin: 0 2px;
 		&:hover { text-decoration: underline; }
 	}
 	.footnotes { border-top: 1px dashed rgba($orange, .2); font-size: 80%;
