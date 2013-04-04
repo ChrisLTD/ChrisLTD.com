@@ -69,7 +69,8 @@ ul, ol { padding-left: 1.4em;
   &.more_spacing li { margin-bottom: .75em; }
 }
 
-blockquote { font-size: 90%; color: lighten($bodycolor, 15%); margin-left: 1.4em; margin-right: 1.4em; }
+blockquote { font-size: 90%; color: lighten($bodycolor, 15%); border-left: 3px solid 
+rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em; }
 
 [role="main"] { background: $offwhite; }
 
