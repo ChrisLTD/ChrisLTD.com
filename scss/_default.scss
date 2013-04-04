@@ -50,7 +50,8 @@ h3 { margin: .9em 0;  }
 
 #header { -webkit-font-smoothing: antialiased; 
   .tagline { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); letter-spacing: 1px; }
-  .main_nav a { color: #fff; text-decoration: none; font-family: $sans; text-transform: uppercase; font-weight: bold; @include prefixer(transition, color 500ms ease-out);
+  .main_nav a { color: #fff; text-decoration: none; font-family: $sans; text-transform: uppercase; font-weight: bold; @include prefixer(transition, color 500ms ease-out); @include prefixer(border-radius, 4px); font-size: 90%;
+  	@include respond-to("tablet"){ @include prefixer(border-radius, 0); font-size: 100%; }
     &:hover, &.active { background: $offwhite; color: $orange; @include box_shadow(0, 1px, 0, $offwhite); }
   }
 }
@@ -212,9 +213,12 @@ form.wufoo {
 .main_nav { 
   ul { @include horizontal_list; 
     li { display: inline-block; float: none; }
-    a { display: inline-block; padding: 5px 10px; text-align: left;
-      @include respond-to("tablet"){ padding: 15px 20px; }
+    a { display: inline-block; padding: 3px 8px; text-align: left; margin-top: 4px;
+      @include respond-to("tablet"){ padding: 10px 15px; margin-top: 0; }
       @include respond-to("desktop"){ padding: 30px 20px; }
+    }
+    li + li { margin-left: 4px; 
+			@include respond-to("tablet"){ margin-left: 0; }    
     }
   }
   .lt-ie8 & li { float: left; }
@@ -281,7 +285,7 @@ form.wufoo {
 
 #header { 
   .container { position: relative; text-align: center; }
-  .logo { margin: 15px 0 10px; }
+  .logo { margin: 15px 0 6px; }
   .tagline { display: none; }
   .main_nav { padding: 0 0 10px; }
   @include respond-to("tablet"){

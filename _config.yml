@@ -16,4 +16,4 @@ url: http://chrisltd.com
 
 # Custom
 feed_url: /blog/feed/
-assets_version: 3 # used to cache bust css and js files
+assets_version: 4 # used to cache bust css and js files
