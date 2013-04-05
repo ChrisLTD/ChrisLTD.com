@@ -7,7 +7,7 @@ class: blog
 
 	<header>
 		<h1><b class="title">{{ page.title }}</b> <span class="date inner_subhead">{{ page.date | date: "%-1m/%-1d/%y" }}</span></h1>
-		<span class="author hide">By {{ site.author }}</span>
+		<div class="author hide">By {{ site.author }}</div>
 	</header>
 
 	{{ content | replace: '&amp;', '&' }}
