@@ -10,11 +10,7 @@ if(!$('html').hasClass('lt-ie9')){
 	// Duplicate menu at the bottom of the page
 	$('#footer > .container').prepend('<nav class="footer_nav"></nav>');
 	$('.main_nav > ul').clone().appendTo('.footer_nav');
-		
-	// Initialize source code highlighting
-	hljs.tabReplace = '  ';
-	hljs.initHighlightingOnLoad();
-	
+
 }
 
 // Toggle

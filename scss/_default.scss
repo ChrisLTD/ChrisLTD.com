@@ -60,7 +60,7 @@ h3 { margin: .9em 0;  }
 
 pre, code { font-family: $monospace; }
 
-pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
+pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px); font-size: 95%;
   code { overflow: auto; padding: $gutter; display: block;  }
 }
 

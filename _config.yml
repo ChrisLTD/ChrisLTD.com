@@ -1,18 +1,17 @@
 # Documentation: https://github.com/mojombo/jekyll/wiki/configuration
 
-source: .
-
-destination: ./_site
-
-plugins:     ./_plugins
-
+url: http://chrisltd.com
 permalink: /blog/:year/:month/:title
 
-exclude: resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md
+source: .
+destination: ./_site
+plugins:     ./_plugins
 
 future: false # publish posts dated into the future
+exclude: resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md
 
-url: http://chrisltd.com
+markdown: maruku
+pygments: true
 
 # Custom
 feed_url: /blog/feed/

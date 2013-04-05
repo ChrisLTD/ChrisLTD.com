@@ -112,6 +112,18 @@ title: Styles
 						</ul>
 						
 						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+						
+{% highlight scss %}
+pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
+  code { overflow: auto; padding: $gutter; display: block;  }
+}
+
+ul, ol { padding-left: 1.4em; 
+  @include respond-to("tablet"){ padding-left: 0; }
+  &.more_spacing li { margin-bottom: .75em; }
+}
+
+{% endhighlight %}
 
           </aside><!--/.sidebar-->
         </div><!--/.grid-->

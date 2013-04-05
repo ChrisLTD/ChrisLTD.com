@@ -10,15 +10,14 @@ With the current version of Safari on iOS, you can’t set your default search e
 This is how you can do it on a [DD-WRT](http://www.dd-wrt.com/) router:
 
 1. Go to the *Services* page in the router admin:<br>
-![Services Page](/blog/images/2013/04/ddg-router1.png)
-2. Enter this redirect in the *Additional DNSMasq Options* field:
-<pre><code class="no-highlight">address=/search.yahoo.com/184.72.115.86</code></pre>
-![Services Page](/blog/images/2013/04/ddg-router2.png)
+   ![Services Page](/blog/images/2013/04/ddg-router1.png)
+2. Enter this redirect in the *Additional DNSMasq Options* field: {% highlight text %}address=/search.yahoo.com/184.72.115.86{% endhighlight %}
+   ![Services Page](/blog/images/2013/04/ddg-router2.png)
 3. Apply the new settings.
 4. On your iOS device[^desktop], set your default search engine to Yahoo. Go into the Settings app, and scroll down to Safari. The setting will be in there:<br>
-![Services Page](/blog/images/2013/04/ddg-iphone1.jpg)
+   ![Services Page](/blog/images/2013/04/ddg-iphone1.jpg)
 5. Bingo, you're done:<br>
-![Services Page](/blog/images/2013/04/ddg-iphone2.jpg)
+   ![Services Page](/blog/images/2013/04/ddg-iphone2.jpg)
 
 Unfortunately, this will only work when you are connected to your network. Anywhere else and you’re going to get the normal Yahoo search results. Hopefully, Apple will either add Duck Duck Go to Safari, or give us the flexibility to use whatever search engine we’d like without resorting to hacks.
 

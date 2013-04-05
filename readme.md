@@ -5,8 +5,21 @@ This is the code for my [Jekyll](https://github.com/mojombo/jekyll) powered port
 
 ## YAML Front Matter
 * Use "class" variable to add a class to the body tag, also used for loading javascript in the default layout, and menu highlighting
-* Use "date" variable set to the future for drafts `date: 3033-09-09 06:66:00 +1000`
+* Use "date" variable set to the future for drafts `date: 2099-09-09 06:06:00 +1000`
 * Use "comments" variable to add disqus comments
+
+## Code Highlighting
+Code highlighting is done via Pygments. Here is the [list of available lexers](http://pygments.org/docs/lexers/).
+
+This is how you use it:
+```
+{% highlight ruby %}
+puts "A simple ruby program."
+…
+{% endhighlight %}
+```
+
+Use `text` as your language for no highlighting.
 
 ## Local testing
 Compress JS, Compile SCSS, generate the site, and turn on server: `sh test.sh'
