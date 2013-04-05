@@ -12,7 +12,7 @@ title: Styles
             <h1>Lorem ipsum dolor sit amet</h1>
 
             <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-            
+          
             <p>
 							<a href="#" class="button">Link button here</a>
 							<button class="button">BUTTON here</button>
@@ -26,6 +26,12 @@ title: Styles
                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                <li>Aliquam tincidunt mauris eu risus.</li>
             </ol>
+            
+<pre><code>/* Comments! */
+            
+#header h1 a {
+	display: block;
+}</code></pre>
 
             <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 
@@ -36,14 +42,16 @@ title: Styles
                <li>Aliquam tincidunt mauris eu risus.</li>
             </ul>
 
-<pre><code>/* Comments! */
-            
-#header h1 a {
-	display: block;
-	width: 300px;
-	height: 80px;
-}</code></pre>
+{% highlight scss %}
+pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
+  code { overflow: auto; padding: $gutter; display: block;  }
+}
 
+ul, ol { padding-left: 1.4em; 
+  @include respond-to("tablet"){ padding-left: 0; }
+  &.more_spacing li { margin-bottom: .75em; }
+}
+{% endhighlight %}
 
 <ul class="link_list">
 	<li>
@@ -62,6 +70,45 @@ title: Styles
 		</a>
 	</li>
 </ul>
+
+		<ul class="icon_list clearfix">
+			<li><a href="http://en.wikipedia.org/wiki/Responsive_Web_Design">Plain</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/HTML5" class="html5">HTML5</a></li>
+			<li><a href="http://jquery.com/" class="jquery">jQuery</a></li>
+			<li><a href="http://sass-lang.com/" class="sass">SASS</a></li>
+		</ul>	
+
+		<ul class="centered_blocks">
+			<li>
+				<a href="https://github.com/ChrisLTD/yo_faux_pagination">
+					<div class="language_icon">.txt</div>
+					<h2>Plain</h2>
+					<p>A jQuery plugin that will give you controls to page through a set of page elements by hiding and showing them in order. Just activate the plugin on a wrapper element and it will do the work.</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/ChrisLTD/yo_portal">
+					<img src="http://placekitten.com/200/120">
+					<h2>Yo Portal</h2>
+					<p>A PHP powered start page for your web browser that displays RSS feeds for the NY Times, Woot, Weather, and Stock Quotes. It also displays a set of static links you can customize in the config file. The design is fluid and responsive, so it will scale down for phones and tablets.</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/ChrisLTD/yo_simple_filter">
+					<div class="language_icon js">.js</div>
+					<h2>Yo Simple Filter</h2>
+					<p>A jQuery plugin to do simple single category filtering on a set of elements.</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/ChrisLTD/yo_faux_pagination">
+					<div class="language_icon php">.php</div>
+					<h2>Yo Faux Pagination</h2>
+					<p>A jQuery plugin that will give you controls to page through a set of page elements by hiding and showing them in order. Just activate the plugin on a wrapper element and it will do the work.</p>
+				</a>
+			</li>
+		</ul>      
+
 
           </div><!--/.content-->
 
@@ -112,18 +159,8 @@ title: Styles
 						</ul>
 						
 						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-						
-{% highlight scss %}
-pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
-  code { overflow: auto; padding: $gutter; display: block;  }
-}
-
-ul, ol { padding-left: 1.4em; 
-  @include respond-to("tablet"){ padding-left: 0; }
-  &.more_spacing li { margin-bottom: .75em; }
-}
-
-{% endhighlight %}
+					
+					
 
           </aside><!--/.sidebar-->
         </div><!--/.grid-->

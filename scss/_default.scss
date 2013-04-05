@@ -136,7 +136,7 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em; }
 	li + li a { padding-top: 1em; border-top: 1px solid rgba($orange, .2); }
 }
 
-.button { background: $orange; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); text-decoration: none; display: inline-block; padding: $button_input_padding; @include prefixer(border-radius, 4px); -webkit-font-smoothing: antialiased; border: none; line-height: $line_height; @include prefixer(transition, all 200ms ease-out); border: 1px solid $orange;
+.button { background: $orange; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); text-decoration: none; display: inline-block; padding: $button_input_padding; @include prefixer(border-radius, 4px); -webkit-font-smoothing: antialiased; border: none; line-height: $line_height; @include prefixer(transition, all 200ms ease-out); border: 1px solid $orange; margin-bottom: 4px;
 	&:hover { background: darken($orange, 4%); border-color: darken($orange, 4%);  }
 	&.button_gray { background: $light_gray; border-color: $light_gray;
 		&:hover { background: darken($light_gray, 4%); border-color: darken($light_gray, 4%); }

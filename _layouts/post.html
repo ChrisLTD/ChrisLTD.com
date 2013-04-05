@@ -5,7 +5,9 @@ class: blog
 
 <article>
 
-	<h1>{{ page.title }} <span class="inner_subhead">{% if page.draft %}<span style="alert">DRAFT</span> {% endif %}{{ page.date | date: "%-1m/%-1d/%y" }}</span></h1>
+	<header>
+		<h1><span class="title">{{ page.title }}</span> <span class="inner_subhead date">{% if page.draft %}<span style="alert">DRAFT</span> {% endif %}{{ page.date | date: "%-1m/%-1d/%y" }}</span></h1>
+	</header>
 
 	{{ content | replace: '&amp;', '&' }}
 
