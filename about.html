@@ -6,9 +6,9 @@ class: about
 
 <h1>{{ page.title }}</h1>
 
-<div class="grid overline">
+<div class="grid overline" itemscope itemtype="http://schema.org/Person">
 	<div class="col-2-3 clearfix">
-		<p>I’m a developer and designer with over 15 years of experience building websites. I’m currently self employed as a contractor and working in New York City. Aside from contract work, I’ve previously held positions with the University of North Carolina at Chapel Hill and IGN Entertainment.</p>
+		<p>I’m a <span itemprop="jobTitle">developer and designer</span> with over 15 years of experience building websites. I’m currently self employed as a contractor and working in New York City. Aside from contract work, I’ve previously held positions with the University of North Carolina at Chapel Hill and IGN Entertainment.</p>
  
 		<p>I've been fortunate to work in a field that I’m passionate about and is never boring. Since I got my start building websites as a teenager in the 1990s, not a week goes by where I don't get the chance to learn something new. I often spend my free time reading industry related books or working on personal web projects.</p>
 
@@ -43,13 +43,15 @@ class: about
 	</div>
 	<div class="col-1-3">
 		
-		<p><img src="img/mugshot.jpg" alt="Chris Johnson drinking tea" class="full_width"></p>
+		<h2 class="hide" itemprop="name">Chris Johnson</h2>
+		
+		<p><img src="img/mugshot.jpg" alt="Chris Johnson drinking tea" class="full_width" itemprop="image"></p>
 		
 		<div class="contact_map">
 			<div class="contact_map_box">
 				<span class="ss-standard ss-mail"></span> <script src="js/email-link.js"></script><br>
-				<span class="ss-standard ss-phone"></span> (917) 727-3545<br>
-				<span class="ss-standard ss-navigate"></span> New York City
+				<span class="ss-standard ss-phone"></span> <span itemprop="telephone">(917) 727-3545</span><br>
+				<span class="ss-standard ss-navigate"></span> <span itemprop="addressLocality">New York City</span>
 			</div>
 		</div>
 		
