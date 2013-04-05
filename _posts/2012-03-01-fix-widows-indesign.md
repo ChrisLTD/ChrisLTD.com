@@ -4,11 +4,11 @@ title: Quickly fix widows in InDesign
 ---
 You can find and fix all the widows in your Adobe InDesign documents just by using InDesign’s Find/Change. Switch to GREP mode and use this [regular expression](https://en.wikipedia.org/wiki/Regular_expression) in the *Find what* field:
 
-<pre><code><span class="nocode">(\b\w+?\b) (\b\S{1,6}?\b[.!?]\r)</span></code></pre>
+<pre><code class="no-highlight">(\b\w+?\b) (\b\S{1,6}?\b[.!?]\r)</code></pre>
 
 And put this in the *Change to* field:
 
-<pre><code><span class="nocode">$1~S$2</span></code></pre>
+<pre><code class="no-highlight">$1~S$2</code></pre>
 
 When you're done, this is what the dialog box should look like:
 
