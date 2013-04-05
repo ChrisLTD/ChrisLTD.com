@@ -11,7 +11,8 @@ class: blog
 	<article>
 
 		<header>
-			<h1><a href="{{ post.url }}" class="title">{{ post.title }}</a> <span class="inner_subhead date">{{ post.date | date: "%-1m/%-1d/%y" }}</span></h1>
+			<h1><a href="{{ post.url }}"><b class="title">{{ post.title }}</b></a> <span class="date inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span></h1>
+			<div class="author hide">By {{ site.author }}</div>
 		</header>
 
 		{{ post.content | rename_footnote_link }}

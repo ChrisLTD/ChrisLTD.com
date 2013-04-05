@@ -14,5 +14,6 @@ markdown: maruku
 pygments: true
 
 # Custom
+author: Chris Johnson
 feed_url: /blog/feed/
 assets_version: 9 # used to cache bust css and js files
