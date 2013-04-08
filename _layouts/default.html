@@ -50,7 +50,7 @@
 
         <nav class="main_nav" role="navigation">
           <ul>
-<li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li><li><a href="/portfolio.html" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li><li><a href="/projects.html" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li><li><a href="/blog" class="{% if page.class == 'blog' or post.class == 'blog' %}active{% endif %}">Blog</a></li><li><a href="/about.html" class="{% if page.class == 'about' %}active{% endif %}">About</a></li> 
+<li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li><li><a href="/portfolio.html" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li><li><a href="/projects.html" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li><li><a href="/blog" class="{% if page.class == 'blog' %}active{% endif %}">Blog</a></li><li><a href="/about.html" class="{% if page.class == 'about' %}active{% endif %}">About</a></li> 
           </ul>
         </nav>
 
@@ -91,17 +91,17 @@
   <script src="/js/script-ck.js?v={{ site.assets_version }}"></script>
   <!-- You can find the unminified javascript at js/script.js --> 
   
-  {% if page.class == 'home'  %}
+  {% if page.class == 'home' %}
 	<script src="/js/jquery.cycle2.min.js?v={{ site.assets_version }}"></script>
   <script src="/js/jquery.cycle2.swipe.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
   
-	{% if page.class == 'blog'  %}
+	{% if page.class == 'blog' %}
   <script src="/js/jquery.fitvids.min.js?v={{ site.assets_version }}"></script>
 	<script src="/js/blog-ck.js?v={{ site.assets_version }}"></script>
   {% endif %}
   
-	{% if page.class == 'portfolio'  %}
+	{% if page.class == 'portfolio' %}
   <script src="/js/jquery.yosimplefilter-ck.js?v={{ site.assets_version }}"></script>
 	<script src="/js/portfolio-ck.js?v={{ site.assets_version }}"></script>
   {% endif %}
