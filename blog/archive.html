@@ -6,9 +6,7 @@ class: blog
 
 <h1>{{ page.title }}</h1>
 
-<form action="//google.com/search" method="get">
-	<input type="hidden" name="q" value="site:{{ site.url | replace: 'http://', '' }}"> <input type="search" placeholder="Search the blog archive" class="text_input" name="q"> <input type="submit" value="Search" class="button">
-</form>
+{% include search_form.html %}
 
 <br>
 
