@@ -1,0 +1,14 @@
+@media print {
+  
+  #header, #footer, .blog_navigation, a[rev="footnote"] { display: none; }
+  
+  #main .container:before { content:"Chris Johnson – http://ChrisLTD.com"; font-weight: bold; color: $orange;  }
+  
+  a { text-decoration: none; }
+
+  [role="main"] {
+    a:after { content: " (" attr(href) ") "; }
+    a[rel="footnote"]:after { content: none; }
+  }
+
+}

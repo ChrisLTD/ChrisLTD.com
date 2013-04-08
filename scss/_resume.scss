@@ -1,0 +1,32 @@
+.resume {
+  $aside_padding: 120px;
+  
+  #header, #footer { display: none; }
+
+  background: $offwhite;
+  h2 { color: $orange; }
+
+  .resume_tagline { text-transform: uppercase; font-size: 75%; letter-spacing: 1px; background: $orange; padding: 7px 12px; color: #fff; display: inline-block; -webkit-font-smoothing: antialiased;
+    @include respond-to("tablet"){
+      margin-left: $aside_padding;
+    }
+  }
+
+  @include respond-to("tablet"){
+    .aside_padding { padding-left: $aside_padding; }
+  }
+
+  article { margin-bottom: 1em;
+    aside {  text-transform: uppercase; font-size: 75%; letter-spacing: 1px; 
+      @include respond-to("tablet"){ width: $aside_padding - 10px; margin-left: -$aside_padding; float: left;  margin-top: 3px; text-align: right; } 
+    } 
+    h3, h4 { margin: 0; }
+  }
+
+}
+ 
+@media print {
+  .resume { 
+    .resume_tagline { color: $orange; padding: 0; }
+  }
+}
