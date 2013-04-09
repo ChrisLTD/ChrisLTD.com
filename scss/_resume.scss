@@ -27,6 +27,9 @@
  
 @media print {
   .resume { 
-    .resume_tagline { color: $orange; padding: 0; }
+    #main {
+      .container:before, a:after { content: none; }
+    }
+    .resume_tagline { color: $orange; padding: 0; font-weight: bold; }
   }
 }

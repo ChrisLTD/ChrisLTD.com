@@ -1,12 +1,13 @@
 @media print {
   
+  body { font-size: 12px; }
+
   #header, #footer, .blog_navigation, a[rev="footnote"] { display: none; }
-  
-  #main .container:before { content:"Chris Johnson – http://ChrisLTD.com"; font-weight: bold; color: $orange;  }
-  
+
   a { text-decoration: none; }
 
-  [role="main"] {
+  #main {
+    .container:before { content:"Chris Johnson – http://ChrisLTD.com"; font-weight: bold; color: $orange;  }
     a:after { content: " (" attr(href) ") "; }
     a[rel="footnote"]:after { content: none; }
   }
