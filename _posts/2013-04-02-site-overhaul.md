@@ -2,7 +2,7 @@
 layout: post
 title: Site Overhaul
 ---
-After months of work, I’ve updated this site’s design and added standalone pages for my [portfolio](/portfolio.html), [projects](/projects.html), and [bio](/about.html)[^ps]. 
+After a considerable amount of work, I’ve updated this site’s design and added standalone pages for my [portfolio](/portfolio.html), [projects](/projects.html), and [bio](/about.html)[^ps]. 
 
 This is what the site looked like before:
 
