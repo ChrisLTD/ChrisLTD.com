@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Site Overhaul
+title: Site overhaul
 ---
 After a considerable amount of work, I’ve updated this site’s design and added standalone pages for my [portfolio](/portfolio.html), [projects](/projects.html), and [bio](/about.html)[^ps]. 
 
