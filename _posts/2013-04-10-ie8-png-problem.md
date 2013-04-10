@@ -13,6 +13,7 @@ My solution – for now – is to hide the logo image for old IE versions, and p
 </a>
 {% endhighlight %}
 {% highlight css %}
+/* Use your favorite method to restrict these styles to IE8 */
 .logo img { display: none; } 
 .logo:before { content:attr(data-content); }
 {% endhighlight %}
