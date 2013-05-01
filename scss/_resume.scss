@@ -27,9 +27,10 @@
  
 @media print {
   .resume { 
+  	background: none;
     #main {
       .container:before, a:after { content: none; }
     }
-    .resume_tagline { color: $orange; padding: 0; font-weight: bold; }
+    .resume_tagline { display: none; }
   }
 }
