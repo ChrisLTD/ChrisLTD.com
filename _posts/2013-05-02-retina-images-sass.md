@@ -52,11 +52,24 @@ That's it, just make sure you’re referencing the standard height and width (in
 
 In case you’re curious, this is the raw CSS your SASS compiler will spit out:
 
-{% highlight css %}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    #logo {
-      background-image: url(logo@2x.png);
-      -webkit-background-size: 200px 100px; } 
-}{% endhighlight %}
+{% highlight css %}
+#logo {
+  width: 200px;
+  height: 100px;
+  background-image: url(logo.png);
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #logo {
+    background-image: url(logo@2x.png);
+    -webkit-background-size: 200px 100px;
+  }
+}
+{% endhighlight %}
 
 [^avoid]: Or avoid delivering images unless absolutely necessary. Alternatives would be graphics made from pure CSS, SVG, and web fonts.
 
