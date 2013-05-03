@@ -27,6 +27,7 @@ In our SCSS file, we need to define this handy mixin I adapted from [Jeff Croft'
       background-image: url($file + '@2x.' + $type);
       -webkit-background-size: $width $height;
       -moz-background-size: $width $height;
+      -o-background-size: $width $height;
       background-size: $width $height;
     }
   }
@@ -69,6 +70,7 @@ In case you’re curious, this is the raw CSS your SASS compiler will spit out:
     background-image: url(logo@2x.png);
     -webkit-background-size: 200px 100px;
     -moz-background-size: 200px 100px;
+    -o-background-size: 200px 100px;
     background-size: 200px 100px; 
   } 
 }
