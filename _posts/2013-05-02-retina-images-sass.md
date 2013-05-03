@@ -24,8 +24,10 @@ In our SCSS file, we need to define this handy mixin I adapted from [Jeff Croft'
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx){
     & {
-    background-image: url($file + '@2x.' + $type);
-    -webkit-background-size: $width $height;
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+      -moz-background-size: $width $height;
+      background-size: $width $height;
     }
   }
 }
@@ -62,12 +64,13 @@ In case you’re curious, this is the raw CSS your SASS compiler will spit out:
   white-space: nowrap;
   overflow: hidden; 
 }
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #logo {
     background-image: url(logo@2x.png);
     -webkit-background-size: 200px 100px;
-  }
+    -moz-background-size: 200px 100px;
+    background-size: 200px 100px; 
+  } 
 }
 {% endhighlight %}
 
