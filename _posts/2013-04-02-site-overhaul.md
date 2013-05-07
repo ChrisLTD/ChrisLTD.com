@@ -22,7 +22,7 @@ It even looks pretty good in [Lynx](http://en.wikipedia.org/wiki/Lynx_(web_brows
 
 ## Dropbox out, Rsync in
 
-When I originally launched this site last year, I published it from a Dropbox folder synced between my computers and my web server[^process]. While that process worked – and gave me the opportunity to publish posts from my phone or tablet – the server-side Dropbox installation was unpredictable. The syncing service would crash and need to be relaunched regularly. I also ran into problems where the server’s files would overwrite my new local versions. It wasn’t a disaster thanks to Dropbox’s file history feature, but it was annoying enough to convince me to switch to [Rsync](http://en.wikipedia.org/wiki/Rsync).
+When I originally launched this site last year, [I published it from a Dropbox folder synced between my computers and my web server]({% post_url 2012-02-08-site-tech %}). While that process worked – and gave me the opportunity to publish posts from my phone or tablet – the server-side Dropbox installation was unpredictable. The syncing service would crash and need to be relaunched regularly. I also ran into problems where the server’s files would overwrite my new local versions. It wasn’t a disaster thanks to Dropbox’s file history feature, but it was annoying enough to convince me to switch to [Rsync](http://en.wikipedia.org/wiki/Rsync).
 
 Rsync is one of those good old Unix utilities that is esoteric to use, but bulletproof. Now my site files are generated on my laptop with [Jekyll](https://github.com/mojombo/jekyll) and “rsynced” to my server. It’s quick because Rsync only transfers the parts of the files that have changed. The entire process (including building the site) takes less than a minute.
 
@@ -37,5 +37,3 @@ For more about the tools I used when designing and developing this site, check o
 [^ps]: I hope you don’t come across this on your own, but you should checkout my new [custom 404 page](/404.html).
 
 [^test]: It’s still valuable to test your site in a text browser, or alternatively in a regular browser with the stylesheets and scripts turned off. This is how search engines and screen readers see your site. 
-
-[^process]: [I blogged]({% post_url 2012-02-08-site-tech %}) about my setup then.
