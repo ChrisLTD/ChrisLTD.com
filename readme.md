@@ -25,7 +25,9 @@ Compress JS, Compile SCSS, generate the site, and turn on server: `sh test.sh'
 
 The future switch shows posts dated well into the future.
 
-## Personal Notes
+## Misc. Notes
+* The Maruku processor doesn't like attributes without values. For instance `<iframe allowfullscreen>`. Fix by changing it to something innocuous like `<iframe allowfullscreen="true">`.
+* The Maruku processor also does not like tag pairs without something in between, like `<iframe></iframe>`. Simply add a space `<iframe> </iframe>`.
 * I had to add `{{ content | replace: '&amp;', '&' }}` to the post template to fix the problem where ampersands in links were killing the parser. This means that all ampersands in links should use the html entity `&amp;`.
 * Server paths hardcoded in: blog/feed/index.php, chrisltd_mint/feeder/index.php, chrisltd_lessn/index.php
 * Run `sh deploy.sh` to generate then rsync the site to the server
