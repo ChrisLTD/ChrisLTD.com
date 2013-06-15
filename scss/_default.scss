@@ -58,10 +58,12 @@ h3 { margin: .9em 0;  }
 
 .logo:before { color: #fff; font-style: italic; font-size: 200%; } /* For IE8 and older */
 
+code { font-size: 95%; color: #845E33; } 
+
 pre, code { font-family: $monospace; }
 
-pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; color: $faint_gray; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px); font-size: 95%;
-  code { overflow: auto; padding: $gutter; display: block; @include prefixer(tab-size, 2);  }
+pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; width: 100%; -webkit-font-smoothing: antialiased; overflow: auto; @include prefixer(border-radius, 3px);
+  code { overflow: auto; padding: $gutter; display: block; @include prefixer(tab-size, 2); color: $faint_gray;  }
 }
 
 ul, ol { padding-left: 1.4em; 
