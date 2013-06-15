@@ -17,7 +17,7 @@ function MY_FUNCTION(){
 add_action('MY_ACTION', 'MY_FUNCTION');
 {% endhighlight %}
 
-After a post is saved, MY_FUNCTION() is scheduled to run the next time Wordpress’s pseudo-cron system is activated[^cron]. This would be useful if MY_FUNCTION() was going to do something that would take a long time[^examples]. Instead of forcing the user to wait for MY_FUNCTION() to finish, they’ll see that the post saved immediately and can go about their business. 
+After a post is saved, `MY_FUNCTION()` is scheduled to run the next time Wordpress’s pseudo-cron system is activated[^cron]. This would be useful if `MY_FUNCTION()` was going to do something that would take a long time[^examples]. Instead of forcing the user to wait for `MY_FUNCTION()` to finish, they’ll see that the post saved immediately and can go about their business. 
 
 This example uses save_post, but you could tie it to any of the [other Wordpress actions](http://codex.wordpress.org/Plugin_API/Action_Reference) that are available.
 

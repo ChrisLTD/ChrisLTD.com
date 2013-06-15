@@ -33,10 +33,10 @@ This is how I would rewrite the above code:
 }
 {% endhighlight %}
 
-Instead of relying on tag selectors like header and nav[^tagselectors], I use classes that could be used anywhere on a page[^ids]. The .nav selector isn’t nested inside the header tag, so I could move the nav element to another part of the page and these styles would still work. 
+Instead of relying on tag selectors like `header` and `nav`[^tagselectors], I use classes that could be used anywhere on a page[^ids]. The `.nav` selector isn’t nested inside the `header` tag, so I could move the `nav` element to another part of the page and these styles would still work. 
 
-I still use nesting inside the .nav-list, but only because I’m relatively certain the HTML markup inside the list won’t change. Even if it does change from being a ul to some other type of tag, the CSS would need to be rewritten since the styles are specifically changing the default styles of a ul.
+I still use nesting inside the `.nav-list`, but only because I’m relatively certain the HTML markup inside the list won’t change. Even if it does change from being a `ul` to some other type of tag, the CSS would need to be rewritten since the styles are specifically changing the default styles of a `ul`.
 
-[^tagselectors]: Targeting generic tag names like header, nav, and footer is almost never a good idea since they could be used in contexts you haven't anticipated. For instance, a blog page could have an overall header and footer, and then a header and footer for each post.
+[^tagselectors]: Targeting generic tag names like `header`, `nav`, and `footer` is almost never a good idea since they could be used in contexts you haven't anticipated. For instance, a blog page could have an overall `header` and `footer`, and then a `header` and `footer` for each post.
 
 [^ids]: IDs are fine as selectors if you’re certain you won’t need to reuse the styles. 
