@@ -14,3 +14,6 @@ After changing your `Gemfile` be sure to run `bundle install` again.
 {% highlight rb %}
 config.assets.compile = true
 {% endhighlight %}
+
+**Update:** You can read Heroku’s unreleased [Rails 4 documentation here](https://devcenter.heroku.com/articles/rails4). Thanks to [Trevoke on Reddit](http://www.reddit.com/r/rails/comments/1gf7m2/i_had_trouble_getting_a_rails_4_rc2_app_working/cajn7ds) for the tip.
+
