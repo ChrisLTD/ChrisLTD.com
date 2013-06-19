@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display blocks on nodes tagged with taxonomy term in Drupal 7
+title: Display blocks on nodes tagged with a taxonomy term in Drupal 7
 ---
 In [Drupal 7](https://drupal.org) it is pretty easy to display or not display blocks on specific nodes. It gets more tricky if you want to display blocks according to other criteria, like nodes tagged with a taxonomy term. In that case you can use this bit of PHP in your block visibility settings:
 
