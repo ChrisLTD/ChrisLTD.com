@@ -32,3 +32,4 @@ The future switch shows posts dated well into the future.
 * Server paths hardcoded in: blog/feed/index.php, chrisltd_mint/feeder/index.php, chrisltd_lessn/index.php
 * Run `sh deploy.sh` to generate then rsync the site to the server
 * There should be a fonts directory with symbolset's ss-social and ss-standard on the server. These are not in the git repo for copyright purposes.
+* If you have parenthesis in your markdown link URLs, use the URL encoding %28 and %29 instead of ( and ).
