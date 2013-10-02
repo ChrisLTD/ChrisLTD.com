@@ -16,6 +16,8 @@
 
 .alignleft { float: left; margin: 0 10px 10px 0; } 
 
+.aligntop { vertical-align: top; }
+
 .textcenter { text-align: center; }
 
 .textright { text-align: right; }
@@ -47,3 +49,13 @@
 }
 
 .full_width { width: 100%; }
+
+.pad { padding: 10px; }
+
+.padright { padding-right: 10px; }
+
+.padleft { padding-left: 10px; }
+
+.padtop { padding-top: 10px; }
+
+.padbottom { padding-bottom: 10px; }
