@@ -2,6 +2,7 @@
 layout: post
 title: Hello, world 
 ---
+When customizing [Drupal](http://drupal.org) for clients, I often need to setup repeatable sections of content within a page. 
 Sometimes you need repeatable content fields[^acf] like these promos:
 
 ![Promos](images/2013/10/d7-field-collection-promos.png)
