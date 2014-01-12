@@ -16,4 +16,4 @@ pygments: true
 # Custom
 author: Chris Johnson
 feed_url: /blog/feed/
-assets_version: 14 # used to cache bust css and js files
+assets_version: 15 # used to cache bust css and js files
