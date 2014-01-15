@@ -32,6 +32,9 @@ As of the time of this post, the Memo Pad still runs Android 4.2 which doesn’t
 
 Ultimately, I can’t recommend the [Memo Pad HD 7](http://www.amazon.com/gp/product/B00E0EY7Z6/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00E0EY7Z6&linkCode=as2&tag=chrisltd-20) until Asus adds some oleophibic coating. A tablet essentially is the screen and you shouldn’t have to try to see it through a distracting coating of your own finger oils. If you can look past that issue, it’s an otherwise great tablet for the price.
 
+**Update:** As of January 14th, 2014, Asus has not yet upgraded the Memo Pad HD 7 to Android 4.3 or greater.
+
+
 [^colors]: Some of the other colors use a shiny and what I would guess is a more slippery plastic.
 
 [^share]: The share panel in Android lists all the apps that can use the type of content you’re trying to share. You don’t have to rely on app developers to implement popular sharing services like [Instapaper](http://instapaper.com) or [Pinboard](http://pinboard.in/) in their apps. 
