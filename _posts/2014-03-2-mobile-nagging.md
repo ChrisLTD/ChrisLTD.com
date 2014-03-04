@@ -6,7 +6,7 @@ title: Mobile nagging
 
 As the mobile web and app ecosystems get older, they are also getting more spammy. If a mobile site has a companion app for iOS or Android, you can bet you’ll be reminded to download it every single time you visit that site. [Jeff Atwood wrote a superb rant](http://www.codinghorror.com/blog/2014/02/app-pocalypse-now.html) on just this subject:
 
-> I’m getting pretty sick of being nagged to install your damn apps.[...]  The more apps out there, the more the app stores are clogged with mediocre junk, the more the overall noise level keeps going up, which leads directly to this profligate nagging. Companies keep asking *how can we get people to find and install our amazing app* instead of the one question they really should have asked.
+> I’m getting pretty sick of being nagged to install your damn apps. &#91;...&#93; The more apps out there, the more the app stores are clogged with mediocre junk, the more the overall noise level keeps going up, which leads directly to this profligate nagging. Companies keep asking *how can we get people to find and install our amazing app* instead of the one question they really should have asked.
 >
 > *Why the hell are we building an app in the first place?*
 
