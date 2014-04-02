@@ -2,11 +2,11 @@
 layout: post
 title: Using AngularJS with Rails 4
 ---
-Using [AngularJS](http://angularjs.org/) with Rails 4 should be pretty simple. Include the AngularJS library in your asset pipeline and start coding away. Unfortunately, it’s not quite that simple. You may have trouble...
+Using [AngularJS](http://angularjs.org/) with Rails 4 should be pretty easy. Include the AngularJS library in your asset pipeline and start coding away. Unfortunately, it’s not quite that simple. You may have trouble...
 
 ## Compressing AngularJS code in your asset pipeline
 
-By default, Rails 4 compresses all of your JavaScript using [UglifyJS](https://github.com/mishoo/UglifyJS). Sadly, UglifyJS clobbers AngularJS files, but the fix[^beryllium] is simple. Go into `config/environments/production.rb` find the `config.assets.js_compressor` line and tell Rails to run the Uglifier without the `mangle` option:
+By default, Rails 4 compresses all of your JavaScript using [UglifyJS](https://github.com/mishoo/UglifyJS). Sadly, UglifyJS clobbers AngularJS files, but the fix is a snap[^beryllium]. Go into `config/environments/production.rb` find the `config.assets.js_compressor` line and tell Rails to run the Uglifier without the `mangle` option:
 
 {% highlight ruby %}
 config.assets.js_compressor = Uglifier.new(:mangle => false)
@@ -45,6 +45,6 @@ $scope.exampleAjax = function(ajaxUrl, var) {
         
 I’ll be sure to update this post as I learn more about using AngularJS with Rails 4.
 
-[^beryllium]: Big thanks to [Beryllium Work](http://blog.berylliumwork.com/2013/07/tips-on-rails-4-assets-compression-with.html) for that fix.
+[^beryllium]: Big thanks to [Beryllium Work](http://blog.berylliumwork.com/2013/07/tips-on-rails-4-assets-compression-with.html) for the fix.
 
 [^jquery]: If you’re using jQuery, Rails built-in [helper](https://github.com/rails/jquery-ujs/) will do this automatically.
