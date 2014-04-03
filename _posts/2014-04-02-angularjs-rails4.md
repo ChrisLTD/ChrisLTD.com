@@ -41,6 +41,30 @@ $scope.exampleAjax = function(ajaxUrl, var) {
 };
 {% endhighlight %}
 
+## Playing nice with Turbolinks
+
+If you’re going to leave [Turbolinks](https://github.com/rails/turbolinks) enabled, you’ll need a way of [re-bootstrapping](http://docs.angularjs.org/guide/bootstrap) your app after the new page content is loaded in[^turbofix]. Turbolinks has an event for this named `page:load` we can bind to after we define our Angular app:
+
+{% highlight js %}
+var app = angular.module('MyApp', []);
+
+$(document).on('ready page:load', function(){
+  angular.bootstrap(document.body, ['MyApp']);
+});
+{% endhighlight %}
+
+Now that we’re bootstrapping our app in our JavaScript, we need to remove the `ng-app` bootstrap directive from our HTML. So this:
+
+{% highlight html %}
+<body ng-app="MyApp">
+{% endhighlight %}
+
+Can just be:
+
+{% highlight html %}
+<body>
+{% endhighlight %}
+
 ## To be continued
         
 I’ll be sure to update this post as I learn more about using AngularJS with Rails 4.
@@ -48,3 +72,5 @@ I’ll be sure to update this post as I learn more about using AngularJS with Ra
 [^beryllium]: Big thanks to [Beryllium Work](http://blog.berylliumwork.com/2013/07/tips-on-rails-4-assets-compression-with.html) for the fix.
 
 [^jquery]: If you’re using jQuery, Rails built-in [helper](https://github.com/rails/jquery-ujs/) will do this automatically.
+
+[^turbofix]: Thanks for fiedl and skalb on [StackOverflow](http://stackoverflow.com/a/15488920/648844) for the Turbolinks fix.
