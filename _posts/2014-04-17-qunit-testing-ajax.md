@@ -85,9 +85,11 @@ Calling `start()` tells QUnit to move on to the next assertion or test. If we re
 
 ![QUnit stuck waiting](/blog/images/2014/04/qunit-hang.png)
 
+## Learning more
+
 If you want to learn more about QUnit, be sure to check out their [Cookbook](http://qunitjs.com/cookbook/) and [API documentation](http://api.qunitjs.com/).
 
-[^async]: Asynchronous code lets a computer do other things while waiting for something that may take a while to happen. For example, in when using [AJAX](https://en.wikipedia.org/wiki/Ajax_%28programming%29) in web development, you can let the user continue to scroll around and use your page while waiting for the server to return new data.
+[^async]: Asynchronous code lets a computer run other code while waiting for result of something that may take a while to finish. For example, in when using [AJAX](https://en.wikipedia.org/wiki/Ajax_%28programming%29) in web development, you can let the user continue to scroll around and use your page while waiting for the server to return new data.
 
 [^server]: For security purposes, browsers will not process AJAX calls from one local file to another.
 
