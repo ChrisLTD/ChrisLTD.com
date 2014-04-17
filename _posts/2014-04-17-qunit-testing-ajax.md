@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Testing AJAX calls with QUnit
+title: Testing Ajax calls with QUnit
 ---
-The [QUnit](http://api.qunitjs.com/asyncTest/) JavaScript testing framework has the ability to run tests on asynchronous code[^async] using `asyncTest`. In this post, I’ll walk you through running a simple test on an AJAX call.
+The [QUnit](http://api.qunitjs.com/asyncTest/) JavaScript testing framework has the ability to run tests on asynchronous code[^async] using `asyncTest`. In this post, I’ll walk you through running a simple test on an Ajax call.
 
 ## Setup
-Since we’re testing AJAX calls, the tests will need to be run on a local or remote webserver[^server]. On your server create three files: `test-response.html`, `tests.html` and `tests.js`.
+Since we’re testing Ajax calls, the tests will need to be run on a local or remote webserver[^server]. On your server create three files: `test-response.html`, `tests.html` and `tests.js`.
 
-We will be calling `test-response.html` using AJAX from our `tests.html` file. We’ll need the `test-response.html` file filled with some sample content:
+We will be calling `test-response.html` using Ajax from our `tests.html` file. We’ll need the `test-response.html` file filled with some sample content:
 
 {% highlight html %}
 <html>
@@ -32,7 +32,7 @@ Our `tests.html` is where we will run the actual QUnit tests. It will need to lo
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
   
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//Ajax.googleapis.com/Ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
   <script src="tests.js"></script>  
 </body>
@@ -51,12 +51,12 @@ Now, visit `tests.html`, and if everything is working correctly you should see t
 
 ![QUnit example test passed](/blog/images/2014/04/qunit-example.png)
 
-## AJAX test
+## Ajax test
 
-Above your example test, add this `asyncTest` that will pull in `test-response.html` through AJAX and read the `<title>` tag of the page. If the title matches ‘Test Page’ we know it’s working properly:
+Above your example test, add this `asyncTest` that will pull in `test-response.html` through [jQuery’s Ajax helper](https://api.jquery.com/jQuery.ajax/) and read the `<title>` tag of the page. If the title matches ‘Test Page’ we know it’s working properly:
 
 {% highlight js %}
-asyncTest('AJAX tests', function(){
+asyncTest('Ajax tests', function(){
 	expect(1); // we have one async test to run
 	
 	var xhr = $.ajax({
@@ -75,7 +75,7 @@ asyncTest('AJAX tests', function(){
 
 Refresh `tests.html` and confirm that the test is passing[^fun].
 
-![QUnit AJAX and example tests passed](/blog/images/2014/04/qunit-ajax.png)
+![QUnit Ajax and example tests passed](/blog/images/2014/04/qunit-Ajax.png)
 
 ## expect() and start()
 
@@ -89,8 +89,8 @@ Calling `start()` tells QUnit to move on to the next assertion or test. If we re
 
 If you want to learn more about QUnit, be sure to check out their [Cookbook](http://qunitjs.com/cookbook/) and [API documentation](http://api.qunitjs.com/).
 
-[^async]: Asynchronous code lets a computer run other code while waiting for result of something that may take a while to finish. For example, in when using [AJAX](https://en.wikipedia.org/wiki/Ajax_%28programming%29) in web development, you can let the user continue to scroll around and use your page while waiting for the server to return new data.
+[^async]: Asynchronous code lets a computer run other code while waiting for result of something that may take a while to finish. For example, in when using [Ajax](https://en.wikipedia.org/wiki/Ajax_%28programming%29) in web development, you can let the user continue to scroll around and use your page while waiting for the server to return new data.
 
-[^server]: For security purposes, browsers will not process AJAX calls from one local file to another.
+[^server]: For security purposes, browsers will not process Ajax calls from one local file to another.
 
 [^fun]: For fun, you can change the `<title>` tag on `test-response.html` and watch the test fail.
