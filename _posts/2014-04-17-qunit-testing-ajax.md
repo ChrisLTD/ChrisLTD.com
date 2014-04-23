@@ -75,7 +75,7 @@ asyncTest('Ajax tests', function(){
 
 Refresh `tests.html` and confirm that the test is passing[^fun].
 
-![QUnit Ajax and example tests passed](/blog/images/2014/04/qunit-Ajax.png)
+![QUnit Ajax and example tests passed](/blog/images/2014/04/qunit-ajax.png)
 
 ## expect() and start()
 
