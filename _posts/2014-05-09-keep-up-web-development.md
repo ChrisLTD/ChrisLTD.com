@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Running to keep up
+title: Running to keep up with web development
 ---
 Scott Williams [laments the ever changing field of web development](http://blog.swilliams.me/words/2014/05/06/oh-cool-you-want-to-be-a-web-developer/):
 
