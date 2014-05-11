@@ -4,7 +4,7 @@ title: Running to keep up with web development
 ---
 Scott Williams [laments the ever changing field of web development](http://blog.swilliams.me/words/2014/05/06/oh-cool-you-want-to-be-a-web-developer/):
 
-> Oh Cool You Want to Be a Web Developer? Just go and learn any or all of these:
+> Oh cool you want to be a web developer? Just go and learn any or all of these:
 > * HTML 5
 > * CSS 3
 > * JavaScript
