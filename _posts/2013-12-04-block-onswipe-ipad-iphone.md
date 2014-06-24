@@ -10,13 +10,27 @@ The good news is that you can block Onswipe permanently on your mobile devices u
 
 This is how you can do it on a [DD-WRT](http://www.dd-wrt.com/) router in three easy steps:
 
-1. Go to the *Services* page in the router admin:<br>
-   ![Services Page](/blog/images/2013/04/ddg-router1.png)
-2. Enter this redirect in the *Additional DNSMasq Options* field: {% highlight text %}address=/assets.onswipe.com/0.0.0.0{% endhighlight %}
-   ![Services Page](/blog/images/2013/12/onswipe-router.png)
-3. Apply the new settings and enjoy a web without Onswipe.
+<ol>
+  <li>
+    Go to the <i>Services</i> page in the router admin:<br>
+    <img alt="Services Page" src="/blog/images/2013/04/ddg-router1.png">
+  </li>
+  <li>
+    Enter these redirects in the *Additional DNSMasq Options* field:
+{% highlight text %}
+address=/assets.onswipe.com/0.0.0.0
+address=/cdn.onswipe.com/0.0.0.0
+{% endhighlight %}
+    <img alt="Onswipe redirect" src="/blog/images/2013/12/onswipe-router.png">
+  </li>
+  <li>
+    Apply the new settings and enjoy a web without Onswipe.
+  </li>
+</ol>
 
 Keep in mind that this will only work when you are connected to that router. So I also encourage you to politely inform website owners that you’d like them to stop using Onswipe. Onswipe should also do their part and let users opt of their service globally rather than on a site-by-site basis.
+
+**Update 6/24/2014:** In order to block Onswipe, we now need two redirects. I’ve updated this post to reflect the changes.
 
 [^swipes]: Instead of letting you scroll down a page, Onswipe forces you to use a choppy swiping implementation.
 
