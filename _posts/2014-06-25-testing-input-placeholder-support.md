@@ -19,6 +19,8 @@ if( inputTest.hasOwnProperty('placeholder') ) {
 }
 {% endhighlight %}
 
+What we’re doing with this code is creating an `<input>` element[^notvisible], and then checking to see if it has a placeholder property using Javascript’s [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method. Even if an element has no placeholder set or an empty placeholder, this will return true if the browser supports the placeholder attribute.
+
 If you’re using [jQuery](http://jquery.com), we can shorten the code a bit by using jQuery’s selector engine and [addClass](http://api.jquery.com/addClass/) method:
 
 {% highlight javascript %}
@@ -48,6 +50,8 @@ Once all the code is in place, you should see these results depending on your br
 ![Results](/blog/images/2014/06/placeholder-comparison.png)
 
 [^natively]: If you need placeholders to work in old browsers, you can [use Javascript to mimic](https://github.com/mathiasbynens/jquery-placeholder) the new native functionality.
+
+[^notvisible]: Don’t worry, this input won’t be visible on the page unless we add it to the document using something like the [appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node.appendChild) method.
 
 [^modernizr]: My first thought was to use [Modernizr](http://modernizr.com/), but Modernizr doesn’t add classes to the HTML tag for input attribute support.
 
