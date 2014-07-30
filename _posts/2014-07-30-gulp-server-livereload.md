@@ -21,7 +21,7 @@ npm install gulp-webserver gulp-sass gulp-sass gulp-plumber opn
 
 ## Create your project files
 
-Our example `gulpfile.js` expects a [basic project structure](https://github.com/ChrisLTD/gulp-playground). We have an `index.html` and `gulpfile.js` file in our root, a `scss` folder for our `styles.scss` source file, and a `css` folder for our compiled SCSS:
+Our example `gulpfile.js` expects a [basic project structure](https://github.com/ChrisLTD/gulp-playground/tree/1.0). We have an `index.html` and `gulpfile.js` file in our root, a `scss` folder for our `styles.scss` source file, and a `css` folder for our compiled SCSS:
 
 ![Directory structure](/blog/images/2014/07/gulp-folder.png)
 
@@ -83,7 +83,7 @@ gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
 
 If you’ve done everything right up to this point, you should be able to run `gulp`[^default], and your browser will open to your newly spawned local server. Try changing and saving the `styles.scss` and watch the browser reload the stylesheet automatically.
 
-You can download a complete [example project from Github](https://github.com/ChrisLTD/gulp-playground).
+You can download a complete [example project from Github](https://github.com/ChrisLTD/gulp-playground/tree/1.0).
 
 [^whygulp]: A few months back [I joked](/blog/2014/05/keep-up-web-development/) about dropping [Grunt](http://gruntjs.com/) in favor of Gulp, and now I have. The syntax is significantly more [understandble](http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/).
 
