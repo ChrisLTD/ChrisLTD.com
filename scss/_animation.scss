@@ -16,12 +16,12 @@
 }
 
 
-$j: 1;
-@while $j <= 5 {
+$_i: 1;
+@while $_i <= 5 {
 
-	.home .main_nav ul li:nth-child(#{$j}) a {
-		@include prefixer(animation, nav_fade_in 750ms (250ms * $j) both);
+	.home .main_nav ul li:nth-child(#{$_i}) a {
+		@include prefixer(animation, nav_fade_in 750ms (250ms * $_i) both);
 	}
 
-	$j: $j + 1;
+	$_i: $_i + 1;
 }
