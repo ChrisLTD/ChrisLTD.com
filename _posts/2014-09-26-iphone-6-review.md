@@ -13,7 +13,7 @@ The big news this year is that both iPhone models are bigger, and significantly 
 
 The increased width as well as the rounded sides make for a phone that’s more difficult to grip. It’s felt precarious enough that I’ve ordered my first ever iPhone case[^case].
 
-While we’re in this transition period to the new sizes, a lot of apps have yet to be upgraded to take advantage of the increased space natively. That means you’ll encounter some slightly blurry looking apps. It’s not too terrible for now, but I’ll be happy when my most used apps are all updated[^kudos].
+While we’re in this transition period to the new sizes, a lot of apps have yet to be upgraded to take advantage of the increased space natively. That means you’ll encounter some slightly blurry looking apps. It’s not too terrible, but I’ll be happy when my most used apps are all updated[^kudos].
 
 ## Looks
 
@@ -41,7 +41,7 @@ One welcome, and unexpected change is the bottom speaker. It’s significantly l
 
 ## iOS 8
 
-iOS 8 is available for older iPhones as well as the 6, and it adds a few compelling features. The biggest and best is [Extensibility](http://www.macrumors.com/2014/06/06/app-extensions-ios-8-yosemite/). Extensibility allows apps to register system-wide helpers you can use in other apps. For instance, if you use Instapaper, you can enable an extension in Safari to save the web page you’re using. Another big one is the new 1Password extension to fill in your login credentials. Providing this sort of app-to-app communication is something that has long been on my personal iOS wishlist and I’m pleased it’s now a reality[^android].
+iOS 8 is available for older iPhones as well as the 6, and it adds a few compelling features. The biggest and best is [Extensibility](http://www.macrumors.com/2014/06/06/app-extensions-ios-8-yosemite/). Extensibility allows apps to register system-wide helpers you can use in other apps. For instance, if you use [Instapaper](https://www.instapaper.com), you can enable an extension in Safari to save the web page you’re reading. Another big one is the new [1Password](https://agilebits.com/onepassword) extension to fill in your username and password. Providing this sort of app-to-app communication is something that has long been on my personal iOS wishlist and I’m pleased it’s now a reality[^android].
 
 ![iOS 8 share sheet with Instapaper and 1Password](/blog/images/2014/09/ios8-share-sheet.jpg)
 
@@ -69,8 +69,8 @@ As upgrades go, the iPhone 6 is a substantial improvement over the 5. The new si
 
 [^kudos]: Kudos to the developers who were ready on Friday with new versions.
 
-[^reachability]: I imagine it will get a lot of use in situations where you only have one hand free, like when you’re standing on a train holding the railing, or holding a drink.
+[^reachability]: I imagine it will get a lot of use in situations where you only have one hand free, like when you’re standing on a train holding the railing, or holding a [drink](https://www.youtube.com/watch?v=gav2jrsNSM0&t=1m31s).
 
-[^ipadspeaker]: It’s also a lot louder than the iPad Mini speaker. My wife bought a Nexus 7 for watching Netflix instead of an iPad Mini because of the weak speaker.
+[^ipadspeaker]: It’s also a lot louder than the iPad Mini speaker. My wife bought a [Nexus 7](http://en.wikipedia.org/wiki/Nexus_7_%282013_version%29) for watching Netflix instead of an iPad Mini because of the weak speaker.
 
 [^android]: Yes, Android has had this feature forever.
