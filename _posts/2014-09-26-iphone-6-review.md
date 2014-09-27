@@ -33,7 +33,7 @@ My last iPhone was an iPhone 5, so this is my first experience with [Touch ID](h
 
 The new camera is a nice upgrade. Check out [this Verge article](http://www.theverge.com/2014/9/18/6339583/iphone-6-and-6-plus-camera-test-iceland) for some sample shots of what is capable with the new lens and sensor. I’m particularly enamored with the slo-mo feature:
 
-<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/CRZ1N3fqHGA?rel=0" frameborder="0" allowfullscreen="yes">http://www.youtube.com/embed/CRZ1N3fqHGA</iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/CRZ1N3fqHGA?rel=0" frameborder="0" allowfullscreen="yes"> </iframe>
 
 With the larger screen and Touch ID button comes [Reachability](https://vine.co/v/OzXYrJZDtrr), which is a shortcut to bring the top of the screen within thumbs reach of the bottom of phone. You can activate and deactivate it by double touching the home button (you don’t actually press the home button in, you tap it like you would a button on the touch screen). It’s an odd seeming feature, but one I’ve used a few times with success[^reachability].
 
@@ -42,6 +42,8 @@ One welcome, and unexpected change is the bottom speaker. It’s significantly l
 ## iOS 8
 
 iOS 8 is available for older iPhones as well as the 6, and it adds a few compelling features. The biggest and best is [Extensibility](http://www.macrumors.com/2014/06/06/app-extensions-ios-8-yosemite/). Extensibility allows apps to register system-wide helpers you can use in other apps. For instance, if you use Instapaper, you can enable an extension in Safari to save the web page you’re using. Another big one is the new 1Password extension to fill in your login credentials. Providing this sort of app-to-app communication is something that has long been on my personal iOS wishlist and I’m pleased it’s now a reality[^android].
+
+![iOS 8 share sheet with Instapaper and 1Password](/blog/images/2014/09/ios8-share-sheet.jpg)
 
 iOS 8 now let’s you install custom keyboards. I haven’t used them much, but if you’d like to know more, check out this [custom keyboard round-up at MacStories](http://www.macstories.net/roundups/my-favorite-ios-8-keyboards-so-far/).
 
