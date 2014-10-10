@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
@@ -9,30 +9,30 @@
 <!--
   / ____/ /_  _____(_)____/ / /_  __/ __ \
  / /   / __ \/ ___/ / ___/ /   / / / / / /
-/ /___/ / / / /  / (__  ) /___/ / / /_/ / 
-\____/_/ /_/_/  /_/____/_____/_/ /_____/ 
+/ /___/ / / / /  / (__  ) /___/ / / /_/ /
+\____/_/ /_/_/  /_/____/_____/_/ /_____/
 -->
 
   <title>{% if page.title %} {{ page.title }} | {% endif %}Chris Johnson - Developer & Designer</title>
- 	
+
 	<meta name="description" content="Chris Johnson is a web developer and designer. This is his portfolio and blog.">
   <meta name="keywords" content="chris johnson, chrisltd">
   <meta name="author" content="Chris Johnson">
- 
+
   <meta name="viewport" content="width=device-width">
-  
+
 	<link rel="alternate" type="application/rss+xml" title="Chris Johnson's Blog Feed" href="{{ site.feed_url }}">
-  
+
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
   <script src="//use.typekit.net/hsh4zpp.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
-  
+
   <link rel="stylesheet" href="/css/styles.css?v={{ site.assets_version }}">
   <!-- You can find the uncompressed SCSS file list at scss/styles.scss -->
-  
+
 </head>
 
 <body class="{{ page.class }} {{ post.class }}">
@@ -44,13 +44,13 @@
   <div id="wrapper">
     <header role="banner" id="header">
       <div class="container">
-          
+
         <a href="/" class="logo" data-content="Chris Johnson"><img src="/img/logo@2x.png" width="330" alt="Chris Johnson"></a>
         <div class="tagline">Developer &amp; Designer</div>
 
         <nav class="main_nav" role="navigation">
           <ul>
-<li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li><li><a href="/portfolio.html" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li><li><a href="/projects.html" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li><li><a href="/blog" class="{% if page.class == 'blog' %}active{% endif %}">Blog</a></li><li><a href="/about.html" class="{% if page.class == 'about' %}active{% endif %}">About</a></li> 
+<li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li><li><a href="/portfolio.html" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li><li><a href="/projects.html" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li><li><a href="/blog" class="{% if page.class == 'blog' %}active{% endif %}">Blog</a></li><li><a href="/about.html" class="{% if page.class == 'about' %}active{% endif %}">About</a></li>
           </ul>
         </nav>
 
@@ -59,7 +59,7 @@
 
     <div role="main" id="main">
 			<div class="container">
-        
+
         {{ content }}
 
       </div><!--/.container-->
@@ -73,7 +73,9 @@
           <li><a href="https://twitter.com/chrisltd"><i class="ss-icon ss-social-circle ss-twitter" title="Twitter"></i><b>Twitter</b></a></li>
           <li><a href="https://pinboard.in/u:chrisltd"><i class="ss-icon ss-social-circle ss-pinboard" title="Pinboard"></i><b>Pinboard</b></a></li>
           <li><a href="https://github.com/chrisltd"><i class="ss-icon ss-social-circle ss-github" title="GitHub"></i><b>GitHub</b></a></li>
-          <li><a href="https://alpha.app.net/chrisltd" rel="me"><i class="ss-icon ss-social-circle ss-appdotnet" title="App.net"></i><b>App.net</b></a></li>
+          {% comment %}
+            <li><a href="https://alpha.app.net/chrisltd" rel="me"><i class="ss-icon ss-social-circle ss-appdotnet" title="App.net"></i><b>App.net</b></a></li>
+          {% endcomment %}
           <li><a href="http://www.last.fm/user/ChrisLTD"><i class="ss-icon ss-social-circle ss-lastfm" title="Last.fm"></i><b>Last.fm</b></a></li>
         </ul>
 
@@ -89,23 +91,23 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/jquery-1.9.1.min.js"><\/script>')</script>
   <script src="/js/script-ck.js?v={{ site.assets_version }}"></script>
-  <!-- You can find the unminified javascript at js/script.js --> 
-  
+  <!-- You can find the unminified javascript at js/script.js -->
+
   {% if page.class == 'home' %}
 	<script src="/js/jquery.cycle2.min.js?v={{ site.assets_version }}"></script>
   <script src="/js/jquery.cycle2.swipe.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
-  
+
 	{% if page.class == 'blog' %}
   <script src="/js/jquery.fitvids.min.js?v={{ site.assets_version }}"></script>
 	<script src="/js/blog-ck.js?v={{ site.assets_version }}"></script>
   {% endif %}
-  
+
 	{% if page.class == 'portfolio' %}
   <script src="/js/jquery.yosimplefilter-ck.js?v={{ site.assets_version }}"></script>
 	<script src="/js/portfolio-ck.js?v={{ site.assets_version }}"></script>
   {% endif %}
-  
+
   {% if site.show_drafts %}
   <!-- Mint not loaded when testing drafts locally -->
   {% else %}
@@ -120,6 +122,6 @@
 	</script>
 	{% endif %}
 
-	
+
 </body>
 </html>
