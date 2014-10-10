@@ -1,6 +1,6 @@
 .hide { @include hide; }
 
-.desktop_only { display: none; 
+.desktop_only { display: none;
 	@include respond-to("tablet"){ display: block; }
 }
 
@@ -8,13 +8,13 @@
 
 .reset { margin: 0; padding:0; border: 0; list-style: none; }
 
-.floatright { float: right; } 
+.floatright { float: right; }
 
-.floatleft { float: left; } 
+.floatleft { float: left; }
 
-.alignright { float: right; margin: 0 0 10px 10px; } 
+.alignright { float: right; margin: 0 0 10px 10px; }
 
-.alignleft { float: left; margin: 0 10px 10px 0; } 
+.alignleft { float: left; margin: 0 10px 10px 0; }
 
 .aligntop { vertical-align: top; }
 
@@ -32,7 +32,7 @@
 
 .ir { @include ir; }
 
-.clearboth { clear: both; } 
+.clearboth { clear: both; }
 
 .clearfix { @include clearfix; }
 
@@ -42,7 +42,7 @@
 
 .rounded { @include prefixer(border-radius, 3px); }
 
-@include respond-to("tablet"){ 
+@include respond-to("tablet"){
   .two_col_text { @include prefixer(column-count, 2); }
   .three_col_text { @include prefixer(column-count, 3); }
   .four_col_text { @include prefixer(column-count, 4); }
@@ -59,3 +59,5 @@
 .padtop { padding-top: 10px; }
 
 .padbottom { padding-bottom: 10px; }
+
+.hide_bullets { list-style: none; }
