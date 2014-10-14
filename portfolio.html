@@ -6,9 +6,11 @@ class: portfolio
 
 <h1>{{ page.title }}</h1>
 
+{% comment %}
 <div class="filters">
   <button class="filter button button_gray button_small active" data-filter="">All</button> <button class="filter button button_gray button_small" data-filter=".f-development">Development</button> <button class="filter button button_gray button_small" data-filter=".f-design">Design</button>
 </div>
+{% endcomment %}
 
 <article class="grid portfolio_item f-development">
   <div class="col-2-3">
@@ -272,10 +274,10 @@ class: portfolio
     <li>Peak, Swirles & Cavallito Properties</li>
     <li>Dunwell</li>
     <li>LabCorp</li>
-    <li>Arcade CG</li>
-    <li>SBE</li>
-    <li>Radius TWC</li>
     {% comment %}
+      <li>Arcade CG</li>
+      <li>SBE</li>
+      <li>Radius TWC</li>
       <li>American Express</li>
     {% endcomment %}
   </ul>
