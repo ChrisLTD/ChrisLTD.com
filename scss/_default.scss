@@ -68,7 +68,7 @@ pre { padding-left: 0; background: darken($gray, 5%); display: inline-block; wid
 
 ul, ol { padding-left: 1.4em;
   @include respond-to("tablet"){ padding-left: 0; }
-  &.more_spacing li { margin-bottom: .75em; }
+  &.more_spacing li { margin-top: .75em; margin-bottom: .75em; }
 }
 
 blockquote { font-size: 90%; color: lighten($bodycolor, 15%); border-left: 3px solid
