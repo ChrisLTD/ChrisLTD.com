@@ -37,7 +37,7 @@ See a [demo of the above code](http://polymerlabs.github.io/google-map/component
 
 If you want to know more, Google engineer [Eric Bidelman](https://twitter.com/ebidel) explains the map component in this video:
 
-<iframe width="400" height="225" src="//www.youtube-nocookie.com/embed/eORqFaf_QzM?rel=0" frameborder="0" allowfullscreen="true"> </iframe>
+<iframe width="400" height="225" src="http://www.youtube.com/embed/eORqFaf_QzM?rel=0" frameborder="0" allowfullscreen="true"> </iframe>
 
 Unfortunately, we can only use Polymer on [bleeding edge browsers](http://www.polymer-project.org/resources/compatibility.html), but I look forward to using it and web components in the future.
 
