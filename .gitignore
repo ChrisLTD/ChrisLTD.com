@@ -7,3 +7,4 @@ _site/*
 *.zip
 fonts/*
 deploy.sh
+.idea
