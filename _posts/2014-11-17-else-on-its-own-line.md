@@ -28,4 +28,4 @@ Sure, we’re now ‘wasting’ an extra line, but we’ve gained the ability to
 
 [^brent]: [Brent Simmons](http://inessential.com/2014/11/13/makes_commenting_out_difficult) not withstanding.
 
-[^iOS]: I’ve wanted to get into iOS development for years now. Maybe going through the Bitfountain videos will finally be the kick in the butt I need to make and ship an app.
+[^iOS]: I’ve wanted to get into iOS development for years now. Maybe going through the [Bitfountain](http://bitfountain.io) videos will finally be the kick in the ass I need to make and ship an app.
