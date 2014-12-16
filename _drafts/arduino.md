@@ -21,7 +21,7 @@ void loop() {
 
 This is the result:
 
-![GIF HERE](#)
+![Blinking LED](//raw.githubusercontent.com/ChrisLTD/ChrisLTD.com/master/blog/images/2014/12/arduino-blink.gif)
 
 In future projects from the kit, I’ll learn how to speed up the blinking LED with a [potentiometer](http://en.wikipedia.org/wiki/Potentiometer), play a tune on a speaker, read the temperature from a temperature sensor, and more.
 
