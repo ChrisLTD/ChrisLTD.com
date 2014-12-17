@@ -27,7 +27,7 @@ This is the result:
 
 Other projects from the kit are a bit more complex. In other lesson you learn how to speed up the blinking LED with a [potentiometer](http://en.wikipedia.org/wiki/Potentiometer), play a tune on a speaker, read the temperature from a temperature sensor, and more.
 
-Arduino is an inexpensive way to learn about electronic circuits and programming, and I wouldn’t hesistate recommnending it to anyone that’s interested in physical computing. To get started, all you’ll need is a decent Arduino kit, and a computer that can upload programs to the Arduino board through a USB port. No soldering required!
+Arduino is an inexpensive way to learn about electronic circuits and programming, and I wouldn’t hesistate recommnending it to anyone that’s interested in physical computing. To get started, all you’ll need is a decent kit, and a computer that can upload programs to the Arduino board through a USB port. No soldering required!
 
 [^php]: PHP may not always seem like a high-level language.
 
