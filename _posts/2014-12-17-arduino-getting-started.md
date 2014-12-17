@@ -25,7 +25,7 @@ This is the result:
 
 ![Blinking LED](/blog/images/2014/12/arduino-blink.gif)
 
-Other projects from the kit are a bit more complex. In other lessons you learn how to speed up the blinking LED with a [potentiometer](http://en.wikipedia.org/wiki/Potentiometer), play a tune on a speaker, read the temperature from a temperature sensor, and more.
+Other projects from the kit are a bit more complex. In other lessons you learn how to speed up the blinking LED with a [potentiometer](http://en.wikipedia.org/wiki/Potentiometer), play a tune on a speaker, read the temperature from a temperature sensor, and more. Once you’re comfortable enough, you can start combining the components and code into whatever you’d like.
 
 Arduino is an inexpensive way to learn about electronic circuits and programming, and I wouldn’t hesistate recommending it to anyone that’s interested in physical computing. To get started, all you’ll need is a decent kit, and a computer that can upload programs to the Arduino board through a USB port. No soldering required!
 
