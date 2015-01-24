@@ -11,6 +11,8 @@ Suffice it to say, his server crashed pretty hard. His only recourse was to bloc
 
 I didn’t even realize an attack like this was possible, but as Hockenberry notes, he wasn’t the [only](http://www.reddit.com/r/networking/comments/2rumgd/chinese_firewall_seems_to_be_redirecting_blocked/) [target](http://www.theregister.co.uk/2014/01/21/china_dns_poisoning_attack/).
 
+**Update:** Matt Wilcox ran into the same problem, and he explains how to [block Chinese IP addresses using iptables](https://mattwilcox.net/archives/unexpected-ddos-blocking-china-with-ipset-and-iptables/).
+
 [^gfw]: Otherwise known as the [Golden Shield Project](http://en.wikipedia.org/wiki/Golden_Shield_Project).
 
 [^why]: We’ll likely never know exactly why this redirection happened, but [theorists](https://news.ycombinator.com/item?id=8931827) think this is a more efficient way for the Chinese government to censor websites.
