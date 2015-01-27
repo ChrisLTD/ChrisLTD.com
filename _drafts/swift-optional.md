@@ -1,8 +1,11 @@
-# What is a Swift optional
+---
+layout: post
+title: What is a Swift optional
+---
 
 By default all [Swift](http://developer.apple.com/swift/) variables must contain a value of the specified type, and can’t be [nil](http://nshipster.com/nil/).
 
-{% highlight text %}
+{% highlight swift %}
 var bestCaptain:String = "Sisko" // this works
 bestCaptain = nil                // throws an error
 {% endhighlight %}
@@ -41,7 +44,6 @@ Swift optionals can be a bit confusing[^me], and a lot of people have tried to e
 
 
 
-Swift is designed around type safety
-But it has to talk to objective c that contains a lot of unsafe variables
+Swift is designed around type safety but it has to talk to objective c that contains a lot of unsafe variables.
 
 
