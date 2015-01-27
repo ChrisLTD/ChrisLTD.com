@@ -1,6 +1,5 @@
 ---
 # Feed setup to use Mint RSS Tracking http://haveamint.com/peppermill/pepper/11/bird_feeder/
-layout: nil
 ---
 <?php
 header("Content-Type:application/xml"); 
