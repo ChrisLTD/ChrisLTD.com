@@ -14,7 +14,7 @@ module FootnoteLiquidFilters
 	# Appends a random integer to the footnote reference link
 	def rename_footnote_link(input)
 		random = rand(9999)
-		input.gsub(/fn:\d+/, '\0-'+"#{random}").gsub(/fnref:\d+/, '\0-'+"#{random}")
+		input.gsub(/fn:/, '\0'+"#{random}-").gsub(/fnref:/, '\0-'+"#{random}-")
 	end
 	# Removes footnote hrefs entirely
 	def remove_footnote_link(input)
