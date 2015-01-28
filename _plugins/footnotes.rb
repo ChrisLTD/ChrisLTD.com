@@ -18,7 +18,7 @@ module FootnoteLiquidFilters
 	end
 	# Removes footnote hrefs entirely
 	def remove_footnote_link(input)
-		input.gsub(/ href='#(fn|fnref):\d+'/, '').gsub(/&#8617;/, '')
+		input.gsub(/ href=("|')#(fn|fnref):\S+("|')/, '').gsub(/&#8617;/, '')
 	end
 end
 	
