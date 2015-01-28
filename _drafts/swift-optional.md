@@ -68,7 +68,7 @@ Swift optionals can be a bit confusing[^me], and a lot of people have tried to e
 
 Big thanks to [Scott Williams](http://swilliams.me) for his valuable feedback on this post. Check out [his blog](http://blog.swilliams.me).
 
-[^init]: Non-optional variables can be declared without a value, but can’t be set to nil. Non-optional class instance variables need to have a value set in the object’s init method.
+[^init]: Non-optional variables can be declared without a value, but can’t be set to nil. Non-optional [instance variables](http://en.wikipedia.org/wiki/Instance_variable) need to have a value set in the object’s init method.
 
 [^patterns]: Objects from the [Cocoa](http://en.wikipedia.org/wiki/Cocoa_Touch) [libraries](http://en.wikipedia.org/wiki/Cocoa_%28API%29) often use [Implicitly Unwrapped Optionals](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Types.html#//apple_ref/doc/uid/TP40014097-CH31-ID453).
 
