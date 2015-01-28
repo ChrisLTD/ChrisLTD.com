@@ -19,8 +19,8 @@ include('../../../chrisltd_mint/feeder/index.php');
 				<title>{{ post.title | xml_escape }}</title>
 				<description>{{ post.content | remove_footnote_link | relative_urls_to_absolute | xml_escape }}</description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y 11:00:00 -0500" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true"><?php $BirdFeeder->seed('{{ post.title }}', '{{ site.url }}{{ post.url }}'); ?></guid>
+				<link><?php $BirdFeeder->seed('{{ post.title }}', '{{ site.url }}{{ post.url }}'); ?></link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
 		{% endfor %}
 	</channel>
