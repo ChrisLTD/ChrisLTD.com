@@ -13,7 +13,7 @@ include('../../../chrisltd_mint/feeder/index.php');
 		<title>Chris Johnson's Blog</title>
 		<description></description>		
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ site.url }}/blog/feed" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:1 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
