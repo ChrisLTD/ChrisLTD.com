@@ -27,7 +27,7 @@ Accessing an optional is a bit trickier, and you have a few alternatives you can
 
 ### Optional binding
 
-The safest way is to access your optional value is use [optional binding](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID333) where you assign the optional value to a constant if it exists.
+The safest way to access your optional value is with [optional binding](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID333). In optional binding, you assign the optional value to a constant if the optional value is not nil.
 
 {% highlight swift %}
 if let unwrappedOptional = myOptional {
@@ -54,12 +54,12 @@ You can use [optional chaining](https://developer.apple.com/library/mac/document
 
 {% highlight swift %}
 myOptional = nil
-println("\(myOptional?.lowercaseString)")
+println("\(myOptional?.lowercaseString)") // prints nil
 {% endhighlight %}
 
 ## More resources
 
-Swift optionals can be a bit confusing[^me], and a lot of people have tried to explain them:
+Swift optionals can be a bit confusing[^me], and a lot of other people have tried to explain them:
 
 * [Apple's documentation](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
 * [Matt Bridges](https://medium.com/@rrridges/swift-optionals-a10dcfd8aab5)
