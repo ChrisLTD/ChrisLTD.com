@@ -40,13 +40,7 @@ Here’s the script I pulled together to make it happen:
       iconURLPrefix + 'pink-dot.png',      
       iconURLPrefix + 'yellow-dot.png'
     ]
-    var icons_length = icons.length;
-    
-    
-    var shadow = {
-      anchor: new google.maps.Point(15,33),
-      url: iconURLPrefix + 'msmarker.shadow.png'
-    };
+    var iconsLength = icons.length;
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
@@ -64,18 +58,16 @@ Here’s the script I pulled together to make it happen:
       maxWidth: 160
     });
 
-    var marker;
     var markers = new Array();
     
     var iconCounter = 0;
     
     // Add the markers and infowindows to the map
     for (var i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
-        icon : icons[iconCounter],
-        shadow: shadow
+        icon: icons[iconCounter]
       });
 
       markers.push(marker);
@@ -89,12 +81,12 @@ Here’s the script I pulled together to make it happen:
       
       iconCounter++;
       // We only have a limited number of possible icon colors, so we may have to restart the counter
-      if(iconCounter >= icons_length){
+      if(iconCounter >= iconsLength) {
       	iconCounter = 0;
       }
     }
 
-    function AutoCenter() {
+    function autoCenter() {
       //  Create a new viewpoint bound
       var bounds = new google.maps.LatLngBounds();
       //  Go through each...
@@ -104,7 +96,7 @@ Here’s the script I pulled together to make it happen:
       //  Fit these bounds to the map
       map.fitBounds(bounds);
     }
-    AutoCenter();
+    autoCenter();
   </script> 
 </body>
 </html>
@@ -112,6 +104,8 @@ Here’s the script I pulled together to make it happen:
 
 Here’s a screenshot of what it should look like:
 
-![Map Screenshot](/blog/images/2013/08/google-maps.png)
+![Map Screenshot](/blog/images/2013/08/google-maps-updated.jpg)
 
 This script is a combination of code I found on [Colin Wiseman’s website](http://you.arenot.me/2010/06/29/google-maps-api-v3-0-multiple-markers-multiple-infowindows/) and [Stack Overflow](http://stackoverflow.com/a/3059129/648844) with a bit of my own to handle the different marker colors.
+
+**Update 2/17/2015:** I removed the code that added separate shadow images behind the markers. As of [version 3.14 of the Google Maps API](https://developers.google.com/maps/documentation/javascript/markers#complex_icons), these shadows were being ignored. If you want shadows, you’ll need to use marker images with the shadows already in them.
