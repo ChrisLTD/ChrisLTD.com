@@ -10,15 +10,14 @@ Here’s the script I pulled together to make it happen:
 <!DOCTYPE html>
 <html> 
 <head> 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
   <title>Google Maps Multiple Markers</title> 
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
 </head> 
 <body>
   <div id="map" style="width: 500px; height: 400px;"></div>
-
-  <script type="text/javascript">
+  
+  <script>
     // Define your locations: HTML content for the info window, latitude, longitude
     var locations = [
       ['<h4>Bondi Beach</h4>', -33.890542, 151.274856],
@@ -90,9 +89,9 @@ Here’s the script I pulled together to make it happen:
       //  Create a new viewpoint bound
       var bounds = new google.maps.LatLngBounds();
       //  Go through each...
-      $.each(markers, function (index, marker) {
-        bounds.extend(marker.position);
-      });
+      for (var i = 0; i < markers.length; i++) {  
+				bounds.extend(markers[i].position);
+      }
       //  Fit these bounds to the map
       map.fitBounds(bounds);
     }
@@ -108,4 +107,4 @@ Here’s a screenshot of what it should look like:
 
 This script is a combination of code I found on [Colin Wiseman’s website](http://you.arenot.me/2010/06/29/google-maps-api-v3-0-multiple-markers-multiple-infowindows/) and [Stack Overflow](http://stackoverflow.com/a/3059129/648844) with a bit of my own to handle the different marker colors.
 
-**Update 2/17/2015:** I removed the code that added separate shadow images behind the markers. As of [version 3.14 of the Google Maps API](https://developers.google.com/maps/documentation/javascript/markers#complex_icons), these shadows were being ignored. If you want shadows, you’ll need to use marker images with the shadows already in them.
+**Update 2/17/2015:** I removed the code that added separate shadow images behind the markers. As of [version 3.14 of the Google Maps API](https://developers.google.com/maps/documentation/javascript/markers#complex_icons), these shadows were being ignored. If you want shadows, you’ll need to use marker images with the shadows already in them. I also took this opportunity to clean up the code a bit, and remove the dependency on jQuery.
