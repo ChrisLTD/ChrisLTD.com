@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Beware of outside JavaScript
+title: Beware of outside Javascript
 ---
-Be choosy about what third-party JavaScript you include on your site, because each is a potential security risk. The wrong script might even turn your visitors into [unwilling attack bots](http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub):
+Be choosy about what third-party Javascript you include on your site, because each is a potential security risk. The wrong script might even turn your visitors into [unwilling attack bots](http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub):
 
 > China is using their active and passive network infrastructure in order to perform a man-on-the-side attack against GitHub. (...)
 > 
