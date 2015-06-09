@@ -95,6 +95,7 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 .blog {
 	article { padding-bottom: 1.5em;
 		img { @include padded_border; }
+		li { margin-bottom: .5em; } 
 	}
 	article + article { border-top: 3px solid rgba($orange, .2); padding-top: 1em;  }
 	[rel="footnote"], [rev="footnote"] { text-decoration: none; margin: 0 2px;
