@@ -37,6 +37,6 @@ With that JavaScript in place I could write CSS code like this:
 }
 {% endhighlight %}
 
-[^font]: Windows was garbling a custom web font that Mac OS X, iOS, and Linux had no trouble displaying. 
+[^font]: Windows was garbling a custom web font that Mac OS X, iOS, and Linux had no trouble displaying. It didn’t matter what browser you were using.
 
 [^abovecss]: If the JavaScript was loaded after the CSS, visitors might see odd styling flashes when the `windows` or `not-windows` class is added.
