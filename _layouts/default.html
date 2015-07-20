@@ -91,7 +91,7 @@
   </div> <!-- /#wrapper -->
 
   <script src="/js/jquery-1.9.1.min.js"></script>
-  <script src="/js/script-ck.js?v={{ site.assets_version }}"></script>
+  <script src="/js/script.min.js?v={{ site.assets_version }}"></script>
   <!-- You can find the unminified javascript at js/script.js -->
 
   {% if page.class == 'home' %}
@@ -101,12 +101,12 @@
 
 	{% if page.class == 'blog' %}
   <script src="/js/jquery.fitvids.min.js?v={{ site.assets_version }}"></script>
-	<script src="/js/blog-ck.js?v={{ site.assets_version }}"></script>
+	<script src="/js/blog.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
 
 	{% if page.class == 'portfolio' %}
-  <script src="/js/jquery.yosimplefilter-ck.js?v={{ site.assets_version }}"></script>
-	<script src="/js/portfolio-ck.js?v={{ site.assets_version }}"></script>
+  <script src="/js/jquery.yosimplefilter.min.js?v={{ site.assets_version }}"></script>
+	<script src="/js/portfolio.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
 
   {% if site.show_drafts %}

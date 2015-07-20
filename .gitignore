@@ -3,6 +3,7 @@ resources/*
 .sass-cache*
 css/
 *-ck.js
+*.min.js
 _site/*
 *.zip
 fonts/*
