@@ -9,7 +9,7 @@ While I’m not about to throwaway my refrigerator or start buying disposable cl
 
 >  I ditched my homebuilt desktop for a cheap, low power Intel NUC. [...] I power the NUC directly from the battery since it runs on 12V and draws less than 1A of current even with the monitors. That’s 72Wh if I use it for 6 hours straight, which my [solar] panel produces in less than an hour in direct sunlight, an abundant resource in Los Angeles.
 
-I’m not quite sure if my apartment gets enough sunlight, but I want to see if I can use a solar cell to charge my iPhone and iPad. It won’t make a huge difference in my energy usage, but it’ll be an interesting experiment, and might end up helping the planet just a little.
+I’m not quite sure if my apartment gets enough sunlight, but I want to see if I can use a solar cell to charge my iPhone and iPad. It won’t make a huge difference in my energy usage [^microscopic], but it’ll be an interesting experiment, and might end up helping the planet just a tiny little bit.
 
 [This is the solar charger](http://www.amazon.com/dp/B00E3OL5U8/?tag=chrisltd-20
 ) [^affiliate] I’m planning on buying:
@@ -18,5 +18,7 @@ I’m not quite sure if my apartment gets enough sunlight, but I want to see if 
 "><img src="/blog/images/2015/08/anker-panel.png"></a>
 
 I’ll let you know how it works out.
+
+[^microscopic]: [Here’s an estimate](http://blog.opower.com/2014/09/iphone-6-charging-47-cents/) saying it costs less than a dollar to charge an iPhone per year.
 
 [^affiliate]: Affiliate link.
