@@ -2,7 +2,7 @@
 layout: post
 title: Site overhaul
 ---
-After a considerable amount of work, I’ve updated this site’s design and added standalone pages for my [portfolio](/portfolio.html), [projects](/projects.html), and [bio](/about.html)[^ps]. 
+After a considerable amount of work, I’ve updated this site’s design and added standalone pages for my [portfolio](/portfolio), [projects](/projects), and [bio](/about)[^ps]. 
 
 This is what the site looked like before:
 
@@ -32,8 +32,8 @@ Since Google announced they are [shutting down Google Reader](http://googlereade
 
 ## More information than you require
 
-For more about the tools I used when designing and developing this site, check out the [colophon section of the About page](/about.html#colophon).
+For more about the tools I used when designing and developing this site, check out the [colophon section of the About page](/about#colophon).
 
-[^ps]: I hope you don’t come across this on your own, but you should checkout my new [custom 404 page](/404.html).
+[^ps]: I hope you don’t come across this on your own, but you should checkout my new [custom 404 page](/404).
 
 [^test]: It’s still valuable to test your site in a text browser, or alternatively in a regular browser with the stylesheets and scripts turned off. This is how search engines and screen readers see your site. 
