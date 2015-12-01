@@ -7,7 +7,7 @@ A lot can change in a [year](/blog/2013/10/favorite-podcasts/), but I’m still 
 <table>
   <tr>
     <td class="aligntop padright padbottom"><img src="/blog/images/2014/12/atp.jpeg"></td>
-    <td class="aligntop padbottom"><strong><a href="http://atp.fm/">Accidental Tech Podcast</a></strong>. Programmers Marco Arment, Casey Liss, and John Siracusa discuss the latest technology news with a focus on Apple. Always thoughtful and funny. When I can, I try to catch the <a href="http://atp.fm/live">live broadcast</a> on on Wednesday nights.</td>
+    <td class="aligntop padbottom"><strong><a href="http://atp.fm/">Accidental Tech Podcast</a></strong>. Programmers Marco Arment, Casey Liss, and John Siracusa discuss the latest technology news with a focus on Apple. Always thoughtful and funny. When I can, I try to catch the <a href="http://atp.fm/live">live broadcast</a> on Wednesday nights.</td>
   </tr>
   <tr>
     <td class="aligntop padright padbottom"><img src="/blog/images/2014/12/political-gabfest.jpeg"></td>
