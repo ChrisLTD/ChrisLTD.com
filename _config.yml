@@ -1,7 +1,7 @@
 # Documentation: https://github.com/mojombo/jekyll/wiki/configuration
 
 url: http://chrisltd.com
-permalink: /blog/:year/:month/:title
+permalink: /blog/:year/:month/:title/
 
 source: .
 destination: ./_site
