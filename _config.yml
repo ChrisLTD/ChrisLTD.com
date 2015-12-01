@@ -5,7 +5,7 @@ permalink: /blog/:year/:month/:title
 
 source: .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir:     ./_plugins
 
 future: false # publish posts dated into the future
 exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md]
