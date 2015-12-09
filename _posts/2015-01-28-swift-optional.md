@@ -31,9 +31,9 @@ The safest way to access your optional value is with [optional binding](https://
 
 {% highlight swift %}
 if let unwrappedOptional = myOptional {
-    println("\(unwrappedOptional)")
+    print("\(unwrappedOptional)")
 } else {
-    println("optional was nil")
+    print("optional was nil")
 }
 {% endhighlight %}
 
@@ -43,7 +43,7 @@ If you’re absolutely sure the value should be there, you can force unwrap the 
 
 {% highlight swift %}
 var myOptionalLowerCase = myOptional!.lowercaseString
-println("\(myOptionalLowerCase)")
+print("\(myOptionalLowerCase)")
 {% endhighlight %}
 
 If the value is actually nil, your program will crash.
@@ -54,7 +54,7 @@ You can use [optional chaining](https://developer.apple.com/library/mac/document
 
 {% highlight swift %}
 myOptional = nil
-println("\(myOptional?.lowercaseString)") // prints nil
+print("\(myOptional?.lowercaseString)") // prints nil
 {% endhighlight %}
 
 ## More resources
