@@ -37,7 +37,7 @@
 
 </head>
 
-<body class="{{ page.class }} {{ post.class }}">
+<body class="{{ page.class }} {% if page.layout == 'post' %}blog{% endif %}">
 
   <div id="accessibility" class="hide">
     <a href="#main">Skip to content</a>
