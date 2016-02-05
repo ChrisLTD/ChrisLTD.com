@@ -13,12 +13,14 @@
 \____/_/ /_/_/  /_/____/_____/_/ /_____/
 -->
 
-  <title>{% if page.title %} {{ page.title }} | {% endif %}Chris Johnson - Developer & Designer</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Chris Johnson - Developer & Designer</title>
 
 	{% if page.class == 'home' %}
 	<meta name="description" content="Chris Johnson is a developer & designer. This is his portfolio and blog.">
+	{% elsif page.content %}
+	<meta name="description" content="{{ page.content | strip_html | truncatewords: 40, '' }}">
 	{% endif %}
-  <meta name="keywords" content="chris johnson, chrisltd">
+	
   <meta name="author" content="Chris Johnson">
 
   <meta name="viewport" content="width=device-width">
@@ -99,7 +101,7 @@
   <script src="/js/jquery.cycle2.swipe.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
 
-	{% if page.class == 'blog' %}
+	{% if page.class == 'blog' or page.layout == 'post' %}
   <script src="/js/jquery.fitvids.min.js?v={{ site.assets_version }}"></script>
 	<script src="/js/blog.min.js?v={{ site.assets_version }}"></script>
   {% endif %}
