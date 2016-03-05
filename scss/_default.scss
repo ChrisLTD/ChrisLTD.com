@@ -274,7 +274,6 @@ form.wufoo {
 	}
 }
 
-
 .centered_blocks { @include centered_list;
 	li { margin: $gutter; }
 	a { width: 200px; height: 400px; display: block; }
@@ -318,6 +317,8 @@ form.wufoo {
 .blog [role="main"] .container { max-width: 700px; }
 
 .blog_navigation { margin-bottom: 1.5em; }
+
+.adwrapper { margin: 2em 0; } 
 
 .portfolio {
 	.filters { margin-bottom: 1.5em;

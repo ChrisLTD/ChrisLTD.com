@@ -14,7 +14,7 @@ class: blog
 
 </article>
 
-{% if page.comments  %}
+{% if page.comments %}
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'chrisltd';
@@ -29,3 +29,18 @@ class: blog
 <div class="blog_navigation">
 	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
 </div>
+
+{% if page.ads %}	
+	<div class="adwrapper">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- ChrisLTD.com blog ad -->
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-9614415583295468"
+				 data-ad-slot="8601654197"
+				 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+{% endif %}

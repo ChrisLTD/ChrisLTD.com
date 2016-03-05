@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Generating a Google Map with multiple markers and info windows
+ads: true
 ---
 I recently needed to generate a Google Map with multiple markers and popup info windows. Easy, right? The twist was that I also wanted the marker pins to be different colors and I needed the map to auto center.
 
