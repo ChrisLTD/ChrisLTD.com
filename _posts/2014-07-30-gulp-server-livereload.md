@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Gulp: Running a local server with Tiny LiveReload'
+ads: true
 ---
 This is my [Gulp](http://gulpjs.com)[^whygulp] recipe for compiling [SASS](http://sass-lang.com) into CSS, loading a local web server, and refreshing the browser when the SASS files are changed and recompiled. To follow along, you’ll need at least an introductory understanding of Gulp. If you need a basic primer, check out the [official documentation](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) or [this excellent blog post from Mark Goodyear](http://markgoodyear.com/2014/01/getting-started-with-gulp/).
 

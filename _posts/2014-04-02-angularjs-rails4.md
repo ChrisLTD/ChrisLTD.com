@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using AngularJS with Rails 4
+ads: true
 ---
 Using [AngularJS](http://angularjs.org/) with Rails 4 should be pretty easy. Include the AngularJS library in your asset pipeline and start coding away. Unfortunately, it’s not quite that simple. You may have trouble...
 

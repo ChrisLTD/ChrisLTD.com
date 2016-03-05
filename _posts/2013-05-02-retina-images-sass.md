@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Retina images with SASS
+ads: true
 ---
 The introduction of [retina](https://en.wikipedia.org/wiki/Retina_Display) displays has added a wrinkle to the process of designing and developing websites. Unless we want our images to look blurry on the latest devices, we have to produce and deliver high resolution images[^avoid]. 
 
