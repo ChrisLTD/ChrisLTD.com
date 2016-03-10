@@ -33,7 +33,7 @@ High quality guidance for using specific frameworks or techniques you might want
 
 **[Sketch](http://www.sketchapp.com)**
 
-Unless you’re working with a designer, you’ll need to create graphics for your app. I used Sketch. I’m more familiar with Adobe suite of tools, but Sketch got the job done and it’s a lot cheaper if you’re just dabbling.
+Unless you’re working with a designer, you’ll need to create graphics for your app. I used Sketch. I’m more familiar with Adobe’s suite of tools, but Sketch got the job done, and it’s a lot cheaper if you’re just dabbling.
 
 **[Script to generate app icons in different sizes](https://github.com/smallmuou/ios-icon-generator)**
 
