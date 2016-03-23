@@ -30,9 +30,9 @@ class: blog
 	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
 </div>
 
-{% capture now-year %}{{'now' | date: '%Y'}}{% endcapture %}
-{% capture post-year %}{{page.date | date: '%Y'}}{% endcapture %}
-{% if page.ads or post-year < now-year %}	
+{% capture now-year %}{{ 'now' | date: '%Y' }}{% endcapture %}
+{% capture page-year %}{{ page.date | date: '%Y' }}{% endcapture %}
+{% if page.ads or page-year < now-year %}	
 	<div class="ad-wrapper">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- ChrisLTD.com blog post ad -->
