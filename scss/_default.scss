@@ -318,7 +318,7 @@ form.wufoo {
 
 .blog_navigation { margin-bottom: 1.5em; }
 
-.ad-wrapper { margin: 2em auto; width: 300px;
+.ad-wrapper { margin: 2em auto; width: 300px; max-width: 100%; overflow: hidden;
 	@include respond-to("tablet") { width: 540px; }
 	@include respond-to("tablet-large") { width: 700px; }
 } 
