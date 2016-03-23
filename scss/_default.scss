@@ -318,7 +318,10 @@ form.wufoo {
 
 .blog_navigation { margin-bottom: 1.5em; }
 
-.adwrapper { margin: 2em 0; } 
+.ad-wrapper { margin: 2em auto; width: 300px;
+	@include respond-to("tablet") { width: 540px; }
+	@include respond-to("tablet-large") { width: 700px; }
+} 
 
 .portfolio {
 	.filters { margin-bottom: 1.5em;
