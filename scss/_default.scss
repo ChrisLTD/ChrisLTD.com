@@ -95,7 +95,7 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 .blog {
 	article { padding-bottom: 1.5em;
 		img { @include padded_border; }
-		li { margin-bottom: .5em; } 
+		li { margin-bottom: .5em; }
 	}
 	article + article { border-top: 3px solid rgba($orange, .2); padding-top: 1em;  }
 	[rel="footnote"], [rev="footnote"] { text-decoration: none; margin: 0 2px;
@@ -227,8 +227,9 @@ form.wufoo {
       @include respond-to("tablet"){ padding: 10px 15px; margin-top: 0; }
       @include respond-to("desktop"){ padding: 30px 20px; }
     }
-    li + li { margin-left: 4px;
-			@include respond-to("tablet"){ margin-left: 0; }
+    li { margin-left: 2px; margin-right: 2px;
+      @include respond-to("phablet"){ margin-left: 12px; margin-right: 12px; }
+			@include respond-to("tablet"){ margin-left: 0; margin-right: 0; }
     }
   }
   .lt-ie8 & li { float: left; }
@@ -245,8 +246,10 @@ form.wufoo {
   span + span { margin-left: 8px; padding-left: 8px; }
 }
 
-.footer_nav { @include prefixer(column-count, 2);
+.footer_nav {
 	ul { @include vertical_list; }
+  ul li { width: 48%; float: left; margin-right: 4%; }
+  ul li:nth-child(even) { margin-right: 0; }
 	a { display: block; padding: 5px 0; }
 }
 
@@ -318,7 +321,7 @@ form.wufoo {
 
 .blog_navigation { margin-bottom: 1.5em; }
 
-.ad-wrapper { margin: 2em auto; } 
+.ad-wrapper { margin: 2em auto; }
 
 .portfolio {
 	.filters { margin-bottom: 1.5em;
@@ -335,7 +338,7 @@ form.wufoo {
 	.social_icons { text-align: center;
 		@include respond-to("tablet"){ text-align: left; }
 	}
-	.footer_nav { margin-bottom: 20px;
+	.footer_nav { @include clearfix; margin-bottom: 20px;
 		@include respond-to("tablet"){ display: none; }
 	}
 	.lt-ie8 & .social_icons { display: none; }
