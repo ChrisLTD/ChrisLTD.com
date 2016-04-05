@@ -7,7 +7,7 @@ Ever since I first saw [Goldfinger](http://amzn.to/25Dwq58), I've wanted the Rol
 
 ![Rolex NATO watch in Goldfinger](/blog/images/2016/04/goldfinger-rolex-nato-watch.jpg)
 
-However, I've never wanted it enough to drop $8,000 to buy a real [Rolex Submariner](http://amzn.to/1W1Q2M8). So instead, I built my own for less than $150 with an [Invicta Pro Diver watch](http://amzn.to/1N3PEW1), a [NATO strap](http://amzn.to/1RFcFk7), and a solid [spring bar tool](http://amzn.to/1N3PSN8). A spring bar tool is necessary if you’re going to swap watch bands.
+However, I've never wanted it enough to drop $8,000 to buy a real [Rolex Submariner](http://amzn.to/1W1Q2M8). So instead, I built my own for less than $150 with an [Invicta Pro Diver watch](http://amzn.to/1N3PEW1), a [Shark Straps NATO strap](http://amzn.to/1RFcFk7), and a solid [spring bar tool](http://amzn.to/1N3PSN8). A spring bar tool is necessary if you’re going to swap watch bands.
 
 If you want to attempt assembling your own, here’s a good video showing the process of changing the straps:
 
