@@ -319,9 +319,9 @@ form.wufoo {
 
 .blog [role="main"] .container { max-width: 700px; }
 
-.blog_navigation { margin-bottom: 1.5em; }
-
-.ad-wrapper { margin: 2em auto; }
+.blog_navigation { margin-bottom: .75em; 
+	.button { margin-right: .5em; margin-bottom: .75em; }
+}
 
 .portfolio {
 	.filters { margin-bottom: 1.5em;

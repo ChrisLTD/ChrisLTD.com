@@ -28,20 +28,5 @@ class: blog
 
 <div class="blog_navigation">
 	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
+	<a href="https://itunes.apple.com/us/app/long-day-day-planner/id1062689795?ls=1&mt=8&at=11l5Li" class="button">Download my app Long Day <i class="ss-icon ss-standard">📱</i></a>
 </div>
-
-{% capture now-year %}{{ 'now' | date: '%Y' }}{% endcapture %}
-{% capture page-year %}{{ page.date | date: '%Y' }}{% endcapture %}
-{% if page.ads or page-year < now-year %}	
-	<div class="ad-wrapper">
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- ChrisLTD.com fixed post ad -->
-		<ins class="adsbygoogle"
-				 style="display:inline-block;width:300px;height:250px"
-				 data-ad-client="ca-pub-9614415583295468"
-				 data-ad-slot="7811834599"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	</div>
-{% endif %}
