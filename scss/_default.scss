@@ -323,6 +323,10 @@ form.wufoo {
 	.button { margin-right: .5em; margin-bottom: .75em; }
 }
 
+.ad-wrapper { display: none; 
+	@include respond-to("tablet") { display: block; margin: 2em auto; }
+}
+
 .portfolio {
 	.filters { margin-bottom: 1.5em;
 		@include respond-to("tablet") { margin-top: -50px; float: right; }
