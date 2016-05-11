@@ -31,21 +31,25 @@ class: blog
 	<a href="https://itunes.apple.com/us/app/long-day-day-planner/id1062689795?ls=1&mt=8&at=11l5Li" class="button">Download my app Long Day <i class="ss-icon ss-standard">📱</i></a>
 </div>
 
-{% capture now-year %}{{ 'now' | date: '%Y' }}{% endcapture %}
-{% capture page-year %}{{ page.date | date: '%Y' }}{% endcapture %}
-{% if page.ads or page-year < now-year %}	
-	<div class="ad-wrapper">
+{% comment %}
+
+	{% capture now-year %}{{ 'now' | date: '%Y' }}{% endcapture %}
+	{% capture page-year %}{{ page.date | date: '%Y' }}{% endcapture %}
+	{% if page.ads or page-year < now-year %}	
+		<div class="ad-wrapper">
 	
-		<script type="text/javascript">
-			( function() {
-				if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-				var unit = {"calltype":"async[2]","publisher":"yoeyo","width":300,"height":250,"sid":"ChrisLTD.com Blog","color_site_link":"1C6588","color_bg":"fbf8f3","color_button":"ffffff","color_button_text":"1C6588"};
-				var placement_id = window.CHITIKA.units.length;
-				window.CHITIKA.units.push(unit);
-				document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-		}());
-		</script>
-		<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+			<script type="text/javascript">
+				( function() {
+					if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+					var unit = {"calltype":"async[2]","publisher":"yoeyo","width":300,"height":250,"sid":"ChrisLTD.com Blog","color_site_link":"1C6588","color_bg":"fbf8f3","color_button":"ffffff","color_button_text":"1C6588"};
+					var placement_id = window.CHITIKA.units.length;
+					window.CHITIKA.units.push(unit);
+					document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+			}());
+			</script>
+			<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
 		
-	</div>
-{% endif %}
+		</div>
+	{% endif %}
+
+{% endcomment %}
