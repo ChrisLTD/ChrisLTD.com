@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Office 2011 for Mac Updates
+title: Office 2011 for Mac updates
 ---
 
 Every couple of weeks I have to open a Microsoft Word or Excel file and invariably I’m greeted with an update like this:
