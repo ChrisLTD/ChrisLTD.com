@@ -11,6 +11,8 @@ Gary Hustwit, the director behind the excellent documentaries *Helvetica*, *Obje
 
 I’ve already backed the project, and [you can too](https://www.kickstarter.com/projects/1019019367/rams-the-first-feature-documentary-about-dieter-ra) for $15.
 
+*Update:* If you’d like to see some of Dieter Rams work in person, check out [this page on Artsy](https://www.artsy.net/artist/dieter-rams).
+
 <div class="footnotes">
   <p>Photo by <a href="https://www.flickr.com/photos/kowitz/6167491525/">Braden Kowitz</a>.</p>
 </div>
