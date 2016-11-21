@@ -9,4 +9,4 @@ Coincidentally, today in the NY Times, [Cal Newport had a piece](http://www.nyti
 
 > Social media use is decidedly not rare or valuable. Any 16-year-old with a smartphone can invent a hashtag or repost a viral article. The idea that if you engage in enough of this low-value activity, it will somehow add up to something of high value in your career is the same dubious alchemy that forms the core of most snake oil and flimflam in business.
 
-The [entire piece](http://www.nytimes.com/2016/11/20/jobs/quit-social-media-your-career-may-depend-on-it.html) is a good taste of the type of the themes Newport touches on in “[Deep Work](http://amzn.to/2gc5u8v)”.
+The [entire piece](http://www.nytimes.com/2016/11/20/jobs/quit-social-media-your-career-may-depend-on-it.html) is a good taste of the themes Newport explores in “[Deep Work](http://amzn.to/2gc5u8v)”.
