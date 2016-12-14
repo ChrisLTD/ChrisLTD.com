@@ -20,7 +20,7 @@ My favorite podcasts of 2016, in no particular order:
   </tr>
   <tr>
     <td class="aligntop padright padbottom"><img src="/blog/images/2016/12/ezra-klein-show.jpg"></td>
-    <td class="aligntop padbottom"><strong><a href="http://www.vox.com/ezra-klein-show-podcast">The Ezra Klein Show</a></strong>. Ezra Klein, from the Weeds, interviews leaders in varied fields. I recommend his episodes on Malcom Gladwell, Joseph Stiglitz, Francis Fukuyama, and Bill Gates.</td>
+    <td class="aligntop padbottom"><strong><a href="http://www.vox.com/ezra-klein-show-podcast">The Ezra Klein Show</a></strong>. Ezra Klein, from the Weeds, interviews leaders in various fields. I heartily recommend his episodes on Malcom Gladwell, Joseph Stiglitz, Francis Fukuyama, and Bill Gates.</td>
   </tr>
   <tr>
     <td class="aligntop padright padbottom"><img src="/blog/images/2014/12/sound-opinions.jpeg"></td>
