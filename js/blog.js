@@ -8,8 +8,6 @@ $(function(){
 		$(this).appendTo(appendTarget);
 	}).fadeIn(200);
 	
-	$.bigfoot({
-		actionOriginalFN: "none"
-	});
+	$.bigfoot();
 
 });
