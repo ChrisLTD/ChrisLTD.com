@@ -11,7 +11,7 @@ echo '<?xml version="1.0" encoding="utf-8"?'.">\r";
 		<description></description>		
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/blog/feed" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:6 %}
+		{% for post in site.posts limit:7 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				<description>{{ post.content | remove_footnote_link | relative_urls_to_absolute | xml_escape }}</description>
