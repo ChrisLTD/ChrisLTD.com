@@ -16,9 +16,9 @@ This is my [Gulp](http://gulpjs.com)[^whygulp] recipe for compiling [SASS](http:
 
 Assuming you have [Node](http://nodejs.org) and Gulp installed, navigate to your project folder in the terminal and run this command to install the plugins[^savedev]:
 
-{% highlight text %}
+```
 npm install gulp-webserver gulp-sass gulp-sass gulp-plumber opn
-{% endhighlight %}
+```
 
 ## Create your project files
 
@@ -30,7 +30,7 @@ Go ahead and put some actual SCSS into `styles.scss` and HTML into `index.html`.
 
 ## The gulpfile.js
 
-{% highlight js %}
+```js
 var gulp      = require('gulp');
 var plumber   = require('gulp-plumber');
 var sass      = require('gulp-sass');
@@ -78,7 +78,7 @@ gulp.task('watch', function(){
 gulp.task('build', ['sass']);
 
 gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
-{% endhighlight %}
+```
 
 # Running gulp
 

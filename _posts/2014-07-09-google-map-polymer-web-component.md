@@ -6,7 +6,7 @@ Google has been doing incredible work to advance the [proposed web component sta
 
 Of [special interest to me](/blog/2013/08/google-map-random-color-pins/) is the [Polymer Google Map component](http://polymerlabs.github.io/google-map/components/google-map/#google-map). Normally, adding custom map widgets to your page is an annoying mix of CSS, Javascript and HTML. Here is a an [example from the Google Maps documentation](https://developers.google.com/maps/documentation/javascript/tutorial#HelloWorld) of how you have to initialize a Google Map today[^mod]:
 
-{% highlight html %}
+```html
 <style>
   #map-canvas { height: 100% }
 </style>
@@ -22,16 +22,16 @@ Of [special interest to me](/blog/2013/08/google-map-random-color-pins/) is the 
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div id="map-canvas"></div>
-{% endhighlight %}
+```
 
 If you’re using Polymer’s Google Map component, the code gets a lot simpler[^pins]:
 
-{% highlight html %}
+```html
 <style>
   google-map { display: block; height: 100%; }
 </style>
 <google-map latitude="37.77493" longitude="-122.41942" zoom="8"></google-map>
-{% endhighlight %}
+```
 
 See a [demo of the above code](http://polymerlabs.github.io/google-map/components/google-map/demo.html).
 

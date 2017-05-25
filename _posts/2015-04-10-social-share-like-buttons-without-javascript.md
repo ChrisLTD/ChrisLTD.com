@@ -15,33 +15,33 @@ In each of the following examples, you’ll need to replace the *YOUR-_____* in 
 
 ## Twitter
 
-{% highlight html %}
+```html
 <a href="https://twitter.com/intent/tweet?url=YOUR-URL&text=YOUR-TITLE&via=YOUR-TWITTERHANDLE">Twitter</a>
-{% endhighlight %}
+```
 
 ## Facebook
 
-{% highlight html %}
+```html
 <a href="https://facebook.com/sharer.php?u=YOUR-URL">Facebook</a>
-{% endhighlight %}
+```
 
 ## LinkedIn
 
-{% highlight html %}
+```html
 <a href="http://www.linkedin.com/shareArticle?mini=true&url=YOUR-URL&title=YOUR-TITLE&summary=YOUR-SUMMARY">LinkedIn</a>
-{% endhighlight %}
+```
 
 ## Pinterest
 
-{% highlight html %}
+```html
 <a href="http://pinterest.com/pin/create/button/?url=YOUR-URL&media=YOUR-IMAGE-URL&description=YOUR-DESCRIPTION">Pinterest</a>
-{% endhighlight %}
+```
 
 ## Google+
 
-{% highlight html %}
+```html
 <a href="https://plus.google.com/share?url=YOUR-URL">Google+</a>
-{% endhighlight %}
+```
 
 I compiled this list with the help of a couple  [StackOverflow](http://stackoverflow.com/a/11212220/648844) [answers](http://stackoverflow.com/a/10737122/648844) and [Scott Hanselman’s post](http://www.hanselman.com/blog/AddSocialSharingLinksToYourBlogWithoutWidgetJavaScript.aspx) on the same subject.
  

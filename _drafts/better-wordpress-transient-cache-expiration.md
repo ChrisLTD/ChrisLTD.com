@@ -8,7 +8,7 @@ The Wordpress [transient API](http://codex.wordpress.org/Transients_API) gives u
 
 This is how the [Wordpress documentation](http://codex.wordpress.org/Transients_API#Complete_Example) suggests you use the transient API:
 
-{% highlight php %}
+```php
 <?php
 // Get any existing copy of our transient data
 if ( false === ( $special_query_results = get_transient( 'special_query_results' ) ) ) {
@@ -18,7 +18,7 @@ if ( false === ( $special_query_results = get_transient( 'special_query_results'
 }
 
 // Use the data like you would have normally...
-{% endhighlight %}
+```
 
 The problem with this approach is that one unlucky user is going to arrive when the cache has expired, and then have to wait for the data to be regenerated.
 
@@ -26,7 +26,7 @@ The problem with this approach is that one unlucky user is going to arrive when 
 
 My colleague [William Garcia](https://twitter.com/williameliel) came up with the idea of deferring the regeneration of the cache until after the user has been sent the page. We can do this by using both a Wordpress hook called  [shutdown](http://codex.wordpress.org/Plugin_API/Action_Reference/shutdown) and a second cache that doesn’t expire[^doesnt]:
 
-{% highlight php %}
+```php
 <?php
 // Function to regenerate the data and save the transients
 // we need this wrapped in a function so we can use it in a hook later
@@ -49,7 +49,7 @@ if( false === ( $special_query_results = get_transient( 'special_query_results' 
   }
 }
 // Use the data like you would have normally...
-{% endhighlight %}
+```
 
 With this approach, none of our users will have to wait for the data to be regenerated. The only downside is that the first user to arrive after the cache has expired will be served stale content.
 

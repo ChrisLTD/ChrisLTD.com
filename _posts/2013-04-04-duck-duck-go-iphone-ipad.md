@@ -15,7 +15,7 @@ This is how you can do it on a [DD-WRT](http://www.dd-wrt.com/) router:
 
 1. Go to the *Services* page in the router admin:<br>
    ![Services Page](/blog/images/2013/04/ddg-router1.png)
-2. Enter this redirect in the *Additional DNSMasq Options* field: {% highlight text %}address=/search.yahoo.com/184.72.115.86{% endhighlight %}
+2. Enter this redirect in the *Additional DNSMasq Options* field: ```address=/search.yahoo.com/184.72.115.86```
    ![Services Page](/blog/images/2013/04/ddg-router2.png)
 3. Apply the new settings.
 4. On your iOS device[^desktop], set your default search engine to Yahoo. Go into the Settings app, and scroll down to Safari. The setting will be in there:<br>

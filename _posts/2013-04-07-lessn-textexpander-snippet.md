@@ -7,7 +7,7 @@ This weekend I setup chris.lt as a personal link shortening service using Shaun 
 
 This is the AppleScript for the snippet:
 
-{% highlight applescript %}
+```applescript
 set api_key to "xxxxxxxxx"
 set domain to "yourdomain.net"
  
@@ -20,7 +20,7 @@ else
   set shortURL to (do shell script shellScript)
   return shortURL
 end if 
-{% endhighlight %}
+```
 
 If you have any bug fixes or changes, fork [this gist](https://gist.github.com/ChrisLTD/5332850).
 

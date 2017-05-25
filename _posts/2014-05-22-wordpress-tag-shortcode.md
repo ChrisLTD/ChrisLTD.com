@@ -8,7 +8,7 @@ In some circumstances you may need to use HTML tags in the [Wordpress](http://wo
 
 However, you may have users that aren’t comfortable editing raw HTML, or they may get lost without the styling cues of the *Visual* editor. In those cases you can add this [shortcode](http://codex.wordpress.org/Shortcode) to the `functions.php` file in your theme:
 
-{% highlight php %}
+```php
 <?php
 /*
 * Tag Shortcode
@@ -24,7 +24,7 @@ function tag_shortcode( $atts, $content = null ) {
   return '<' . esc_attr($type) . ' id="' . esc_attr($id) . '" class="' . esc_attr($class) . '" style="' . esc_attr($style) . '">' . do_shortcode($content) . '</' . esc_attr($type) . '>';
 }
 add_shortcode( 'tag', 'tag_shortcode' );
-{% endhighlight %}
+```
 
 Now you can add HTML tags without leaving *Visual* mode using the `[tag]` shortcode. `[tag]` accepts four optional parameters. The parameter `type` lets you specify the tag, like `a`, `iframe`, or anything else you might need. If you don’t specify `type`, it defaults to `div`. You can use `id` and `class` to set the – you guessed it – id and classes applied to your tag. Lastly, you have `style` if you need to specify an inline style.
 

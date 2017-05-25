@@ -5,10 +5,10 @@ title: What is a Swift optional
 
 By default all [Swift](http://developer.apple.com/swift/) variables must contain a value of the specified type[^init], and can’t be [nil](http://nshipster.com/nil/).
 
-{% highlight swift %}
+```swift
 var bestCaptain:String = "Sisko" // this works
 bestCaptain = nil                // throws an error
-{% endhighlight %}
+```
 
 However, Swift has to work with a lot of Objective-C code and design patterns[^patterns] where variables can and are often set to nil. That’s where optionals come in. Optionals are protective wrappers around your variables. The wrapper itself tells you whether or not the variable within is set to nil, but that’s all it says. If the variable inside isn’t nil, and you want to access it, you have to *unwrap* the optional.
 
@@ -16,10 +16,10 @@ However, Swift has to work with a lot of Objective-C code and design patterns[^p
 
 Defining an optional is easy, just add a `?` to the end of your variable name.
 
-{% highlight swift %}
+```swift
 var myOptional:String? = "I'm an optional, short and stout"
 myOptional = nil // totally legal
-{% endhighlight %}
+```
 
 ## Accessing optionals
 
@@ -29,22 +29,22 @@ Accessing an optional is a bit trickier, and you have a few alternatives you can
 
 The safest way to access your optional value is with [optional binding](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID333). In optional binding, you assign the optional value to a constant if the optional value is not nil.
 
-{% highlight swift %}
+```swift
 if let unwrappedOptional = myOptional {
     print("\(unwrappedOptional)")
 } else {
     print("optional was nil")
 }
-{% endhighlight %}
+```
 
 ### Forced unwrapping!
 
 If you’re absolutely sure the value should be there, you can force unwrap the optional by appending a `!` to the variable.
 
-{% highlight swift %}
+```swift
 var myOptionalLowerCase = myOptional!.lowercaseString
 print("\(myOptionalLowerCase)")
-{% endhighlight %}
+```
 
 If the value is actually nil, your program will crash.
 
@@ -52,10 +52,10 @@ If the value is actually nil, your program will crash.
 
 You can use [optional chaining](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/OptionalChaining.html#//apple_ref/doc/uid/TP40014097-CH21-ID245) to access properties and methods of the underlying variable by using a `?`. If the variable is nil, those properties and methods are never accessed, and the statement returns nil.
 
-{% highlight swift %}
+```swift
 myOptional = nil
 print("\(myOptional?.lowercaseString)") // prints nil
-{% endhighlight %}
+```
 
 ## More resources
 

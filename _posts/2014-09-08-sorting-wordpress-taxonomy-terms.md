@@ -10,33 +10,33 @@ The first step is populating our term description fields with values we can use 
 
 In our theme we’ll need to pull in the array of terms with `get_terms`. Be sure to replace `my_custom_taxonomy` with your taxonomy name:
 
-{% highlight php %}
+```php
 <?php $terms = get_terms( 'my_custom_taxonomy' ); ?>
-{% endhighlight %}
+```
 
 Next, we need to define a comparison function[^comparison] that we’ll use with PHP’s [`usort`](http://php.net/manual/en/function.usort.php) to compare the numerical values of the description fields:
 
-{% highlight php %}
+```php
 <?php
 function description_compare( $a, $b ) {
   return $a->description - $b->description;
 }
 ?>
-{% endhighlight %}
+```
 
 Finally, we can sort our array using `usort` with our comparison function:
 
-{% highlight php %}
+```php
 <?php usort($resource_terms, "description_compare"); ?>
-{% endhighlight %}
+```
 
 Now, when you loop through the `$terms` array, it should be in the order you defined in your description fields. Here’s an example of how you could output the terms:
 
-{% highlight php %}
+```php
 <?php foreach( $terms as $term ): ?>
   <a href="<?php get_term_link( $term ) ?>"><?php echo $term->name ?></a>
 <?php endforeach; ?>
-{% endhighlight %}
+```
 
 [^terms]: A taxonomy term is the generic name for category or tag. Categories and tags are examples of taxonomies.
 

@@ -8,7 +8,7 @@ The JavaScript is simple, all it has to do is check the handy `navigator.platfor
 
 Here’s the working script I added to my HTML document `<head>` above my CSS styles [^abovecss]:
 
-{% highlight html %}
+```html
 <script>
 // add html class if we're on windows
 var htmlEl = document.getElementsByTagName("html")[0];
@@ -23,11 +23,11 @@ else {
   htmlEl.className += ' ' + className;
 }
 </script>
-{% endhighlight %}
+```
 
 With that JavaScript in place I could write CSS code like this:
 
-{% highlight css %}
+```css
 /* Use Comic Sans on Windows and Helvetica Neue everywhere else */
 .windows body {
   font-family: 'Comic Sans MS', sans-serif;
@@ -35,7 +35,7 @@ With that JavaScript in place I could write CSS code like this:
 .not-windows body {
   font-family: 'Helvetica Neue', Arial;
 }
-{% endhighlight %}
+```
 
 [^font]: Windows was garbling a custom web font that Mac OS X, iOS, and Linux had no trouble displaying. It didn’t matter what browser you were using.
 

@@ -17,10 +17,10 @@ This is how you can do it on a [DD-WRT](http://www.dd-wrt.com/) router in three 
   </li>
   <li>
     Enter these redirects in the <i>Additional DNSMasq Options</i> field:
-{% highlight text %}
+```
 address=/assets.onswipe.com/0.0.0.0
 address=/cdn.onswipe.com/0.0.0.0
-{% endhighlight %}
+```
     <img alt="Onswipe redirect" src="/blog/images/2013/12/onswipe-router.png">
   </li>
   <li>

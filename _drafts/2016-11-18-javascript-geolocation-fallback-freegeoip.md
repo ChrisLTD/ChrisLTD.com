@@ -15,7 +15,7 @@ Mention ES6
 
 Here’s the script I pulled together to make it happen:
 
-{% highlight js %}
+```js
 'use strict';
 
 const GEOLOCATION_TYPE = {
@@ -157,14 +157,14 @@ class Localizer {
 
 // Instantiate object
 var localizer = new Localizer();
-{% endhighlight %}
+```
 
 If you copy and paste that code into your browser’s console, you should see a result like this:
 
-{% highlight text %}
+```
 latitude: 38.9036 longitude: -77.4512
 You are currently 369241 meters from Yankee Stadium
-{% endhighlight %}
+```
 
 
 I've put this script on [Github as a Gist](https://gist.github.com/ChrisLTD/263f46a54b240fd9bafc93fbc6fa1f3f) if you’d like to fork it or contribute.

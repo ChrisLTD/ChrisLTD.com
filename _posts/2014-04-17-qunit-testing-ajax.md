@@ -9,7 +9,7 @@ Since we’re testing Ajax calls, the tests will need to be run on a local or re
 
 We will be calling `test-response.html` using Ajax from our `tests.html` file. We’ll need the `test-response.html` file filled with some sample content:
 
-{% highlight html %}
+```html
 <html>
 <head>
   <title>Test Page</title>
@@ -18,11 +18,11 @@ We will be calling `test-response.html` using Ajax from our `tests.html` file. W
 	<h1>My Test Page</h1>
 </body>
 </html>
-{% endhighlight %}
+```
 
 Our `tests.html` is where we will run the actual QUnit tests. It will need to load the jQuery and QUnit framework files as well as our `tests.js` file. This is the minimum required markup:
 
-{% highlight html %}
+```html
 <html>
 <head>
   <title>Test</title>
@@ -37,15 +37,15 @@ Our `tests.html` is where we will run the actual QUnit tests. It will need to lo
   <script src="tests.js"></script>  
 </body>
 </html>
-{% endhighlight %}
+```
 
 In `tests.js` let’s add a sample synchronous test just to make sure we’ve got everything setup correctly:
 
-{% highlight js %}
+```js
 test('Example test', function(){
 	equal(1, 1, 'One is one');
 })
-{% endhighlight %}
+```
 
 Now, visit `tests.html`, and if everything is working correctly you should see that your example test passed.
 
@@ -55,7 +55,7 @@ Now, visit `tests.html`, and if everything is working correctly you should see t
 
 Above your example test, add this `asyncTest` that will pull in `test-response.html` through [jQuery’s Ajax helper](https://api.jquery.com/jQuery.ajax/) and read the `<title>` tag of the page. If the title matches ‘Test Page’ we know it’s working properly:
 
-{% highlight js %}
+```js
 asyncTest('Ajax tests', function(){
 	expect(1); // we have one async test to run
 	
@@ -71,7 +71,7 @@ asyncTest('Ajax tests', function(){
 	});
 
 });
-{% endhighlight %}
+```
 
 Refresh `tests.html` and confirm that the test is passing[^fun].
 

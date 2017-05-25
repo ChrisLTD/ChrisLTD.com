@@ -4,7 +4,7 @@ title: Don’t deeply nest your SASS or LESS
 ---
 CSS preprocessors like [SASS](http://sass-lang.com/) and [LESS](http://lesscss.org/) are fantastic tools for helping you write CSS more efficiently. However, one bad thing they enable (and often encourage) is writing deeply nested rules like this:
 
-{% highlight scss %}
+```scss
 header { width: 90%;
   nav { background: #000;
     ul { list-style: none;
@@ -14,13 +14,13 @@ header { width: 90%;
     }
   }
 }
-{% endhighlight %}
+```
 
 I’ve written code just like what you see above, and I’ve come to regret it every time. Deeply nested code is tough to read and it tightly ties your CSS styles to the HTML markup of the page. Ultimately, that means your styles will be hard to maintain and nearly impossible to reuse across your site. For instance, if we move the nav element out of the header and into the footer, the nav will be completely unstyled until we change the CSS.
 
 This is how I would rewrite the above code:
 
-{% highlight scss %}
+```scss
 
 .header { width: 90%; }
 
@@ -31,7 +31,7 @@ This is how I would rewrite the above code:
     a { color: #fff; }
   } 
 }
-{% endhighlight %}
+```
 
 Instead of relying on tag selectors like `header` and `nav`[^tagselectors], I use classes that could be used anywhere on a page[^ids]. The `.nav` selector isn’t nested inside the `header` tag, so I could move the `nav` element to another part of the page and these styles would still work. 
 

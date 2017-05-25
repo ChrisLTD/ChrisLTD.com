@@ -9,26 +9,26 @@ Using [AngularJS](http://angularjs.org/) with Rails 4 should be pretty easy. Inc
 
 By default, Rails 4 compresses all of your JavaScript using [UglifyJS](https://github.com/mishoo/UglifyJS). Sadly, UglifyJS clobbers AngularJS files, but the fix is a snap[^beryllium]. Go into `config/environments/production.rb` find the `config.assets.js_compressor` line and tell Rails to run the Uglifier without the `mangle` option:
 
-{% highlight ruby %}
+```ruby
 config.assets.js_compressor = Uglifier.new(:mangle => false)
-{% endhighlight %}
+```
 
 ## Processing Angular GET requests
 
 To [increase security](http://stackoverflow.com/questions/9996665/rails-how-does-csrf-meta-tag-work), Rails will only process GET (and other form requests) if they pass along the proper cross-site request forgery (CSRF) token[^jquery]. Rails is also particular about the `Accept` header when returning JSON. You can solve both issues by configuring your app’s global `$httpProvider`:
 
-{% highlight js %}
+```js
 var app = angular.module('MyApp', []);
 
 app.config(function($httpProvider) {
   var authToken = angular.element('meta[name="csrf-token"]').attr("content");
   $httpProvider.defaults.headers.common["X-CSRF-TOKEN"] = authToken;
 });
-{% endhighlight %}
+```
 
 In your AngularJS `$http` GET calls, you’ll also need to pass along a specific `Content-Type` header:
 
-{% highlight js %}
+```js
 $scope.exampleAjax = function(ajaxUrl, var) {
   $http({
     method: 'GET',
@@ -40,31 +40,31 @@ $scope.exampleAjax = function(ajaxUrl, var) {
     console.log( data );
   });
 };
-{% endhighlight %}
+```
 
 ## Playing nice with Turbolinks
 
 If you’re going to leave [Turbolinks](https://github.com/rails/turbolinks) enabled, you’ll need a way of [re-bootstrapping](http://docs.angularjs.org/guide/bootstrap) your app after the new page content is loaded in[^turbofix]. Turbolinks has an event for this named `page:load` we can bind to after we define our Angular app:
 
-{% highlight js %}
+```js
 var app = angular.module('MyApp', []);
 
 $(document).on('ready page:load', function(){
   angular.bootstrap(document.body, ['MyApp']);
 });
-{% endhighlight %}
+```
 
 Now that we’re bootstrapping our app in our JavaScript, we need to remove the `ng-app` bootstrap directive from our HTML. So this:
 
-{% highlight html %}
+```html
 <body ng-app="MyApp">
-{% endhighlight %}
+```
 
 Can just be:
 
-{% highlight html %}
+```html
 <body>
-{% endhighlight %}
+```
 
 ## To be continued
         

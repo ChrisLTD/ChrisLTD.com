@@ -6,7 +6,7 @@ For years I’ve wanted to try my hand at [physical computing](http://en.wikiped
 
 An [Arduino](http://en.wikipedia.org/wiki/Arduino) kit, at the most basic level, is a simple programmable computer that you can combine with [components](http://store.arduino.cc/category/6) like lights, speakers, and buttons[^kits]. For example, in the first project from the [starter kit I purchased](http://www.amazon.com/dp/B00BT0NDB8/?tag=chrisltd-20), the included book walks you through wiring up an Arduino board to make an LED blink at an interval set with a bit of C code.
 
-{% highlight c %}
+```c
 void setup() {
   // Set up pin 13 (the one connected to a LED)
   // to be an output
@@ -19,7 +19,7 @@ void loop() {
   digitalWrite(13, LOW);    // Turn off the LED
   delay(1000);              // Wait for one second
 }
-{% endhighlight %}
+```
 
 This is the result:
 

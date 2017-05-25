@@ -7,16 +7,16 @@ When building this site, I came across an interesting issue in IE8. My PNG logo 
 
 My solution – for now – is to hide the logo image for old IE versions, and present the logo as plain text using the [CSS content property](https://developer.mozilla.org/en-US/docs/CSS/content):
 
-{% highlight html %}
+```html
 <a href="/" class="logo" data-content="Chris Johnson">
   <img src="/img/logo@2x.png" width="330" alt="Chris Johnson">
 </a>
-{% endhighlight %}
-{% highlight css %}
+```
+```css
 /* Use your favorite method to restrict these styles to IE8 */
 .logo img { display: none; } 
 .logo:before { content:attr(data-content); }
-{% endhighlight %}
+```
 
 ![Header in IE8](/blog/images/2013/04/ie8-header.png)
 

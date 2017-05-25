@@ -9,13 +9,13 @@ Using [SASS](http://sass-lang.com/)[^scss] you can combine media queries and goo
 
 Let’s assume we’re starting with two images: logo.png (200px &times; 100px), and a retina counterpart logo@2x.png (400px &times; 200px). We want these images to show up when we use this link tag:
 
-{% highlight scss %}
+```scss
 <a href="/" id="logo">My Logo</a>
-{% endhighlight %}
+```
 
 In our SCSS file, we need to define this handy mixin I adapted from [Jeff Croft's](http://jeffcroft.com/) code:
 
-{% highlight scss %}
+```scss
 @mixin background-image-retina($file, $type, $width, $height) {
   background-image: url($file + '.' + $type);
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -33,13 +33,13 @@ In our SCSS file, we need to define this handy mixin I adapted from [Jeff Croft'
     }
   }
 }
-{% endhighlight %}
+```
 
 *Note that the mixin assumes your retina files are always named with the @2x between the filename and the extension (like our example logo.png and logo@2x.png).*
 
 Then, we can use image replacement on the link tag along with the included mixin:
 
-{% highlight scss %}
+```scss
 #logo {
   width: 200px;
   height: 100px;
@@ -50,13 +50,13 @@ Then, we can use image replacement on the link tag along with the included mixin
   white-space: nowrap; 
   overflow: hidden;
 }
-{% endhighlight %}
+```
 
 That's it, just make sure you’re referencing the standard height and width (in this case, 200px &times; 100px) in your SCSS.
 
 In case you’re curious, this is the raw CSS your SASS compiler will spit out:
 
-{% highlight css %}
+```css
 #logo {
   width: 200px;
   height: 100px;
@@ -75,7 +75,7 @@ In case you’re curious, this is the raw CSS your SASS compiler will spit out:
     background-size: 200px 100px; 
   } 
 }
-{% endhighlight %}
+```
 
 [^avoid]: Or avoid delivering images unless absolutely necessary. Alternatives would be graphics made from pure CSS, SVG, and web fonts.
 

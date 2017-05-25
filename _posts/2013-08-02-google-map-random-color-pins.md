@@ -7,7 +7,7 @@ I recently needed to generate a Google Map with multiple markers and popup info 
 
 Here’s the script I pulled together to make it happen:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html> 
 <head> 
@@ -100,7 +100,7 @@ Here’s the script I pulled together to make it happen:
   </script> 
 </body>
 </html>
-{% endhighlight %}
+```
 
 Here’s a screenshot of what it should look like:
 

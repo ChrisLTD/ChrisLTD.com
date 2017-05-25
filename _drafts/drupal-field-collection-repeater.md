@@ -26,7 +26,7 @@ Afterwards, you should have a nice clean and logical way to add new collection i
 
 The big trick is getting data out of your collections. To help I wrote this PHP function that returns a clean array you can work with:
 
-{% highlight php %}
+```php
 /*
 *  Returns array of single level Field Collection data
 *
@@ -67,17 +67,17 @@ function get_field_collection_array($field_collection_name, $field_names_array) 
 
   return $field_data_array;
 }
-{% endhighlight %}
+```
 
 Calling the function like this:
 
-{% highlight php %}
+```php
 get_field_collection_array("field_promos", array('field_title', 'field_url', 'field_short_description') );
-{% endhighlight %}
+```
 
 Will return an array you can then loop through yourself and output however you'd like:
 
-{% highlight text %}
+```
 Array
 (
     [0] => Array
@@ -95,7 +95,7 @@ Array
         )
 
 )
-{% endhighlight %}
+```
 
 
 [^acf]: Wordpress has an awesome payware plugin for this called [Advanced Custom Fields](http://www.advancedcustomfields.com/) [repeater](http://www.advancedcustomfields.com/add-ons/repeater-field/) field

@@ -8,7 +8,7 @@ In this example, we’re going to hide the `<label>` tag if the browser has plac
 
 Here’s the plain ol’ Javascript code for adding either a *placeholder* or *no-placeholder* class to the  `<html>` element depending on support:
 
-{% highlight javascript %}
+```javascript
 var htmlEl = document.getElementsByTagName('html');
 htmlEl = htmlEl[0]; // first result is the html tag
 var inputTest = document.createElement('input');
@@ -17,31 +17,31 @@ if( inputTest.hasOwnProperty('placeholder') ) {
 } else {
   htmlEl.className += ' ' + 'no-placeholder';
 }
-{% endhighlight %}
+```
 
 What we’re doing with this code is creating an `<input>` element[^notvisible], and then checking to see if it has a placeholder property using Javascript’s [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method. Even if an element has no placeholder set or an empty placeholder, this will return `true` when the browser supports the placeholder attribute[^homework].
 
 If you’re using [jQuery](http://jquery.com), we can shorten the code a bit by using jQuery’s selector engine and [addClass](http://api.jquery.com/addClass/) method:
 
-{% highlight javascript %}
+```javascript
 var inputTest = document.createElement('input');
 if( inputTest.hasOwnProperty('placeholder') ) {
   $('html').addClass('placeholder');
 } else {
   $('html').addClass('no-placeholder');
 }
-{% endhighlight %}
+```
 
 With the Javascript in place we can use this bit of CSS and HTML:
 
-{% highlight html %}
+```html
 <style>
   .placeholder .hide-label { display: none; }
 </style>
 
 <label class="hide-label" for="your-name">Your Name</label>
 <input type="text" name="your-name" id="your-name">
-{% endhighlight %}
+```
 
 In this case we’re only hiding labels that have the class *hide-label* and are inside a tag – in this case `<html>` – with the class *placeholder*[^options].
 
