@@ -11,9 +11,11 @@ future: false # publish posts dated into the future
 exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md]
 
 markdown: kramdown
-highlighter: pygments
+highlighter: none
 
 # Custom
 author: Chris Johnson
 feed_url: /blog/feed/
 assets_version: 16 # used to cache bust css and js files
+
+permalink: /:slug
