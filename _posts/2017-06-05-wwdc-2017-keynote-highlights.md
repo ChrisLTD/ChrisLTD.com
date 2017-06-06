@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WWDC 2017 Keynote hot takes
+title: WWDC 2017 Keynote highlights
 ---
 
 Today at WWDC, Apple announced a boatload of software updates and three new hardware products. These are my notes arranged by platform and appearance in the keynote:
