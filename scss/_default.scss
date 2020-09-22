@@ -101,7 +101,6 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 	[rel="footnote"], [rev="footnote"] { text-decoration: none; margin: 0 2px;
 		&:hover { text-decoration: underline; }
 	}
-	[rev="footnote"] { display: none; } /* Unhidden via js */
 	.footnotes { border-top: 1px dashed rgba($orange, .2); font-size: 80%;
 		hr { display: none; }
 	}
@@ -113,6 +112,12 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 	}
 }
 
+.portfolio__clients-list ul {
+	@extend .two_col_text;
+	@extend .more_spacing;
+	@extend .hide_bullets;
+}
+
 .sidebar { font-size: 85%;
   ul, ol { padding-left: 1.5em; }
 }
@@ -121,7 +126,7 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 	@include respond-to("tablet"){ font-size: 21px; }
 }
 
-.cycle-slideshow {
+.featured-work {
 	img { @include img_border; }
 	.slide > a { color: $bodycolor; text-decoration: none;
 		&:hover b { color: $orange; }
@@ -130,6 +135,10 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 		span { font-size: 30px; color: rgba($orange, .3); }
 		.cycle-pager-active { color: $orange; }
 	}
+}
+
+.featured-work__slide__description {
+	padding-right: 120px;
 }
 
 .link_list {
@@ -142,7 +151,10 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 	li + li a { padding-top: 1em; border-top: 1px solid rgba($orange, .2); }
 }
 
-.button { background: $orange; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); text-decoration: none; display: inline-block; padding: $button_input_padding; @include prefixer(border-radius, 4px); -webkit-font-smoothing: antialiased; border: none; line-height: $line_height; @include prefixer(transition, all 200ms ease-out); border: 1px solid $orange; margin-bottom: 4px;
+.button { background: $orange; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.1); text-decoration: none;
+display: inline-block; padding: $button_input_padding; @include prefixer(border-radius, 4px);
+-webkit-font-smoothing: antialiased; border: none; line-height: $line_height; cursor: pointer;
+@include prefixer(transition, all 200ms ease-out); border: 1px solid $orange; margin-bottom: 4px;
 	&:hover { background: darken($orange, 4%); border-color: darken($orange, 4%);  }
 	&.button_gray { background: $light_gray; border-color: $light_gray;
 		&:hover { background: darken($light_gray, 4%); border-color: darken($light_gray, 4%); }
@@ -181,6 +193,8 @@ rgba(0,0,0,.1); margin-left: 0; padding-left: 1em; margin-right: 1em;
 		&.ee { background: $ee_color url(../img/icon_ee.gif);}
 		&.rails { background: $rails_color url(../img/icon_rails.jpg);}
 		&.django { background: $django_color; }
+		&.react { background: $react_color url(../img/icon_react.png);}
+		&.sketch { background: $sketch_color url(../img/icon_sketch.png);}
 	}
 }
 
@@ -258,7 +272,7 @@ form.wufoo {
 	.hr { margin: $gutter 0; }
 }
 
-.cycle-slideshow { width: 100%;
+.featured-work { width: 100%;
 	.slide { width: 100%; }
 	.cycle-pager { text-align: center;
 		@include respond-to("tablet"){ position: absolute; right: 0; bottom: 0; z-index: 999; }
@@ -319,7 +333,7 @@ form.wufoo {
 
 .blog [role="main"] .container { max-width: 700px; }
 
-.blog_navigation { margin-bottom: .75em; 
+.blog_navigation { margin-bottom: .75em;
 	.button { margin-right: .5em; margin-bottom: .75em; }
 }
 
