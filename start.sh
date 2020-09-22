@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 sh compileassets.sh
-jekyll serve --drafts
+jekyll serve --drafts --trace
