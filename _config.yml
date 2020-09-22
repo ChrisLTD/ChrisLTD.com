@@ -11,7 +11,7 @@ future: false # publish posts dated into the future
 exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md]
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Custom
 author: Chris Johnson
