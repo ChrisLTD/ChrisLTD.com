@@ -14,18 +14,6 @@ class: blog
 
 </article>
 
-{% if page.comments %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'chrisltd';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-{% endif %}
-
 <div class="blog_navigation">
 	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
 	<a href="https://itunes.apple.com/us/app/long-day-day-planner/id1062689795?ls=1&mt=8&at=11l5Li" class="button">Download my app Long Day <i class="ss-icon ss-standard">📱</i></a>
@@ -35,9 +23,9 @@ class: blog
 
 	{% capture now-year %}{{ 'now' | date: '%Y' }}{% endcapture %}
 	{% capture page-year %}{{ page.date | date: '%Y' }}{% endcapture %}
-	{% if page.ads or page-year < now-year %}	
+	{% if page.ads or page-year < now-year %}
 		<div class="ad-wrapper">
-	
+
 			<script type="text/javascript">
 				( function() {
 					if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
@@ -48,7 +36,7 @@ class: blog
 			}());
 			</script>
 			<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-		
+
 		</div>
 	{% endif %}
 
