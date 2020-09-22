@@ -14,6 +14,9 @@ markdown: kramdown
 highlighter: rouge
 
 # Custom
+title: Chris Johnson - Developer in NYC
+description: Chris Johnson is a developer in NYC. This is his portfolio and blog.
+tagline: Developer in NYC
 author: Chris Johnson
 feed_url: /blog/feed/
 assets_version: 16 # used to cache bust css and js files
