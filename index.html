@@ -18,34 +18,42 @@ class: home
 
             <h1><a href="/portfolio">Featured work</a></h1>
 
-            <div class="cycle-slideshow" data-cycle-timeout="3500" data-cycle-swipe="true" data-cycle-slides="> .slide" data-cycle-pause-on-hover="true" data-cycle-pager-template='<span class="ss-record"></span>' data-cycle-loader="true">
+            <div class="featured-work js-slideshow" data-cycle-timeout="3500" data-cycle-swipe="true" data-cycle-slides="> .slide" data-cycle-pause-on-hover="true" data-cycle-pager-template='<span class="ss-record"></span>' data-cycle-loader="true">
               <div class="cycle-pager ss-icon"></div>
 
-              <div class="slide">
+              <div class="slide featured-work__slide">
                 <img src="portfolio/sbe.jpg">
-                <b>sbe.com</b><br>
-                Type: Website | Role: Developer
+                <b class="featured-work__slide__title">sbe.com</b><br>
+                <div class="featured-work__slide__description">
+                  Type: Website | Role: Developer of responsive HTML/CSS templates, JavaScript modules and WordPress back-end functionality
+                </div>
               </div>
 
-              <div class="slide">
+              <div class="slide featured-work__slide">
                 <img src="portfolio/novella.jpg">
-                <b>Novella Clinical</b><br>
-                Type: Website | Role: Developer (Wordpress)
+                <b class="featured-work__slide__title">Novella Clinical</b><br>
+                <div class="featured-work__slide__description">
+                  Type: Website | Role: Developer of responsive WordPress theme and JavaScript interactions
+                </div>
               </div>
 
-              <div class="slide">
-                <img src="portfolio/radius-twc.jpg">
-                <b>Radius TWC</b><br>
-                Type: Website | Role: Developer
+              <div class="slide featured-work__slide">
+                <img src="portfolio/justworks.jpg">
+                <b class="featured-work__slide__title">Justworks</b><br>
+                <div class="featured-work__slide__description">
+                  Type: Website | Role: Rails and React developer
+                </div>
               </div>
 
-              <div class="slide">
-                <img src="portfolio/sls-las-vegas.jpg">
-                <b>SLS Las Vegas</b><br>
-                Type: Website | Role: Developer (AngularJS)
+              <div class="slide featured-work__slide">
+                <img src="portfolio/integral.jpg">
+                <b class="featured-work__slide__title">Integral</b><br>
+                <div class="featured-work__slide__description">
+                  Type: Website | Role: WordPress developer, and information architect
+                </div>
               </div>
 
-            </div><!--/.cycle-slideshow-->
+            </div><!--/.featured-work-->
 
             <p><a href="/portfolio" class="button button_small">See more work <i class="ss-icon ss-standard ss-right"></i></a></p>
 
