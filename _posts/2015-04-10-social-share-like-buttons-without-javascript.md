@@ -3,6 +3,8 @@ layout: post
 title: Social Share and Like buttons without Javascript
 ---
 
+**Update 2/12/2019:** Facebook has updated their sharing URL, and Google plus is no more.
+
 Social networks like Twitter and Facebook encourage you to drop external Javascript code on your website if you want those little share and like buttons you see everywhere. However, relying on external Javascript has a few downsides. For instance, you are:
 
 * Exposing your users to [tracking](http://www.geek.com/news/facebook-like-button-tracks-you-even-if-you-dont-click-1380793/)
@@ -15,34 +17,28 @@ In each of the following examples, you’ll need to replace the *YOUR-_____* in 
 
 ## Twitter
 
-{% highlight html %}
+```html
 <a href="https://twitter.com/intent/tweet?url=YOUR-URL&text=YOUR-TITLE&via=YOUR-TWITTERHANDLE">Twitter</a>
-{% endhighlight %}
+```
 
 ## Facebook
 
-{% highlight html %}
-<a href="https://facebook.com/sharer.php?u=YOUR-URL">Facebook</a>
-{% endhighlight %}
+```html
+<a href="https://facebook.com/sharer/sharer.php?u=YOUR-URL">Facebook</a>
+```
 
 ## LinkedIn
 
-{% highlight html %}
+```html
 <a href="http://www.linkedin.com/shareArticle?mini=true&url=YOUR-URL&title=YOUR-TITLE&summary=YOUR-SUMMARY">LinkedIn</a>
-{% endhighlight %}
+```
 
 ## Pinterest
 
-{% highlight html %}
+```html
 <a href="http://pinterest.com/pin/create/button/?url=YOUR-URL&media=YOUR-IMAGE-URL&description=YOUR-DESCRIPTION">Pinterest</a>
-{% endhighlight %}
-
-## Google+
-
-{% highlight html %}
-<a href="https://plus.google.com/share?url=YOUR-URL">Google+</a>
-{% endhighlight %}
+```
 
 I compiled this list with the help of a couple  [StackOverflow](http://stackoverflow.com/a/11212220/648844) [answers](http://stackoverflow.com/a/10737122/648844) and [Scott Hanselman’s post](http://www.hanselman.com/blog/AddSocialSharingLinksToYourBlogWithoutWidgetJavaScript.aspx) on the same subject.
- 
+
 [^slow]: The Javascript will not only require more time to download, but it will use some of your visitor’s computing power to run. On desktop computers that might not be a big deal, but it could seriously slow mobile devices.
