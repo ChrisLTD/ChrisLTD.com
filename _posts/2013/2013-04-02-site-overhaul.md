@@ -16,7 +16,7 @@ Like the old site, this redesign is fully responsive so it works well on tablets
 
 ![Phone screenshot](/blog/images/2013/04/chrisltd-phone1.jpg) ![Phone screenshot 2](/blog/images/2013/04/chrisltd-phone2.jpg)
 
-It even looks pretty good in [Lynx](http://en.wikipedia.org/wiki/Lynx_(web_browser)[^test]:
+It even looks pretty good in [Lynx](http://en.wikipedia.org/wiki/Lynx_(web_browser))[^test]:
 
 ![Lynx screenshot](/blog/images/2013/04/chrisltd-lynx.png)
 

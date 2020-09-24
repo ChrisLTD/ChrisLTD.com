@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Newer model static sites
+category: dev
 ---
 Sites that are served statically (meaning they aren’t backed by a scripting language or a database) have big advantages in terms of speed, simplicity, and security. But as [Leon Paternoster notes](https://www.leonpaternoster.com/posts/static/), the definition of static sites is changing, and we’re losing speed and simplicity in the process.
 
