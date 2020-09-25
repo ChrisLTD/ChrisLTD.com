@@ -17,8 +17,8 @@
 
 	{% if page.class == 'home' %}
 	  <meta name="description" content="{{ site.description }}">
-	{% elsif page.content %}
-	  <meta name="description" content="{{ page.content | strip_html | truncatewords: 40, '' }}">
+	{% elsif page.excerpt %}
+	  <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 40, '' }}">
 	{% endif %}
 
 
@@ -34,7 +34,7 @@
   {% if page.title %}
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:type" content="article">
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 40 }}"/>
   {% else %}
     <meta property="og:title" content="{{ site.title }}">
     <meta property="og:type" content="website">
