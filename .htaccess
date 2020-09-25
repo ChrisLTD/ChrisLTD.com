@@ -2,12 +2,13 @@
 # | Redirects                                                                  |
 # ------------------------------------------------------------------------------
 
-Redirect 301 /about.html 					/about
-Redirect 301 /portfolio.html 			/portfolio
-Redirect 301 /projects.html 			/projects
-Redirect 301 /blog/archive.html 	/blog/archive
-Redirect 301 /404.html					 	/404
-Redirect 301 /resume.html					/resume
+Redirect 301 /blog/feed				    /blog/feed.xml
+Redirect 301 /about.html			    /about
+Redirect 301 /portfolio.html		  /portfolio
+Redirect 301 /projects.html			  /projects
+Redirect 301 /blog/archive.html		/blog/archive
+Redirect 301 /404.html				    /404
+Redirect 301 /resume.html			    /resume
 
 # ------------------------------------------------------------------------------
 # | File access (hide index pages)                                             |

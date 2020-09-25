@@ -28,7 +28,7 @@ Rsync is one of those good old Unix utilities that is esoteric to use, but bulle
 
 ## Goodbye Feedburner
 
-Since Google announced they are [shutting down Google Reader](http://googlereader.blogspot.com/2013/03/powering-down-google-reader.html), it seemed like a good idea move away from Google’s other major RSS service: [Feedburner](http://feedburner.com). Feedburner cleans up your feeds and provides you with readership stats, but your feeds have to be hosted on their servers for it to work. My solution was to move to a plugin for [Mint](http://haveamint.com) called [Bird Feeder](http://haveamint.com/peppermill/pepper/11/bird_feeder/) and clean up my feed with a couple customized [Jekyll](https://github.com/ChrisLTD/ChrisLTD.com/blob/master/_plugins/rss_url_filter.rb) [filters](https://github.com/ChrisLTD/ChrisLTD.com/blob/master/_plugins/footnotes.rb). You can [subscribe to my feed here](/blog/feed/).
+Since Google announced they are [shutting down Google Reader](http://googlereader.blogspot.com/2013/03/powering-down-google-reader.html), it seemed like a good idea move away from Google’s other major RSS service: [Feedburner](http://feedburner.com). Feedburner cleans up your feeds and provides you with readership stats, but your feeds have to be hosted on their servers for it to work. My solution was to move to a plugin for [Mint](http://haveamint.com) called [Bird Feeder](http://haveamint.com/peppermill/pepper/11/bird_feeder/) and clean up my feed with a couple customized [Jekyll](https://github.com/ChrisLTD/ChrisLTD.com/blob/master/_plugins/rss_url_filter.rb) [filters](https://github.com/ChrisLTD/ChrisLTD.com/blob/master/_plugins/footnotes.rb). You can [subscribe to my feed here](/blog/feed.xml).
 
 ## More information than you require
 

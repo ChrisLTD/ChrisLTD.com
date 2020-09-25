@@ -18,5 +18,5 @@ title: Chris Johnson - Developer in NYC
 description: Chris Johnson is a developer in NYC. This is his portfolio and blog.
 tagline: Developer in NYC
 author: Chris Johnson
-feed_url: /blog/feed/
+feed_url: /blog/feed.xml
 assets_version: 17 # used to cache bust css and js files
