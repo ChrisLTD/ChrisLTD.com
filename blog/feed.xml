@@ -3,20 +3,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<title>Chris Johnson's Blog</title>
-		<description></description>
+		<title>{{ site.feed_title }}</title>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml" />
+		<description></description>
+		<language>en-us</language>
+		<pubDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</pubDate>
+		<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
+
 		{% for post in site.posts limit:1 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
+				<link>{{ site.url }}{{ post.url }}</link>
+				<pubDate>{{ post.date | date: "%a, %d %b %Y 11:00:00 -0500" }}</pubDate>
+				<author>{{ site.author }}</author>
+				<guid>{{ site.url }}{{ post.url }}</guid>
 				<description>
 					<![CDATA[ {{ post.content | remove_footnote_link | relative_urls_to_absolute }} ]]>
 				</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y 11:00:00 -0500" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
 		{% endfor %}
+
 	</channel>
 </rss>
