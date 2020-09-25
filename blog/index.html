@@ -6,8 +6,6 @@ class: blog
 
 {% for post in site.posts limit:10 %}
 
-  {% unless post.draft %}
-
 	<article>
 
 		<header>
@@ -24,8 +22,6 @@ class: blog
 		{{ post.content | rename_footnote_link }}
 
 	</article>
-
-  {% endunless %}
 
 {% endfor %}
 
