@@ -2,6 +2,7 @@
 # | Redirects                                                                  |
 # ------------------------------------------------------------------------------
 
+Redirect 301 /blog/feed/				  /blog/feed.xml
 Redirect 301 /blog/feed				    /blog/feed.xml
 Redirect 301 /about.html			    /about
 Redirect 301 /portfolio.html		  /portfolio
