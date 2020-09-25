@@ -1,6 +1,6 @@
 # Documentation: https://github.com/mojombo/jekyll/wiki/configuration
 
-url: http://chrisltd.com
+url: https://chrisltd.com
 permalink: /blog/:year/:month/:title/
 
 source: .
