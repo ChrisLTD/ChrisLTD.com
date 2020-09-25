@@ -16,7 +16,6 @@
 				<title>{{ post.title | xml_escape }}</title>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y 11:00:00 -0500" }}</pubDate>
-				<author>{{ site.author }}</author>
 				<guid>{{ site.url }}{{ post.url }}</guid>
 				<description>
 					<![CDATA[ {{ post.content | remove_footnote_link | relative_urls_to_absolute }} ]]>
