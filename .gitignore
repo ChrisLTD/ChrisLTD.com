@@ -1,7 +1,8 @@
 .DS_Store
 resources/*
 .sass-cache*
-css/
+css/*
+!css/.gitkeep
 *-ck.js
 *.min.js
 _site/*
