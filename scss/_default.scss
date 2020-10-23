@@ -170,9 +170,7 @@ display: inline-block; padding: $button_input_padding; @include prefixer(border-
 }
 
 .contact_map { margin: 1em 0; padding: 2em 0; text-align: center; background-position: top center; @include background-image-retina("../img/contact_map", jpg, 500px, 340px);
-	.contact_map_box { display: inline-block; margin: 0 auto; padding: 1em; text-align: left; background: rgba(255,255,255,.75); line-height: 2;
-		.lt-ie9 & { background: #fff; }
-	}
+	.contact_map_box { display: inline-block; margin: 0 auto; padding: 1em; text-align: left; background: rgba(255,255,255,.75); line-height: 2; }
 	.ss-standard { color: $orange; vertical-align: middle; margin-right: 4px; }
 }
 
@@ -213,10 +211,7 @@ form.wufoo {
 
 .hr { display: block; width: 100%; height: 3px; margin: 1.75em 0; }
 
-.logo { display: inline-block;
-	.lt-ie9 &:before { content:attr(data-content); }
-	.lt-ie9 & img { display: none; }
-}
+.logo { display: inline-block; }
 
 .main_nav {
   ul { @include horizontal_list;
@@ -230,7 +225,6 @@ form.wufoo {
 			@include respond-to("tablet"){ margin-left: 0; margin-right: 0; }
     }
   }
-  .lt-ie8 & li { float: left; }
 }
 
 .social_icons { @include horizontal_list;
@@ -307,10 +301,6 @@ form.wufoo {
     .tagline { display: block; position: absolute; top: 57px; left: 161px; }
     .main_nav { padding: 0; float: right; }
   }
-	.lt-ie9 & {
-		.main_nav {	display: block; }
-	}
-	.lt-ie8 & .container { text-align: left; }
 }
 
 [role="main"]{ padding-top: 15px; padding-bottom: 5px; }
@@ -341,5 +331,4 @@ form.wufoo {
 	.footer_nav { @include clearfix; margin-bottom: 20px;
 		@include respond-to("tablet"){ display: none; }
 	}
-	.lt-ie8 & .social_icons { display: none; }
 }
