@@ -1,6 +1,13 @@
 @mixin nav_fade_in {
-	0%   { opacity: 0; @include prefixer(animation-timing-function, ease-in); }
-	100% { opacity: 1; @include prefixer(animation-timing-function, ease-in); }
+	0% {
+		opacity: 0;
+		@include prefixer(animation-timing-function, ease-in);
+	}
+
+	100% {
+		opacity: 1;
+		@include prefixer(animation-timing-function, ease-in);
+	}
 }
 
 @-webkit-keyframes nav_fade_in {
@@ -17,11 +24,12 @@
 
 
 $_i: 1;
-@while $_i <= 5 {
+
+@while $_i <=5 {
 
 	.home .main_nav ul li:nth-child(#{$_i}) a {
 		@include prefixer(animation, nav_fade_in 750ms (250ms * $_i) both);
 	}
 
-	$_i: $_i + 1;
+	$_i: $_i+1;
 }

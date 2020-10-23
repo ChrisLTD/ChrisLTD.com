@@ -1,15 +1,34 @@
 @media print {
 
-  body { font-size: 12px; }
+  body {
+    font-size: 12px;
+  }
 
-  #header, #footer, .blog_navigation, a[rev="footnote"] { display: none; }
+  #header,
+  #footer,
+  .blog_navigation,
+  a[rev="footnote"] {
+    display: none;
+  }
 
-  a { text-decoration: none; }
+  a {
+    text-decoration: none;
+  }
 
   #main {
-    .container:before { content:"Chris Johnson - https://ChrisLTD.com"; font-weight: bold; color: $orange;  }
-    a:after { content: " (" attr(href) ") "; }
-    a[rel="footnote"]:after { content: none; }
+    .container:before {
+      content: "Chris Johnson - https://ChrisLTD.com";
+      font-weight: bold;
+      color: $orange;
+    }
+
+    a:after {
+      content: " ("attr(href) ") ";
+    }
+
+    a[rel="footnote"]:after {
+      content: none;
+    }
   }
 
 }

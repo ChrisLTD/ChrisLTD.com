@@ -1,63 +1,135 @@
-.hide { @include hide; }
-
-.desktop_only { display: none;
-	@include respond-to("tablet"){ display: block; }
+.hide {
+  @include hide;
 }
 
-.remove { display: none; }
+.desktop_only {
+  display: none;
 
-.reset { margin: 0; padding:0; border: 0; list-style: none; }
-
-.floatright { float: right; }
-
-.floatleft { float: left; }
-
-.alignright { float: right; margin: 0 0 10px 10px; }
-
-.alignleft { float: left; margin: 0 10px 10px 0; }
-
-.aligntop { vertical-align: top; }
-
-.textcenter { text-align: center; }
-
-.textright { text-align: right; }
-
-.textleft { text-align: left; }
-
-.sans { font-family: $sans; }
-
-.serif { font-family: $serif; }
-
-.caps { text-transform: uppercase; letter-spacing: 1px; }
-
-.ir { @include ir; }
-
-.clearboth { clear: both; }
-
-.clearfix { @include clearfix; }
-
-.horizontal_list { @include horizontal_list; }
-
-.vertical_list { @include vertical_list; }
-
-.rounded { @include prefixer(border-radius, 3px); }
-
-@include respond-to("tablet"){
-  .two_col_text { @include prefixer(column-count, 2); }
-  .three_col_text { @include prefixer(column-count, 3); }
-  .four_col_text { @include prefixer(column-count, 4); }
+  @include respond-to("tablet") {
+    display: block;
+  }
 }
 
-.full_width { width: 100%; }
+.remove {
+  display: none;
+}
 
-.pad { padding: 10px; }
+.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
 
-.padright { padding-right: 10px; }
+.floatright {
+  float: right;
+}
 
-.padleft { padding-left: 10px; }
+.floatleft {
+  float: left;
+}
 
-.padtop { padding-top: 10px; }
+.alignright {
+  float: right;
+  margin: 0 0 10px 10px;
+}
 
-.padbottom { padding-bottom: 10px; }
+.alignleft {
+  float: left;
+  margin: 0 10px 10px 0;
+}
 
-.hide_bullets { list-style: none; }
+.aligntop {
+  vertical-align: top;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.textright {
+  text-align: right;
+}
+
+.textleft {
+  text-align: left;
+}
+
+.sans {
+  font-family: $sans;
+}
+
+.serif {
+  font-family: $serif;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ir {
+  @include ir;
+}
+
+.clearboth {
+  clear: both;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.horizontal_list {
+  @include horizontal_list;
+}
+
+.vertical_list {
+  @include vertical_list;
+}
+
+.rounded {
+  @include prefixer(border-radius, 3px);
+}
+
+@include respond-to("tablet") {
+  .two_col_text {
+    @include prefixer(column-count, 2);
+  }
+
+  .three_col_text {
+    @include prefixer(column-count, 3);
+  }
+
+  .four_col_text {
+    @include prefixer(column-count, 4);
+  }
+}
+
+.full_width {
+  width: 100%;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.padright {
+  padding-right: 10px;
+}
+
+.padleft {
+  padding-left: 10px;
+}
+
+.padtop {
+  padding-top: 10px;
+}
+
+.padbottom {
+  padding-bottom: 10px;
+}
+
+.hide_bullets {
+  list-style: none;
+}
