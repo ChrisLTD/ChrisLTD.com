@@ -7,7 +7,6 @@ css/*
 *.min.js
 _site/*
 *.zip
-fonts/*
 deploy.sh
 .jekyll-cache/*
 .idea

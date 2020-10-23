@@ -20,4 +20,4 @@ tagline: Developer in NYC
 author: Chris Johnson
 feed_url: /blog/feed.xml
 feed_title: Chris Johnson's Blog
-assets_version: 17 # used to cache bust css and js files
+assets_version: 18 # used to cache bust css and js files
