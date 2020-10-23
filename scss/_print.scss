@@ -7,7 +7,7 @@
   a { text-decoration: none; }
 
   #main {
-    .container:before { content:"Chris Johnson – https://ChrisLTD.com"; font-weight: bold; color: $orange;  }
+    .container:before { content:"Chris Johnson - https://ChrisLTD.com"; font-weight: bold; color: $orange;  }
     a:after { content: " (" attr(href) ") "; }
     a[rel="footnote"]:after { content: none; }
   }
