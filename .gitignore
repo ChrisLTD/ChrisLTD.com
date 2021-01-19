@@ -10,3 +10,4 @@ _site/*
 deploy.sh
 .jekyll-cache/*
 .idea
+.vscode
