@@ -8,6 +8,10 @@
 
   background: white;
 
+  #main {
+    background: white;
+  }
+
   h2 {
     color: $orange;
   }
@@ -63,6 +67,7 @@
     background: none;
 
     #main {
+      background: none;
 
       .container:before,
       a:after {
