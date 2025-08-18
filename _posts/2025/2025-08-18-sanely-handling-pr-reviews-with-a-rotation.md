@@ -37,7 +37,7 @@ What to review deserves it's own essay, but briefly, these are things I ask my t
 What shouldn't you review? Style. If something works and is logically written, don’t block a PR from being merged just because it isn’t exactly like you would have written it. [^commentandapprove]
 ## Lessons learned
 
-It's not all wine and roses, some weeks are heavier on reviews than others. Reviewers might have a tough time getting to their scheduled reviews quickly if the rest of their workload is heavy. But I still think this simple system has had a positive effect on the team. PR authors know exactly who to reach out to for reviews, reviewers don't get overwhelmed, and knowledge about the codebase grows naturally on the team. 
+It's not all wine and roses, some weeks are heavier on reviews than others. Reviewers might have a tough time getting to their scheduled reviews quickly if the rest of their workload is heavy. But I still think this simple system has had a positive effect on the team. PR authors know exactly who to reach out to for reviews, reviewers don't get overwhelmed, and knowledge about the codebase grows naturally on the team.
 
 We’re still tuning the rotation, but it’s the first system that’s made PR reviews feel less like a chore and more like a shared responsibility.
 
@@ -45,9 +45,3 @@ We’re still tuning the rotation, but it’s the first system that’s made PR 
 [^aischedule]: I used AI to generate the rotation about 6 months out. AI can also help slot in new teammates as your team grows and changes.
 [^principles]: See my post on [programming principles](/blog/2025/08/human-first-programming-principles/) for more.
 [^commentandapprove]: If there are style tweaks I want to suggest, I'll put them in my review, but I'll grant the approval. Then it's up to the PR author if they want to adopt my suggestions or not.
-
-
-
-
-https://chatgpt.com/c/68a0d8fe-a934-832d-ac8c-753124c90956
-https://claude.ai/chat/14e49cc9-ee55-44e9-83b3-22913dea11d5
