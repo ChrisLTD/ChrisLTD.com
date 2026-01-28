@@ -13,6 +13,19 @@ exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, G
 markdown: kramdown
 highlighter: rouge
 
+# Plugins
+plugins:
+  - jekyll-archives
+
+# Jekyll Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: category-archive
+  permalinks:
+    category: /blog/category/:name/
+
 # Custom
 title: Chris Johnson - Frontend Engineer in NYC
 description: Chris Johnson is a Frontend Engineer in NYC. This is his portfolio and blog.
