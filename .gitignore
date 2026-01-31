@@ -11,3 +11,19 @@ deploy.sh
 .jekyll-cache/*
 .idea
 .vscode
+
+# Gatsby
+node_modules/
+.cache/
+public/
+.env*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+*.swp
+*.swo
