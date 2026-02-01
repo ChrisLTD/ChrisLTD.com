@@ -1,13 +1,48 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Production
+build/
+dist/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Jekyll (legacy)
+_site/
+.sass-cache/
+.jekyll-cache/
+
+# IDE
+.idea
+.vscode
+
+# OS
 .DS_Store
-resources/*
-.sass-cache*
+
+# Build artifacts
 css/*
 !css/.gitkeep
 *-ck.js
 *.min.js
-_site/*
 *.zip
+
+# Misc
+resources/*
 deploy.sh
-.jekyll-cache/*
-.idea
-.vscode
