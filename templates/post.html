@@ -1,0 +1,25 @@
+{{template "base" .}}
+
+{{define "content"}}
+<article class="max-w-3xl">
+  <header class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">
+      {{.Post.Title}}
+    </h1>
+    <time class="text-gray-medium" datetime="{{formatDate .Post.Date "2006-01-02"}}">
+      {{formatDateShort .Post.Date}}
+    </time>
+  </header>
+
+  <div class="prose-blog">
+    {{.Post.Content}}
+  </div>
+</article>
+
+<div class="mt-12 pt-8 border-t border-gray-light flex flex-wrap gap-4">
+  <a href="/blog/archive" class="btn flex items-center gap-2">
+    Browse the blog archive
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+</div>
+{{end}}

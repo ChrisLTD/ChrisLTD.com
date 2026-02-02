@@ -1,0 +1,25 @@
+{{template "base" .}}
+
+{{define "content"}}
+<h1 class="text-3xl md:text-4xl font-bold mb-8">{{.Category.Title}}</h1>
+
+<ul class="space-y-3">
+  {{range .Category.Posts}}
+  <li>
+    <a href="{{.URL}}" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-semibold text-body hover:text-primary">
+        {{.Title}}
+        <span class="text-sm text-gray-medium font-normal ml-2">{{formatDateLong .Date}}</span>
+      </h3>
+    </a>
+  </li>
+  {{end}}
+</ul>
+
+<div class="mt-12 pt-8 border-t border-gray-light">
+  <a href="/blog/archive" class="btn flex items-center gap-2 w-fit">
+    View all posts
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+</div>
+{{end}}

@@ -1,37 +1,123 @@
 # ChrisLTD.com
-### Version 2.0 | By [Chris Johnson](http://chrisltd.com)
 
-This is the code for my [Jekyll](https://github.com/mojombo/jekyll) powered portfolio site and blog. Uses [Liquid templates](https://github.com/shopify/liquid/wiki/liquid-for-designers).
+### Version 3.0 | By [Chris Johnson](http://chrisltd.com)
 
-## YAML Front Matter
-* Use "class" variable to add a class to the body tag, also used for loading javascript in the default layout, and menu highlighting
-* Use "comments" variable to add disqus comments
+A Go-based static site generator with Tailwind CSS, designed for hosting on Cloudflare Pages.
+
+## Technology Stack
+
+- **Static Site Generator**: Custom Go-based generator
+- **Styling**: Tailwind CSS
+- **Markdown Processing**: Goldmark with syntax highlighting
+- **Hosting**: Cloudflare Pages
+
+## Prerequisites
+
+- Go 1.21 or later
+- Node.js 18 or later
+- npm
+
+## Quick Start
+
+```bash
+# Install dependencies and build the site
+./build.sh
+
+# Or run commands separately:
+npm install                    # Install npm dependencies
+npm run build:css              # Build Tailwind CSS
+go build -o bin/generate ./cmd # Build Go generator
+./bin/generate                 # Generate static site
+```
+
+## Development
+
+Start a local development server:
+
+```bash
+./bin/generate -serve -port 8080
+```
+
+Watch for CSS changes (in a separate terminal):
+
+```bash
+npm run watch:css
+```
+
+## Project Structure
+
+```
+├── _posts/           # Blog posts in Markdown (YYYY-MM-DD-title.md format)
+├── cmd/              # Go entry point
+├── generator/        # Go static site generator code
+├── templates/        # HTML templates with Go template syntax
+├── static/
+│   ├── css/          # Tailwind CSS input and output
+│   └── js/           # JavaScript files
+├── img/              # Site images
+├── portfolio/        # Portfolio images
+├── projects/         # Project images
+├── fonts/            # Icon fonts
+└── _site/            # Generated output (gitignored)
+```
+
+## Blog Posts
+
+Create new blog posts in `_posts/YYYY/YYYY-MM-DD-title.md` with front matter:
+
+```yaml
+---
+layout: post
+title: Your Post Title
+category: optional-category
+---
+
+Your content in Markdown...
+```
+
+## Cloudflare Pages Deployment
+
+The site is configured for Cloudflare Pages with:
+
+- `_headers` - Cache control and security headers
+- `_redirects` - URL redirects for legacy URLs
+
+### Build Configuration
+
+- **Build command**: `./build.sh`
+- **Build output directory**: `_site`
+
+## Templates
+
+Templates use Go's `html/template` package with custom functions:
+
+- `formatDate` - Format dates
+- `formatDateShort` - Short date format (M/D/YY)
+- `formatDateLong` - Long date format (M/D/YYYY)
+- `truncateWords` - Truncate text to word count
+- `stripHTML` - Remove HTML tags
+- `limit` - Limit slice length
+- `safeHTML` - Render raw HTML
 
 ## Code Highlighting
-Code highlighting is done via Pygments. Here is the [list of available lexers](http://pygments.org/docs/lexers/).
 
-This is how you use it:
+Code highlighting is handled by the Goldmark Markdown processor with the Chroma highlighter. Use standard Markdown code fences:
+
+````markdown
+```go
+func main() {
+    fmt.Println("Hello, World!")
+}
 ```
-{% highlight ruby %}
-puts "A simple ruby program."
-…
-{% endhighlight %}
-```
+````
 
-Use `text` as your language for no highlighting.
+## Migrating from Jekyll
 
-## Local testing
-Compress JS, Compile SCSS, generate the site, and turn on server: `sh test.sh'
+This site was migrated from Jekyll. The blog post format remains compatible:
+- Posts use the same `YYYY-MM-DD-title.md` naming convention
+- Front matter syntax is preserved
+- Markdown content works the same way
 
-The future switch shows posts dated well into the future.
+## License
 
-## Misc. Notes
-* The Maruku processor doesn't like attributes without values. For instance `<iframe allowfullscreen>`. Fix by changing it to something innocuous like `<iframe allowfullscreen="true">`.
-* The Maruku processor also does not like tag pairs without something in between, like `<iframe></iframe>`. Simply add a space `<iframe> </iframe>`.
-* I had to add `{{ content | replace: '&amp;', '&' }}` to the post template to fix the problem where ampersands in links were killing the parser. This means that all ampersands in links should use the html entity `&amp;`.
-* Server paths hardcoded in: blog/feed/index.php, chrisltd_mint/feeder/index.php, chrisltd_lessn/index.php
-* Run `sh deploy.sh` to generate then rsync the site to the server
-* There should be a fonts directory with symbolset's ss-social and ss-standard on the server. These are not in the git repo for copyright purposes.
-* If you have parenthesis in your markdown link URLs, use the URL encoding %28 and %29 instead of ( and ).
-* if you need to use brackets without creating a footnote, use the html entities &#91; &#93; instead of [ and ].
-* I’ve set the default time of blog posts to 11:00am.
+Content and design copyright Chris Johnson. Code structure available for reference.

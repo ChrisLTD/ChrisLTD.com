@@ -1,0 +1,67 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="mb-12">
+  <div class="h-px bg-gray-light mb-8"></div>
+
+  <p class="text-lg md:text-xl leading-relaxed max-w-3xl">
+    Hello! My name is Chris Johnson and I'm a frontend engineer with a passion for building user experiences through the intersection of web technology and design. I've led high-performing teams in delivering scalable, user-centric applications. I mentor engineers to think beyond code, considering the broader user experience while maintaining high standards for performance and accessibility. If you'd like to work together, <a href="/about" class="underline">please get in touch</a>.
+  </p>
+
+  <div class="h-px bg-gray-light mt-8"></div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+  <div class="lg:col-span-2">
+    <h2 class="text-2xl font-bold mb-6">
+      <a href="/portfolio" class="hover:text-primary-dark">Featured work</a>
+    </h2>
+
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
+      <div class="relative">
+        <div id="slideshow" class="overflow-hidden">
+          <div class="slide p-4">
+            <img src="/portfolio/sbe.jpg" alt="sbe.com" class="w-full h-auto rounded">
+            <h3 class="text-lg font-bold mt-4">sbe.com</h3>
+            <p class="text-sm text-gray-dark mt-1">
+              Type: Website | Role: Developer of responsive HTML/CSS templates, JavaScript modules and WordPress back-end functionality
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="/portfolio" class="btn btn-small inline-flex items-center gap-2">
+      See more work
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <aside>
+    <h2 class="text-2xl font-bold mb-6">
+      <a href="/blog" class="hover:text-primary-dark">Blog posts</a>
+    </h2>
+
+    <ul class="space-y-4 mb-6">
+      {{range limit .Posts 4}}
+      <li>
+        <a href="{{.URL}}" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-body">
+            {{.Title}}
+            <span class="text-sm text-gray-medium font-normal block mt-1">{{formatDateShort .Date}}</span>
+          </h3>
+          <p class="text-sm text-gray-dark mt-2 line-clamp-2">
+            {{truncateWords (stripHTML (printf "%s" .Content)) 16}}
+          </p>
+        </a>
+      </li>
+      {{end}}
+    </ul>
+
+    <a href="/blog" class="btn btn-small inline-flex items-center gap-2">
+      Read more blog posts
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </aside>
+</div>
+{{end}}

@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    @apply text-body;
+  }
+
+  body {
+    @apply bg-off-white font-sans antialiased;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+  }
+}
+
+/* Custom component classes */
+@layer components {
+  .container-site {
+    @apply max-w-site mx-auto px-4 md:px-6;
+  }
+
+  .btn {
+    @apply inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-block px-4 py-2 border-2 border-primary text-primary rounded hover:bg-primary hover:text-white transition-colors;
+  }
+
+  .btn-small {
+    @apply text-sm px-3 py-1.5;
+  }
+
+  .btn-gray {
+    @apply bg-gray-medium hover:bg-gray-dark;
+  }
+
+  /* Blog post content styling */
+  .prose-blog {
+    @apply prose prose-lg max-w-none;
+    @apply prose-headings:font-sans prose-headings:font-bold;
+    @apply prose-a:text-primary hover:prose-a:text-primary-dark;
+    @apply prose-code:bg-gray-100 prose-code:px-1 prose-code:rounded;
+    @apply prose-pre:bg-gray-900 prose-pre:text-gray-100;
+    @apply prose-img:rounded-lg;
+    @apply prose-li:marker:text-primary;
+  }
+
+  /* Grid layouts */
+  .grid-2-3-1-3 {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+  }
+
+  .col-2-3 {
+    @apply md:col-span-2;
+  }
+
+  .col-1-3 {
+    @apply md:col-span-1;
+  }
+
+  /* Link list for blog archive */
+  .link-list {
+    @apply space-y-4;
+  }
+
+  .link-list li a {
+    @apply block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .link-list h3 {
+    @apply text-lg font-semibold text-body;
+  }
+
+  .link-list .date {
+    @apply text-sm text-gray-medium ml-2;
+  }
+
+  /* Icon list for tools/skills */
+  .icon-list {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .icon-list li a {
+    @apply inline-block px-3 py-2 text-white text-sm rounded;
+  }
+
+  /* Portfolio items */
+  .portfolio-item {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden mb-8;
+  }
+
+  .portfolio-item img {
+    @apply w-full h-auto;
+  }
+
+  /* Featured work slideshow */
+  .featured-work {
+    @apply relative bg-white rounded-lg overflow-hidden;
+  }
+
+  .featured-work__slide {
+    @apply p-4;
+  }
+
+  .featured-work__slide img {
+    @apply w-full h-auto rounded;
+  }
+
+  .featured-work__slide__title {
+    @apply block text-lg font-bold mt-3;
+  }
+
+  .featured-work__slide__description {
+    @apply text-sm text-gray-dark mt-1;
+  }
+
+  /* Centered blocks for projects */
+  .centered-blocks {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .centered-blocks li a {
+    @apply block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow;
+  }
+
+  .centered-blocks img {
+    @apply w-full h-auto;
+  }
+
+  .centered-blocks h2 {
+    @apply text-lg font-bold px-4 pt-4;
+  }
+
+  .centered-blocks p {
+    @apply text-sm text-gray-dark px-4 pb-4;
+  }
+
+  /* Contact form */
+  .contact-form label {
+    @apply block text-sm font-semibold mb-1;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    @apply w-full px-3 py-2 border border-gray-light rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent mb-4;
+  }
+
+  .contact-form textarea {
+    @apply h-32;
+  }
+
+  /* Resume styles */
+  .resume-section {
+    @apply mb-8;
+  }
+
+  .resume-section aside {
+    @apply text-sm text-gray-medium mb-1;
+  }
+
+  .resume-section h3 {
+    @apply text-lg font-bold;
+  }
+
+  .resume-section h4 {
+    @apply text-base text-gray-dark mb-2;
+  }
+
+  /* Horizontal rule */
+  .hr {
+    @apply h-px bg-gray-light my-8;
+  }
+
+  /* Social icons */
+  .social-icons {
+    @apply flex gap-4;
+  }
+
+  .social-icons a {
+    @apply text-gray-dark hover:text-primary transition-colors;
+  }
+
+  /* Navigation */
+  .nav-main a {
+    @apply text-body hover:text-primary transition-colors px-3 py-2;
+  }
+
+  .nav-main a.active {
+    @apply text-primary;
+  }
+
+  /* Article styles */
+  article header h1 {
+    @apply text-2xl md:text-3xl font-bold mb-2;
+  }
+
+  article header .date {
+    @apply text-gray-medium text-sm;
+  }
+
+  /* Inner subhead */
+  .inner-subhead {
+    @apply text-sm text-gray-medium font-normal;
+  }
+
+  /* Hide utility */
+  .hide {
+    @apply sr-only;
+  }
+
+  /* Caps utility */
+  .caps {
+    @apply uppercase text-xs tracking-wider;
+  }
+
+  /* Search form */
+  .search-form {
+    @apply flex gap-2 mb-6;
+  }
+
+  .search-form input[type="text"] {
+    @apply flex-1 px-3 py-2 border border-gray-light rounded focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .search-form button {
+    @apply px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors;
+  }
+
+  /* Clients list */
+  .clients-list ul {
+    @apply columns-2 md:columns-3 gap-4 text-sm;
+  }
+
+  .clients-list li {
+    @apply mb-1;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+
+  .no-print {
+    @apply hidden;
+  }
+
+  a {
+    @apply text-black underline;
+  }
+}

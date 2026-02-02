@@ -1,13 +1,27 @@
+# OS files
 .DS_Store
-resources/*
-.sass-cache*
-css/*
-!css/.gitkeep
-*-ck.js
-*.min.js
-_site/*
-*.zip
-deploy.sh
-.jekyll-cache/*
+
+# Build output
+_site/
+bin/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Editor
 .idea
 .vscode
+
+# Compiled assets
+static/css/styles.css
+
+# Archives
+*.zip
+
+# Deploy scripts (keep private)
+deploy.sh
+
+# Legacy Jekyll files
+.sass-cache*
+.jekyll-cache/*

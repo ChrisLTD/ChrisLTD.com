@@ -1,0 +1,17 @@
+{
+  "name": "chrisltd-site",
+  "version": "1.0.0",
+  "description": "Chris Johnson's portfolio and blog",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./static/css/input.css -o ./static/css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./static/css/input.css -o ./static/css/styles.css --watch",
+    "build:go": "go build -o bin/generate ./cmd",
+    "build": "npm run build:css && npm run build:go && ./bin/generate",
+    "dev": "npm run build:css && npm run build:go && ./bin/generate -serve",
+    "generate": "./bin/generate"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

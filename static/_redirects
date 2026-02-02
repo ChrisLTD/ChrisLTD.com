@@ -1,0 +1,16 @@
+# Cloudflare Pages Redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Legacy URL redirects (from old .htaccess)
+/index.html /
+/about.html /about
+/portfolio.html /portfolio
+/projects.html /projects
+/resume.html /resume
+/blog.html /blog
+/blog/archive.html /blog/archive
+/blog/feed/ /blog/feed.xml
+/blog/feed /blog/feed.xml
+
+# Old blog post formats (if needed)
+# /blog/YYYY/MM/slug.html /blog/YYYY/MM/slug/ 301

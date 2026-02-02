@@ -1,0 +1,21 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="text-center py-16">
+  <h1 class="text-6xl md:text-8xl font-bold text-primary mb-4">404</h1>
+  <h2 class="text-2xl md:text-3xl font-bold mb-4">Page Not Found</h2>
+  <p class="text-gray-dark mb-8 max-w-md mx-auto">
+    Sorry, the page you're looking for doesn't exist or has been moved.
+  </p>
+
+  <div class="space-y-4">
+    <a href="/" class="btn inline-block">Go to Homepage</a>
+    <p class="text-gray-medium">or</p>
+    <form class="search-form max-w-md mx-auto" action="https://duckduckgo.com/" method="get">
+      <input type="hidden" name="sites" value="chrisltd.com">
+      <input type="text" name="q" placeholder="Search the site..." class="flex-1 px-4 py-2 border border-gray-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+</div>
+{{end}}

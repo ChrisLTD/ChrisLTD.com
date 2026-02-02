@@ -1,0 +1,84 @@
+{{template "base" .}}
+
+{{define "content"}}
+<h1 class="text-3xl md:text-4xl font-bold mb-8">About</h1>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 border-t border-gray-light pt-8">
+  <div class="lg:col-span-2">
+    <div class="prose-blog max-w-none">
+      <p>I'm a frontend engineer with over 15 years of experience building web experiences. I'm currently working as a full-time engineering leader in New York City. Aside from my current work, I've previously held positions with Justworks, Two Sigma IQ, The University of North Carolina at Chapel Hill, IGN Entertainment, Sideways NYC, and Pave.</p>
+
+      <p>I've been fortunate to work in a field that I'm passionate about and is never boring. Since I got my start building web apps as a teenager in the 1990s, not a week goes by where I don't get the chance to learn something new. I often spend my free time reading industry related books or working on personal programming projects.</p>
+
+      <p><em>I am currently accepting new work.</em></p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">My tools</h2>
+
+    <ul class="flex flex-wrap gap-2 mb-12">
+      <li><a href="https://en.wikipedia.org/wiki/HTML5" class="inline-block px-3 py-2 text-white text-sm rounded bg-html5 hover:opacity-90">HTML5</a></li>
+      <li><a href="https://www.typescriptlang.org/" class="inline-block px-3 py-2 text-white text-sm rounded bg-typescript hover:opacity-90">TypeScript</a></li>
+      <li><a href="https://reactjs.org/" class="inline-block px-3 py-2 text-white text-sm rounded bg-react hover:opacity-90">React</a></li>
+      <li><a href="https://nextjs.org/" class="inline-block px-3 py-2 text-white text-sm rounded bg-nextjs hover:opacity-90">Next.js</a></li>
+      <li><a href="https://tailwindcss.com/" class="inline-block px-3 py-2 text-white text-sm rounded bg-tailwind hover:opacity-90">Tailwind CSS</a></li>
+      <li><a href="https://git-scm.com/" class="inline-block px-3 py-2 text-white text-sm rounded bg-git hover:opacity-90">Git</a></li>
+      <li><a href="https://rubyonrails.org/" class="inline-block px-3 py-2 text-white text-sm rounded bg-rails hover:opacity-90">Rails</a></li>
+      <li><a href="https://wordpress.org/" class="inline-block px-3 py-2 text-white text-sm rounded bg-wordpress hover:opacity-90">WordPress</a></li>
+      <li><a href="https://www.figma.com/" class="inline-block px-3 py-2 text-white text-sm rounded bg-figma hover:opacity-90">Figma</a></li>
+      <li><a href="https://www.docker.com" class="inline-block px-3 py-2 text-white text-sm rounded bg-docker hover:opacity-90">Docker</a></li>
+      <li><a href="https://swift.org" class="inline-block px-3 py-2 text-white text-sm rounded bg-swift hover:opacity-90">Swift</a></li>
+      <li><a href="https://aws.amazon.com" class="inline-block px-3 py-2 text-white text-sm rounded bg-aws hover:opacity-90">AWS</a></li>
+    </ul>
+
+    <div class="hidden lg:block">
+      <h2 class="text-2xl font-bold mb-4">Colophon</h2>
+      <div class="prose-blog">
+        <p>This site was designed and engineered on a <a href="http://www.apple.com/macbook-pro/">MacBook Pro</a> using <a href="https://code.visualstudio.com/">Visual Studio Code</a> for coding.</p>
+        <p>Body text is set in <a href="https://typekit.com/fonts/franklin-gothic-urw">Franklin Gothic URW</a>. The site is built with <a href="https://go.dev/">Go</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a>.</p>
+        <p>Pages on this site are generated statically and served by <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img src="/img/mugshot.jpg" alt="Chris drinking tea" class="w-full rounded-lg shadow-sm mb-6">
+
+    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-gray-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href="mailto:Chris@ChrisLTD.com">Chris@ChrisLTD.com</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-gray-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>(917) 727-3545</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-gray-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>New York City</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-bold mb-4">Contact me</h2>
+    <form class="contact-form bg-white rounded-lg shadow-sm p-6" action="https://chrisltd.wufoo.com/forms/z7x3k1/#public" method="post">
+      <label for="Field17">Name<span class="text-primary">*</span></label>
+      <input id="Field17" name="Field17" type="text" required>
+
+      <label for="Field11">Email<span class="text-primary">*</span></label>
+      <input id="Field11" name="Field11" type="email" required>
+
+      <label for="Field15">Message<span class="text-primary">*</span></label>
+      <textarea id="Field15" name="Field15" required></textarea>
+
+      <button type="submit" class="btn w-full">Submit</button>
+
+      <div class="hidden">
+        <label for="comment">Do Not Fill This Out</label>
+        <textarea name="comment" id="comment"></textarea>
+        <input type="hidden" id="idstamp" name="idstamp" value="dLWXT1kem80XJKLSKrzpoGu7kVwlvqMG0dQu0PI/+Y8=">
+      </div>
+    </form>
+  </div>
+</div>
+{{end}}
