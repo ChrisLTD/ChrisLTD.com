@@ -11,7 +11,4 @@ $(function(){
     $(toggleTarget).slideToggle('fast');
   });
 
-  // enable slideshows
-  $('.js-slideshow').cycle();
-
 });

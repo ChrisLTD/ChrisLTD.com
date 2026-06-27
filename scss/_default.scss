@@ -324,20 +324,13 @@ blockquote {
 		color: $bodycolor;
 		text-decoration: none;
 
-		&:hover b {
+		&:hover .featured-work__slide__title {
 			color: $orange;
 		}
 	}
 
-	.cycle-pager {
-		span {
-			font-size: 30px;
-			color: rgba($orange, .3);
-		}
-
-		.cycle-pager-active {
-			color: $orange;
-		}
+	.slide + .slide {
+		margin-top: $gutter * 2;
 	}
 }
 
@@ -727,23 +720,6 @@ form.wufoo {
 
 	.slide {
 		width: 100%;
-	}
-
-	.cycle-pager {
-		text-align: center;
-
-		@include respond-to("tablet") {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			z-index: 999;
-		}
-
-		span {
-			cursor: pointer;
-			display: inline-block;
-			padding: 5px;
-		}
 	}
 
 	img {
