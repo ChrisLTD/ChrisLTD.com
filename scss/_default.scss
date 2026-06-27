@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*=======
 Stylesheet by Chris Johnson
 https://chrisltd.com
@@ -87,7 +89,7 @@ h3 {
 
 @mixin img_border {
 	border: 1px solid $faintest_gray;
-	@include prefixer(box-sizing, border-box);
+	box-sizing: border-box;
 }
 
 .img_border {
@@ -97,7 +99,7 @@ h3 {
 @mixin padded_border {
 	@include img_border;
 	padding: 5px;
-	@include prefixer(border-radius, 3px);
+	border-radius: 3px;
 	background: #fff;
 }
 
@@ -123,11 +125,11 @@ h3 {
 		font-family: $sans;
 		text-transform: uppercase;
 		font-weight: bold;
-		@include prefixer(transition, color 500ms ease-out);
-		@include prefixer(border-radius, 4px);
+		transition: color 500ms ease-out;
+		border-radius: 4px;
 
 		@include respond-to("tablet") {
-			@include prefixer(border-radius, 0);
+			border-radius: 0;
 		}
 
 		&:hover,
@@ -164,13 +166,13 @@ pre {
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 	overflow: auto;
-	@include prefixer(border-radius, 3px);
+	border-radius: 3px;
 
 	code {
 		overflow: auto;
 		padding: $gutter;
 		display: block;
-		@include prefixer(tab-size, 2);
+		tab-size: 2;
 		color: $faint_gray;
 	}
 }
@@ -385,12 +387,12 @@ blockquote {
 	text-decoration: none;
 	display: inline-block;
 	padding: $button_input_padding;
-	@include prefixer(border-radius, 4px);
+	border-radius: 4px;
 	-webkit-font-smoothing: antialiased;
 	border: none;
 	line-height: $line_height;
 	cursor: pointer;
-	@include prefixer(transition, all 200ms ease-out);
+	transition: all 200ms ease-out;
 	border: 1px solid $orange;
 	margin-bottom: 4px;
 
@@ -417,22 +419,15 @@ blockquote {
 	&.button_small {
 		font-size: 80%;
 	}
-
-	.ss-icon {
-		vertical-align: -15%;
-		font-size: 90%;
-		margin-left: 5px;
-		line-height: 1;
-	}
 }
 
 .text_input {
 	padding: $button_input_padding;
 	line-height: $line_height;
-	@include prefixer(border-radius, 4px);
+	border-radius: 4px;
 	border: 1px solid $light_gray;
 	@include box_shadow_inset(2px, 2px, 4px, rgba(0, 0, 0, .1));
-	@include prefixer(box-sizing, border-box);
+	box-sizing: border-box;
 	outline: none;
 
 	&:focus {
@@ -455,12 +450,6 @@ blockquote {
 		background: rgba(255, 255, 255, .75);
 		line-height: 2;
 	}
-
-	.ss-standard {
-		color: $orange;
-		vertical-align: middle;
-		margin-right: 4px;
-	}
 }
 
 .icon_list {
@@ -470,7 +459,7 @@ blockquote {
 		color: #fff;
 		text-decoration: none;
 		-webkit-font-smoothing: antialiased;
-		@include prefixer(border-radius, 4em);
+		border-radius: 4em;
 		line-height: 1;
 
 		&:hover {
@@ -538,7 +527,7 @@ iframe[src*="vimeo"] {
 		border: 3px solid rgba($orange, .2);
 		border-left: none;
 		border-right: none;
-		@include prefixer(transition, all 100ms ease-in-out);
+		transition: all 100ms ease-in-out;
 	}
 
 	a:hover {
@@ -755,8 +744,8 @@ form.wufoo {
 		height: 70px - $text_padding;
 		padding-left: $text_padding;
 		padding-top: $text_padding;
-		margin-left: $gutter / 2;
-		margin-right: $gutter / 2;
+		margin-left: math.div($gutter, 2);
+		margin-right: math.div($gutter, 2);
 		margin-bottom: $gutter;
 		font-size: 16px;
 		overflow: hidden;

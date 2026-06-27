@@ -10,7 +10,7 @@
 }
 
 @mixin col {
-	@include prefixer(box-sizing, border-box);
+	box-sizing: border-box;
 	float: left;
 	padding-right: $gutter;
 

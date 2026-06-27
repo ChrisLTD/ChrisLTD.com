@@ -74,13 +74,7 @@
   }
 
   @if $device==retina-display {
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (-moz-min-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
+    @media only screen and (min-resolution: 2dppx) {
       @content;
     }
   }
@@ -89,41 +83,10 @@
 @mixin background-image-retina($file, $type, $width, $height) {
   background-image: url($file + '.' + $type);
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
+  @media only screen and (min-resolution: 2dppx) {
     & {
       background-image: url($file + '@2x.' + $type);
-      @include prefixer(background-size, $width $height);
-    }
-  }
-}
-
-body {
-  &:after {
-    display: none;
-
-    @include respond-to(handheld) {
-      content: "handheld";
-    }
-
-    @include respond-to(tablet) {
-      content: "tablet";
-    }
-
-    @include respond-to(tablet-large) {
-      content: "tablet-large";
-    }
-
-    @include respond-to(desktop) {
-      content: "desktop";
-    }
-
-    @include respond-to(desktop-large) {
-      content: "desktop-large";
+      background-size: $width $height;
     }
   }
 }
