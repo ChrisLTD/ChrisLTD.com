@@ -13,6 +13,11 @@ exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, G
 markdown: kramdown
 highlighter: rouge
 
+sass:
+  sass_dir: scss
+  style: compressed
+  sourcemap: never
+
 # Plugins
 plugins:
   - jekyll-archives
@@ -33,4 +38,4 @@ tagline: Engineer in NYC
 author: Chris Johnson
 feed_url: /blog/feed.xml
 feed_title: Chris Johnson's Blog
-assets_version: 18 # used to cache bust css and js files
+assets_version: 19 # used to cache bust css and js files
