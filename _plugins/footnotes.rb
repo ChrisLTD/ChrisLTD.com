@@ -1,27 +1,24 @@
 # Title: Footnote Liquid Filter
 # Author: Chris Johnson
-# Description: Liquid filters to modify footnote markup. Useful for blog index
-#     pages where the same footnote reference may be used multiple times as
-#     articles are compiled. Also for rss feeds where footnote links won't work.
-#
-# Based on code from: Syeong Gan http://syeong.jcsg.com/2012/07/07/octopress-footnote-problem/
-#
-# Example Usage:
-#   <div class="entry-content">{{ content | excerpt | remove_footnote_link }}</div>
-#   <div class="entry-content">{{ content | excerpt | rename_footnote_link }}</div>
+# Description: Liquid filters to modify footnote markup. Used on the blog
+#     index where the same footnote reference may appear in multiple
+#     articles, and in the RSS feed where in-page anchor links don't work.
+
+require 'digest'
 
 module FootnoteLiquidFilters
-	# Appends a random integer to the footnote reference link
-	def rename_footnote_link(input)
-		random = rand(9999)
-		input.gsub(/fn:/, '\0'+"#{random}-").gsub(/fnref:/, '\0-'+"#{random}-")
+	# Prefixes footnote ids/refs with a stable per-post token so multiple
+	# posts on the same rendered page can't collide.
+	def rename_footnote_link(input, token = nil)
+		token ||= Digest::SHA1.hexdigest(input.to_s)[0, 8]
+		input.gsub(/fn:/, "fn:#{token}-").gsub(/fnref:/, "fnref:-#{token}-")
 	end
-	# Removes footnote hrefs entirely
+
+	# Strips footnote anchor links and back-arrows so they don't break
+	# in environments without in-page anchors (e.g., feed readers).
 	def remove_footnote_link(input)
-		input.gsub(/ href=("|')#(fn|fnref):\S+("|')/, '').gsub(/&#8617;/, '')
+		input.gsub(/ href=("|')#(fn|fnref):\S+\1/, '').gsub(/&#8617;/, '')
 	end
 end
-	
-Liquid::Template.register_filter FootnoteLiquidFilters
 
-puts "Running FootnoteLiquidFilters Plugin"
+Liquid::Template.register_filter FootnoteLiquidFilters

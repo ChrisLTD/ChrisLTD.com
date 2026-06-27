@@ -19,7 +19,7 @@ class: blog
 
 		</header>
 
-		{{ post.content | rename_footnote_link }}
+		{{ post.content | rename_footnote_link: post.slug }}
 
 	</article>
 
