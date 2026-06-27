@@ -11,3 +11,7 @@ deploy.sh
 .jekyll-cache/*
 .idea
 .vscode
+node_modules/
+tests/visual/current/
+tests/visual/diff/
+tests/visual/report.html

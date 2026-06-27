@@ -1,0 +1,22 @@
+{
+  "baseUrl": "http://localhost:8080",
+  "viewports": [
+    { "name": "mobile", "width": 375, "height": 812 },
+    { "name": "tablet", "width": 768, "height": 1024 },
+    { "name": "desktop", "width": 1280, "height": 800 }
+  ],
+  "pages": [
+    { "name": "home", "path": "/" },
+    { "name": "portfolio", "path": "/portfolio/" },
+    { "name": "projects", "path": "/projects/" },
+    { "name": "about", "path": "/about/" },
+    { "name": "resume", "path": "/resume/" },
+    { "name": "blog-index", "path": "/blog/" },
+    { "name": "blog-archive", "path": "/blog/archive/" },
+    { "name": "blog-category-media-diet", "path": "/blog/category/media-diet/" },
+    { "name": "post-with-footnotes", "path": "/blog/2013/05/adobe-subscription-pricing/" },
+    { "name": "post-with-iframe", "path": "/blog/2014/07/google-map-polymer-web-component/" },
+    { "name": "styles", "path": "/styles/" },
+    { "name": "404", "path": "/404.html" }
+  ]
+}
