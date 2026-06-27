@@ -491,6 +491,26 @@ blockquote {
 	font-weight: bold;
 }
 
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+
+	&--inline {
+		margin-left: 4px;
+		color: $orange;
+	}
+
+	&--social {
+		display: block;
+	}
+
+	&--contact {
+		margin-right: 4px;
+		vertical-align: -3px;
+	}
+}
+
 .icon_list--tools {
 	.icon_list--tool-html5     { background: #df4e28 url(/img/icon_html5.gif); }
 	.icon_list--tool-typescript { background: #3178c6; }
