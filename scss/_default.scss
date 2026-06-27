@@ -484,6 +484,14 @@ blockquote {
 	font-weight: bold;
 }
 
+iframe[src*="youtube"],
+iframe[src*="vimeo"] {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	max-width: 100%;
+}
+
 .icon {
 	display: inline-block;
 	vertical-align: middle;
