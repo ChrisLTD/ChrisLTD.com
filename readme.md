@@ -1,13 +1,13 @@
 # ChrisLTD.com
 
-Source for [chrisltd.com](https://chrisltd.com) — a personal portfolio + blog by [Chris Johnson](https://chrisltd.com/).
+Source for [chrisltd.com](https://chrisltd.com), a personal portfolio + blog by [Chris Johnson](https://chrisltd.com/).
 
 ## Stack
 
-- **[Jekyll](https://jekyllrb.com/) 4.3.x** — static site generator.
-- **[kramdown](https://kramdown.gettalong.org/)** with **[Rouge](https://rouge.jneen.net/)** — Markdown + syntax highlighting.
-- **[jekyll-archives](https://github.com/jekyll/jekyll-archives)** — powers `/blog/category/…` pages.
-- **Dart Sass** via `jekyll-sass-converter` — no separate build step.
+- **[Jekyll](https://jekyllrb.com/) 4.3.x**: static site generator.
+- **[kramdown](https://kramdown.gettalong.org/)** with **[Rouge](https://rouge.jneen.net/)**: Markdown + syntax highlighting.
+- **[jekyll-archives](https://github.com/jekyll/jekyll-archives)**: powers `/blog/category/…` pages.
+- **Dart Sass** via `jekyll-sass-converter`, no separate build step.
 - **Zero client-side JavaScript.** No jQuery, no bundler, no minifier.
 
 Deploys as a static site. Server-side config (redirects, cache headers, HSTS, X-Frame-Options, etc.) lives in `.htaccess`.
@@ -67,9 +67,9 @@ puts "hello"
 
 ## Front matter conventions
 
-- `class` — string appended to the `<body>` tag. Used by the default layout for menu highlighting (e.g. `class: about` marks the About nav item active).
-- `title` — page title; also used in the browser tab and `<meta property="og:title">`.
-- `excerpt` — used for `<meta name="description">` and OG description when set.
+- `class`: string appended to the `<body>` tag. Used by the default layout for menu highlighting (e.g. `class: about` marks the About nav item active).
+- `title`: page title; also used in the browser tab and `<meta property="og:title">`.
+- `excerpt`: used for `<meta name="description">` and OG description when set.
 
 ## Testing
 
@@ -82,19 +82,15 @@ npm run visual:baseline        # capture reference PNGs against current state
 npm run visual:check           # diff against the baselines; opens report.html
 ```
 
-Baselines are gitignored — generate them locally against whatever "before" state you want to compare to.
+Baselines are gitignored. Generate them locally against whatever "before" state you want to compare to.
 
 ## Deployment
 
 Auto-deploys via Cloudflare Pages / Vercel from `master` (build settings are managed in the respective dashboards). `deploy_example.sh` in the repo is a historical rsync recipe kept for reference.
 
-## Deferred modernization
-
-The 2026 modernization (jQuery removed, Symbolset icons swapped for inline SVG, packr/Ruby-Sass dropped, security headers added, etc.) deliberately left a few items for later. See [`TODO.md`](./TODO.md) for the list — float grid → CSS Grid, `@import` → `@use`, Normalize v2 → modern reset, etc.
-
 ## Markdown gotchas
 
 A couple of authoring rules that catch me out often enough to be worth writing down:
 
-- **Parentheses in link URLs** — URL-encode them as `%28` / `%29` so kramdown doesn't get confused.
-- **Literal square brackets in body copy** — use the HTML entities `&#91;` and `&#93;` so kramdown doesn't try to parse them as a footnote reference.
+- **Parentheses in link URLs**: URL-encode them as `%28` / `%29` so kramdown doesn't get confused.
+- **Literal square brackets in body copy**: use the HTML entities `&#91;` and `&#93;` so kramdown doesn't try to parse them as a footnote reference.
