@@ -6,6 +6,7 @@ tests/visual/diff/
 tests/visual/report.html
 tests/visual/report-inline.html
 _posts/
+_drafts/
 css/
 Gemfile.lock
 package-lock.json

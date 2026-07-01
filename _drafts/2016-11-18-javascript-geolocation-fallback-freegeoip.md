@@ -3,7 +3,6 @@ layout: post
 title: JavaScript geolocation with a fallback to Freegeoip
 ads: true
 ---
-
 The geolocation API that modern browsers offer is pretty great and [easy to use](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation). But it has one big downside, browsers present a dialog box asking permission before sending their location:
 
 ![Geolocation permission dialog](/blog/images/2016/11/geolocation-permission.png)
@@ -20,18 +19,18 @@ Here’s the script I pulled together to make it happen:
 'use strict';
 
 const GEOLOCATION_TYPE = {
-GEOPOSITION: 'GEOPOSITION',
-FREEGEOIP: 'FREEGEOIP'
+  GEOPOSITION: 'GEOPOSITION',
+  FREEGEOIP: 'FREEGEOIP'
 };
 
 class Localizer {
 
-constructor() {
-// Let's get the ball rolling
-this.getPositionViaGeolocationAPI();
-}
+  constructor() {
+    // Let's get the ball rolling
+    this.getPositionViaGeolocationAPI();
+  }
 
-getPositionViaGeolocationAPI() {
+  getPositionViaGeolocationAPI() {
 
     // check if this browser supports the geolocation API
     var geolocation = null;
@@ -41,21 +40,21 @@ getPositionViaGeolocationAPI() {
     }
 
     if (geolocation) {
-      // this browser supports geolocation,
+      // this browser supports geolocation, 
       // ask for permission to get the users info
       // if they deny us, we'll try freegeoip instead
       geolocation.getCurrentPosition((position) => {
         this.foundPosition(position, GEOLOCATION_TYPE.GEOPOSITION);
       }, this.getPositionViaFreegeoip.bind(this));
     } else {
-      // this browser doesn't support geolocation
+      // this browser doesn't support geolocation 
       // try freegeoip instead
       this.getPositionViaFreegeoip();
     }
 
-}
+  }
 
-getPositionViaFreegeoip() {
+  getPositionViaFreegeoip() {
 
     // Request geolocation from freegeoip using JSONP
     // Using JSONP instead of XMLHttpRequest let's us get around CORS
@@ -75,9 +74,9 @@ getPositionViaFreegeoip() {
         timeout: 5
     });
 
-}
+  }
 
-foundPosition(position, positionType) {
+  foundPosition(position, positionType) {
 
     var latitude, longitude;
 
@@ -101,31 +100,31 @@ foundPosition(position, positionType) {
 
     console.log(`You are currently ${distanceFromYS} meters from Yankee Stadium`);
 
-}
+  }
 
-noPositionAvailable() {
-console.log('No position information available.');
-}
+  noPositionAvailable() {
+    console.log('No position information available.');
+  }
 
-// http://stackoverflow.com/a/13045312/648844
-//
-// Sample Usage:
-//
-// jsonpSend('some_url?callback=handleStuff', {
-// callbackName: 'handleStuff',
-// onSuccess: function(json){
-// console.log('success!', json);
-// },
-// onTimeout: function(){
-// console.log('timeout!');
-// },
-// timeout: 5
-// });
-jsonpSend(src, options) {
-var callback_name = options.callbackName || 'callback',
-on_success = options.onSuccess || function(){},
-on_timeout = options.onTimeout || function(){},
-timeout = options.timeout || 10; // sec
+  // http://stackoverflow.com/a/13045312/648844
+  // 
+  // Sample Usage:
+  //
+  // jsonpSend('some_url?callback=handleStuff', {
+  //   callbackName: 'handleStuff',
+  //     onSuccess: function(json){
+  //     console.log('success!', json);
+  //   },
+  //   onTimeout: function(){
+  //     console.log('timeout!');
+  //   },
+  //   timeout: 5
+  // });
+  jsonpSend(src, options) {
+    var callback_name = options.callbackName || 'callback',
+      on_success = options.onSuccess || function(){},
+      on_timeout = options.onTimeout || function(){},
+      timeout = options.timeout || 10; // sec
 
     var timeout_trigger = window.setTimeout(function(){
       window[callback_name] = function(){};
@@ -143,17 +142,16 @@ timeout = options.timeout || 10; // sec
     script.src = src;
 
     document.getElementsByTagName('head')[0].appendChild(script);
+  }
 
-}
-
-// http://stackoverflow.com/a/28543001/648844
-distanceInMetersBetween(latitude, longitude, latitude2, longitude2) {
-const dLatitude = (latitude - latitude2) * Math.PI / 180;
-const dLongitude = (longitude - longitude2) * Math.PI / 180;
-const a = 0.5 - Math.cos(dLatitude) / 2 + Math.cos(latitude2 * Math.PI / 180) *
-Math.cos(latitude * Math.PI / 180) * (1 - Math.cos(dLongitude)) / 2;
-return Math.round(6371000 * 2 * Math.asin(Math.sqrt(a)));
-}
+  // http://stackoverflow.com/a/28543001/648844
+  distanceInMetersBetween(latitude, longitude, latitude2, longitude2) {
+    const dLatitude = (latitude - latitude2) * Math.PI / 180;
+    const dLongitude = (longitude - longitude2) * Math.PI / 180;
+    const a = 0.5 - Math.cos(dLatitude) / 2 + Math.cos(latitude2 * Math.PI / 180) *
+      Math.cos(latitude * Math.PI / 180) * (1 - Math.cos(dLongitude)) / 2;
+    return Math.round(6371000 * 2 * Math.asin(Math.sqrt(a)));
+  }
 
 }
 
@@ -167,6 +165,7 @@ If you copy and paste that code into your browser’s console, you should see a 
 latitude: 38.9036 longitude: -77.4512
 You are currently 369241 meters from Yankee Stadium
 {% endhighlight %}
+
 
 I've put this script on [Github as a Gist](https://gist.github.com/ChrisLTD/263f46a54b240fd9bafc93fbc6fa1f3f) if you’d like to fork it or contribute.
 

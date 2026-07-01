@@ -15,25 +15,25 @@ Create IAM user
 Grant IAM user bucket permissions
 
 {
-"Statement": [
-{
-"Sid": "AllowPublicRead",
-"Action": [
-"s3:ListBucket",
-"s3:GetObject",
-"s3:PutObject",
-"s3:PutObjectAcl",
-"s3:DeleteObject"
-],
-"Effect": "Allow",
-"Resource": [
-"arn:aws:s3:::timekiwi/_",
-"arn:aws:s3:::timekiwi",
-"arn:aws:s3:::timekiwi-dev/_",
-"arn:aws:s3:::timekiwi-dev"
-]
-}
-]
+    "Statement": [
+        {
+            "Sid": "AllowPublicRead",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:DeleteObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::timekiwi/*",
+                "arn:aws:s3:::timekiwi",
+                "arn:aws:s3:::timekiwi-dev/*",
+                "arn:aws:s3:::timekiwi-dev"
+            ]
+        }
+    ]
 }
 
 Install CarrierWave, Install Fog-AWS, dotenv
@@ -49,5 +49,6 @@ heroku config:set GITHUB_USERNAME=joesmith
 Configure Fog-AWS
 
 Attach uploader to model
+
 
 [^paperclip]: [PaperClip](https://github.com/thoughtbot/paperclip) is another popular option.

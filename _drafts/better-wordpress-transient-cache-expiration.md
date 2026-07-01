@@ -2,7 +2,6 @@
 layout: post
 title: Better Wordpress transient cache expiration
 ---
-
 The Wordpress [transient API](http://codex.wordpress.org/Transients_API) gives us an easy way to temporarily [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29) dynamic data directly in the Wordpress database. Instead of forcing all of your users to wait for the result of an external API call or an especially slow database query, you do it once every so often[^timetoexpire], cache the result and serve the faster cached version to your users.
 
 ## The not so good way
