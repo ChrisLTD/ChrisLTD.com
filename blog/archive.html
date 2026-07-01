@@ -8,20 +8,21 @@ class: blog
 
 {% include search_form.html %}
 
-<br>
+<br />
 
 <ul class="link_list">
-{% for post in site.posts %}
-  {% unless post.draft %}
-	<li>
-		<a href="{{ post.url }}">
-			<h3><b>{{ post.title }}</b> <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%Y" }}</span></h3>
-		</a>
-	</li>
-  {% endunless %}
-{% endfor %}
+  {% for post in site.posts %} {% unless post.draft %}
+  <li>
+    <a href="{{ post.url }}">
+      <h3>
+        <span class="title">{{ post.title }}</span>
+        <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%Y" }}</span>
+      </h3>
+    </a>
+  </li>
+  {% endunless %} {% endfor %}
 </ul>
 
 <div class="blog_navigation">
-	<a href="{{ site.feed_url }}" class="button">Subscribe via RSS <i class="ss-icon ss-rss"></i></a>
+  <a href="{{ site.feed_url }}" class="button">Subscribe via RSS {% include icons/rss.svg %}</a>
 </div>

@@ -1,0 +1,8 @@
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "plugins": ["@shopify/prettier-plugin-liquid"],
+  "overrides": [{ "files": "*.svg", "options": { "parser": "html" } }]
+}

@@ -5,13 +5,19 @@ permalink: /blog/:year/:month/:title/
 
 source: .
 destination: ./_site
-plugins_dir:     ./_plugins
+plugins_dir: ./_plugins
 
 future: false # publish posts dated into the future
 exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md]
+include: [_headers]  # Cloudflare Pages security headers; copied verbatim to _site/
 
 markdown: kramdown
 highlighter: rouge
+
+sass:
+  sass_dir: scss
+  style: compressed
+  sourcemap: never
 
 # Plugins
 plugins:
@@ -33,4 +39,5 @@ tagline: Engineer in NYC
 author: Chris Johnson
 feed_url: /blog/feed.xml
 feed_title: Chris Johnson's Blog
-assets_version: 18 # used to cache bust css and js files
+# Cache-busting is automatic: _plugins/assets_hash.rb sets `site.assets_hash`
+# from the SHA-1 of the SCSS source tree at build time.

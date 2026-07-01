@@ -1,5 +1,4 @@
 @media print {
-
   body {
     font-size: 12px;
   }
@@ -23,12 +22,11 @@
     }
 
     a:after {
-      content: " ("attr(href) ") ";
+      content: " (" attr(href) ") ";
     }
 
     a[rel="footnote"]:after {
       content: none;
     }
   }
-
 }

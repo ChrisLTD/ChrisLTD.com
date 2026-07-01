@@ -6,25 +6,21 @@ class: blog
 
 {% for post in site.posts limit:10 %}
 
-	<article>
+<article>
+  <header>
+    <h1>
+      <a href="{{ post.url }}"><span class="title">{{ post.title }}</span></a>
+      <span class="date inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span>
+    </h1>
 
-		<header>
+    <div class="author hide">By {{ site.author }}</div>
+  </header>
 
-			<h1>
-				<a href="{{ post.url }}"><b class="title">{{ post.title }}</b></a>
-				<span class="date inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span>
-			</h1>
-
-			<div class="author hide">By {{ site.author }}</div>
-
-		</header>
-
-		{{ post.content | rename_footnote_link }}
-
-	</article>
+  {{ post.content | rename_footnote_link: post.slug }}
+</article>
 
 {% endfor %}
 
 <div class="blog_navigation">
-	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
+  <a href="/blog/archive" class="button">Browse the blog archive <span aria-hidden="true">&#x27A1;</span></a>
 </div>

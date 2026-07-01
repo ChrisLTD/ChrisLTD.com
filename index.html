@@ -3,78 +3,82 @@ layout: default
 class: home
 ---
 
-        <div class="intro">
+<div class="intro">
+  <div class="hr"></div>
 
-          <div class="hr"></div>
+  <p>
+    Hello! My name is Chris Johnson and I'm a frontend engineer with a passion for building user experiences through the
+    intersection of web technology and design. I’ve led high-performing teams in delivering scalable, user-centric
+    applications. I mentor engineers to think beyond code, considering the broader user experience while maintaining
+    high standards for performance and accessibility. If you’d like to work together,
+    <a href="/about">please get in touch</a>.
+  </p>
 
-          <p>Hello! My name is Chris Johnson and I'm a frontend engineer with a passion for building user experiences through the intersection of web technology and design. I’ve led high-performing teams in delivering scalable, user-centric applications. I mentor engineers to think beyond code, considering the broader user experience while maintaining high standards for performance and accessibility. If you’d like to work together, <a href="/about">please get in touch</a>.</p>
+  <div class="hr"></div>
+</div>
+<!--/.intro -->
 
-          <div class="hr"></div>
+<div class="grid">
+  <div class="col-2-3">
+    <h1><a href="/portfolio">Featured work</a></h1>
 
-        </div><!--/.intro -->
+    <div class="featured-work">
+      <div class="slide featured-work__slide">
+        <img src="portfolio/sbe.jpg" alt="Screenshot of sbe.com" />
+        <span class="featured-work__slide__title">sbe.com</span><br />
+        <div class="featured-work__slide__description">
+          Type: Website | Role: Developer of responsive HTML/CSS templates, JavaScript modules and WordPress back-end
+          functionality
+        </div>
+      </div>
 
-        <div class="grid">
-          <div class="col-2-3">
+      <div class="slide featured-work__slide">
+        <img src="portfolio/novella.jpg" alt="Screenshot of Novella Clinical" />
+        <span class="featured-work__slide__title">Novella Clinical</span><br />
+        <div class="featured-work__slide__description">
+          Type: Website | Role: Developer of responsive WordPress theme and JavaScript interactions
+        </div>
+      </div>
 
-            <h1><a href="/portfolio">Featured work</a></h1>
+      <div class="slide featured-work__slide">
+        <img src="portfolio/justworks.jpg" alt="Screenshot of Justworks" />
+        <span class="featured-work__slide__title">Justworks</span><br />
+        <div class="featured-work__slide__description">Type: Website | Role: Rails and React developer</div>
+      </div>
 
-            <div class="featured-work js-slideshow" data-cycle-timeout="3500" data-cycle-swipe="true" data-cycle-slides="> .slide" data-cycle-pause-on-hover="true" data-cycle-pager-template='<span class="ss-record"></span>' data-cycle-loader="true">
-              <div class="cycle-pager ss-icon"></div>
+      <div class="slide featured-work__slide">
+        <img src="portfolio/integral.jpg" alt="Screenshot of Integral" />
+        <span class="featured-work__slide__title">Integral</span><br />
+        <div class="featured-work__slide__description">
+          Type: Website | Role: WordPress developer, and information architect
+        </div>
+      </div>
+    </div>
+    <!--/.featured-work-->
 
-              <div class="slide featured-work__slide">
-                <img src="portfolio/sbe.jpg">
-                <b class="featured-work__slide__title">sbe.com</b><br>
-                <div class="featured-work__slide__description">
-                  Type: Website | Role: Developer of responsive HTML/CSS templates, JavaScript modules and WordPress back-end functionality
-                </div>
-              </div>
+    <p><a href="/portfolio" class="button button_small">See more work {% include icons/arrow-right.svg %}</a></p>
+  </div>
+  <!--/.content-->
 
-              <div class="slide featured-work__slide">
-                <img src="portfolio/novella.jpg">
-                <b class="featured-work__slide__title">Novella Clinical</b><br>
-                <div class="featured-work__slide__description">
-                  Type: Website | Role: Developer of responsive WordPress theme and JavaScript interactions
-                </div>
-              </div>
+  <aside class="col-1-3">
+    <h1><a href="/blog">Blog posts</a></h1>
 
-              <div class="slide featured-work__slide">
-                <img src="portfolio/justworks.jpg">
-                <b class="featured-work__slide__title">Justworks</b><br>
-                <div class="featured-work__slide__description">
-                  Type: Website | Role: Rails and React developer
-                </div>
-              </div>
+    <ul class="link_list">
+      {% for post in site.posts limit:4 %}
+      <li>
+        <a href="{{ post.url }}">
+          <h3>
+            <span class="title">{{ post.title }}</span>
+            <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span>
+          </h3>
+          {{ post.content | strip_html | truncatewords: 16, ' &hellip;' }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
 
-              <div class="slide featured-work__slide">
-                <img src="portfolio/integral.jpg">
-                <b class="featured-work__slide__title">Integral</b><br>
-                <div class="featured-work__slide__description">
-                  Type: Website | Role: WordPress developer, and information architect
-                </div>
-              </div>
-
-            </div><!--/.featured-work-->
-
-            <p><a href="/portfolio" class="button button_small">See more work <i class="ss-icon ss-standard ss-right"></i></a></p>
-
-          </div><!--/.content-->
-
-          <aside class="col-1-3">
-
-            <h1><a href="/blog">Blog posts</a></h1>
-
-            <ul class="link_list">
-						{% for post in site.posts limit:4 %}
-							<li>
-								<a href="{{ post.url }}">
-									<h3><b>{{ post.title }}</b> <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span></h3>
-									{{ post.content | strip_html | truncatewords: 16, ' &hellip;' }}
-								</a>
-							</li>
-						{% endfor %}
-						</ul>
-
-            <a href="/blog" class="button button_small">Read more blog posts <i class="ss-icon ss-standard ss-right"></i></a>
-
-          </aside><!--/.sidebar-->
-        </div><!--/.grid-->
+    <a href="/blog" class="button button_small">Read more blog posts {% include icons/arrow-right.svg %}</a>
+  </aside>
+  <!--/.sidebar-->
+</div>
+<!--/.grid-->

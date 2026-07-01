@@ -4,17 +4,20 @@ class: blog
 ---
 
 <article>
+  <header>
+    <h1>
+      <span class="title">{{ page.title }}</span>
+      <span class="date inner_subhead">{{ page.date | date: "%-1m/%-1d/%y" }}</span>
+    </h1>
+    <div class="author hide">By {{ site.author }}</div>
+  </header>
 
-	<header>
-		<h1><b class="title">{{ page.title }}</b> <span class="date inner_subhead">{{ page.date | date: "%-1m/%-1d/%y" }}</span></h1>
-		<div class="author hide">By {{ site.author }}</div>
-	</header>
-
-	{{ content | replace: '&amp;', '&' }}
-
+  {{ content }}
 </article>
 
 <div class="blog_navigation">
-	<a href="/blog/archive" class="button">Browse the blog archive <i class="ss-icon ss-standard">&#x27A1;</i></a>
-	<a href="https://itunes.apple.com/us/app/long-day-day-planner/id1062689795?ls=1&mt=8&at=11l5Li" class="button">Download my app Long Day <i class="ss-icon ss-standard">📱</i></a>
+  <a href="/blog/archive" class="button">Browse the blog archive <span aria-hidden="true">&#x27A1;</span></a>
+  <a href="https://itunes.apple.com/us/app/long-day-day-planner/id1062689795?ls=1&mt=8&at=11l5Li" class="button"
+    >Download my app Long Day <span aria-hidden="true">📱</span></a
+  >
 </div>

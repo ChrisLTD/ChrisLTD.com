@@ -4,5 +4,3 @@ ruby ">= 3.3.0"
 
 gem 'jekyll'
 gem 'jekyll-archives'
-gem 'sass'
-gem 'packr'
