@@ -12,6 +12,7 @@ deploy.sh
 .idea
 .vscode
 node_modules/
+tests/visual/baselines/
 tests/visual/current/
 tests/visual/diff/
 tests/visual/report.html
