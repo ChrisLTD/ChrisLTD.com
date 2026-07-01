@@ -9,6 +9,7 @@ plugins_dir: ./_plugins
 
 future: false # publish posts dated into the future
 exclude: [resources, deploy.sh, deploy_example.sh, localtest.sh, Gemfile.lock, Gemfile, readme.md]
+include: [_headers]  # Cloudflare Pages security headers; copied verbatim to _site/
 
 markdown: kramdown
 highlighter: rouge
