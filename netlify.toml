@@ -1,0 +1,15 @@
+# Netlify build configuration for chrisltd.com.
+# The site is served by Netlify (chrisltd-site.netlify.app CNAME).
+#
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+#
+# Security headers are set in `_headers` rather than here so the file
+# stays in sync with the Cloudflare Pages parity config. Values in
+# netlify.toml would take precedence over `_headers` if duplicated.
+
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build"
+
+[build.environment]
+  RUBY_VERSION = "3.3.4"
