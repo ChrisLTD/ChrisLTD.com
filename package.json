@@ -5,12 +5,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "visual:baseline": "node tests/visual/snap.mjs --mode=baseline",
     "visual:check": "node tests/visual/snap.mjs --mode=check"
   },
   "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.3",
     "pixelmatch": "^6.0.0",
     "playwright": "^1.49.0",
-    "pngjs": "^7.0.0"
+    "pngjs": "^7.0.0",
+    "prettier": "^3.9.4"
   }
 }

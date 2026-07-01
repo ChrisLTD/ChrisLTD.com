@@ -81,11 +81,11 @@
 }
 
 @mixin background-image-retina($file, $type, $width, $height) {
-  background-image: url($file + '.' + $type);
+  background-image: url($file + "." + $type);
 
   @media only screen and (min-resolution: 2dppx) {
     & {
-      background-image: url($file + '@2x.' + $type);
+      background-image: url($file + "@2x." + $type);
       background-size: $width $height;
     }
   }

@@ -6,31 +6,33 @@
 //   --mode=check      Capture screenshots to tests/visual/current/ and diff against baselines/.
 //                     Writes diff PNGs to tests/visual/diff/ and an HTML report to tests/visual/report.html.
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
-import { PNG } from 'pngjs';
-import pixelmatch from 'pixelmatch';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
+import { PNG } from "pngjs";
+import pixelmatch from "pixelmatch";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname);
-const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'pages.json'), 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.join(ROOT, "pages.json"), "utf8"));
 
-const args = Object.fromEntries(process.argv.slice(2).map(a => {
-  const [k, v] = a.replace(/^--/, '').split('=');
-  return [k, v ?? true];
-}));
-const mode = args.mode === 'baseline' ? 'baseline' : 'check';
+const args = Object.fromEntries(
+  process.argv.slice(2).map((a) => {
+    const [k, v] = a.replace(/^--/, "").split("=");
+    return [k, v ?? true];
+  }),
+);
+const mode = args.mode === "baseline" ? "baseline" : "check";
 
-const baselineDir = path.join(ROOT, 'baselines');
-const currentDir = path.join(ROOT, 'current');
-const diffDir = path.join(ROOT, 'diff');
-const reportPath = path.join(ROOT, 'report.html');
+const baselineDir = path.join(ROOT, "baselines");
+const currentDir = path.join(ROOT, "current");
+const diffDir = path.join(ROOT, "diff");
+const reportPath = path.join(ROOT, "report.html");
 
-const outDir = mode === 'baseline' ? baselineDir : currentDir;
+const outDir = mode === "baseline" ? baselineDir : currentDir;
 fs.mkdirSync(outDir, { recursive: true });
-if (mode === 'check') {
+if (mode === "check") {
   fs.rmSync(diffDir, { recursive: true, force: true });
   fs.mkdirSync(diffDir, { recursive: true });
 }
@@ -41,10 +43,10 @@ async function waitForServer(url, timeoutMs = 30_000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     try {
-      const res = await fetch(url, { method: 'HEAD' });
+      const res = await fetch(url, { method: "HEAD" });
       if (res.ok || res.status === 404) return true;
     } catch {}
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise((r) => setTimeout(r, 500));
   }
   throw new Error(`Server at ${url} did not respond within ${timeoutMs}ms`);
 }
@@ -62,7 +64,7 @@ const results = []; // { page, viewport, status, diffPct, baselineExists }
 await waitForServer(config.baseUrl);
 
 // Use the pre-installed Chromium when present (overrides Playwright's bundled-version check).
-const preInstalledChrome = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+const preInstalledChrome = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome";
 const launchOpts = fs.existsSync(preInstalledChrome) ? { executablePath: preInstalledChrome } : {};
 const browser = await chromium.launch(launchOpts);
 try {
@@ -70,19 +72,19 @@ try {
     const context = await browser.newContext({
       viewport: { width: viewport.width, height: viewport.height },
       deviceScaleFactor: 1,
-      reducedMotion: 'reduce',
+      reducedMotion: "reduce",
     });
     const page = await context.newPage();
     for (const p of config.pages) {
       const url = config.baseUrl + p.path;
       try {
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 30_000 });
+        await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
       } catch (err) {
         console.warn(`! navigation issue on ${url}: ${err.message} — continuing`);
       }
       // scroll to bottom to trigger lazy images, then back to top
       await page.evaluate(async () => {
-        await new Promise(resolve => {
+        await new Promise((resolve) => {
           let y = 0;
           const step = () => {
             window.scrollBy(0, 600);
@@ -100,10 +102,16 @@ try {
       const currentBuf = await page.screenshot({ fullPage: true });
       fs.writeFileSync(outFile, currentBuf);
 
-      if (mode === 'check') {
+      if (mode === "check") {
         const baselineFile = fileForPage(baselineDir, p, viewport);
         if (!fs.existsSync(baselineFile)) {
-          results.push({ page: p.name, viewport: viewport.name, status: 'no-baseline', diffPct: 0, baselineExists: false });
+          results.push({
+            page: p.name,
+            viewport: viewport.name,
+            status: "no-baseline",
+            diffPct: 0,
+            baselineExists: false,
+          });
           console.log(`?  ${p.name} ${viewport.name} — no baseline`);
           continue;
         }
@@ -120,7 +128,8 @@ try {
           return out.data;
         };
         const numDiff = pixelmatch(padded(baselinePng), padded(currentPng), diffPng.data, w, h, { threshold: 0.1 });
-        const sizeDelta = Math.abs(baselinePng.width - currentPng.width) + Math.abs(baselinePng.height - currentPng.height);
+        const sizeDelta =
+          Math.abs(baselinePng.width - currentPng.width) + Math.abs(baselinePng.height - currentPng.height);
         const total = w * h;
         const diffPctValue = pct(numDiff, total);
         const diffFile = fileForPage(diffDir, p, viewport);
@@ -129,15 +138,17 @@ try {
         results.push({
           page: p.name,
           viewport: viewport.name,
-          status: flagged ? 'flagged' : 'ok',
+          status: flagged ? "flagged" : "ok",
           diffPct: diffPctValue,
           baselineExists: true,
           baselineSize: `${baselinePng.width}×${baselinePng.height}`,
           currentSize: `${currentPng.width}×${currentPng.height}`,
           sizeDelta,
         });
-        const marker = flagged ? '✗' : '✓';
-        console.log(`${marker}  ${p.name} ${viewport.name} — ${diffPctValue.toFixed(3)}% diff${sizeDelta ? ` (size Δ ${sizeDelta}px)` : ''}`);
+        const marker = flagged ? "✗" : "✓";
+        console.log(
+          `${marker}  ${p.name} ${viewport.name} — ${diffPctValue.toFixed(3)}% diff${sizeDelta ? ` (size Δ ${sizeDelta}px)` : ""}`,
+        );
       } else {
         console.log(`captured ${p.name} ${viewport.name}`);
       }
@@ -148,28 +159,34 @@ try {
   await browser.close();
 }
 
-if (mode === 'check') {
+if (mode === "check") {
   results.sort((a, b) => b.diffPct - a.diffPct);
-  const rel = (file) => path.relative(ROOT, file).split(path.sep).join('/');
-  const rows = results.map(r => {
-    const base = rel(path.join(baselineDir, `${r.page}__${r.viewport}.png`));
-    const curr = rel(path.join(currentDir, `${r.page}__${r.viewport}.png`));
-    const diff = rel(path.join(diffDir, `${r.page}__${r.viewport}.png`));
-    const cls = r.status === 'flagged' ? 'flagged' : r.status === 'no-baseline' ? 'nobase' : 'ok';
-    const sizeNote = r.baselineExists ? ` <small>${r.baselineSize} → ${r.currentSize}</small>` : '';
-    return `<section class="${cls}">
+  const rel = (file) => path.relative(ROOT, file).split(path.sep).join("/");
+  const rows = results
+    .map((r) => {
+      const base = rel(path.join(baselineDir, `${r.page}__${r.viewport}.png`));
+      const curr = rel(path.join(currentDir, `${r.page}__${r.viewport}.png`));
+      const diff = rel(path.join(diffDir, `${r.page}__${r.viewport}.png`));
+      const cls = r.status === "flagged" ? "flagged" : r.status === "no-baseline" ? "nobase" : "ok";
+      const sizeNote = r.baselineExists ? ` <small>${r.baselineSize} → ${r.currentSize}</small>` : "";
+      return `<section class="${cls}">
       <h2>${r.page} <small>${r.viewport}</small></h2>
-      <p class="pct">${r.baselineExists ? r.diffPct.toFixed(3) + '% diff' : 'no baseline'}${sizeNote}</p>
-      ${r.baselineExists ? `
+      <p class="pct">${r.baselineExists ? r.diffPct.toFixed(3) + "% diff" : "no baseline"}${sizeNote}</p>
+      ${
+        r.baselineExists
+          ? `
       <div class="row">
         <figure><figcaption>baseline</figcaption><img src="${base}" loading="lazy"></figure>
         <figure><figcaption>current</figcaption><img src="${curr}" loading="lazy"></figure>
         <figure><figcaption>diff</figcaption><img src="${diff}" loading="lazy"></figure>
-      </div>` : `<p>Captured at <a href="${curr}">${curr}</a></p>`}
+      </div>`
+          : `<p>Captured at <a href="${curr}">${curr}</a></p>`
+      }
     </section>`;
-  }).join('\n');
-  const flaggedCount = results.filter(r => r.status === 'flagged').length;
-  const noBaseCount = results.filter(r => r.status === 'no-baseline').length;
+    })
+    .join("\n");
+  const flaggedCount = results.filter((r) => r.status === "flagged").length;
+  const noBaseCount = results.filter((r) => r.status === "no-baseline").length;
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <title>Visual regression report</title>

@@ -1,0 +1,11 @@
+_site/
+node_modules/
+tests/visual/baselines/
+tests/visual/current/
+tests/visual/diff/
+tests/visual/report.html
+tests/visual/report-inline.html
+_posts/
+css/
+Gemfile.lock
+package-lock.json

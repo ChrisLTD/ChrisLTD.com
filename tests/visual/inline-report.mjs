@@ -3,28 +3,30 @@
 // the FLAGGED pages at the DESKTOP viewport. Skips OK pages and the
 // mobile / tablet viewports to keep the HTML under ~15 MB.
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { PNG } from 'pngjs';
-import pixelmatch from 'pixelmatch';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { PNG } from "pngjs";
+import pixelmatch from "pixelmatch";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname);
-const baselineDir = path.join(ROOT, 'baselines');
-const currentDir = path.join(ROOT, 'current');
-const diffDir = path.join(ROOT, 'diff');
-const outPath = path.join(ROOT, 'report-inline.html');
+const baselineDir = path.join(ROOT, "baselines");
+const currentDir = path.join(ROOT, "current");
+const diffDir = path.join(ROOT, "diff");
+const outPath = path.join(ROOT, "report-inline.html");
 
-const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'pages.json'), 'utf8'));
-const desktop = config.viewports.find(v => v.name === 'desktop');
+const config = JSON.parse(fs.readFileSync(path.join(ROOT, "pages.json"), "utf8"));
+const desktop = config.viewports.find((v) => v.name === "desktop");
 
 function dataUri(file) {
   if (!fs.existsSync(file)) return null;
-  return 'data:image/png;base64,' + fs.readFileSync(file).toString('base64');
+  return "data:image/png;base64," + fs.readFileSync(file).toString("base64");
 }
 
-function pct(a, b) { return b === 0 ? 0 : (a / b) * 100; }
+function pct(a, b) {
+  return b === 0 ? 0 : (a / b) * 100;
+}
 
 const sections = [];
 let totalBytes = 0;
@@ -59,7 +61,15 @@ for (const page of config.pages) {
   const dUri = dataUri(diffFile);
   totalBytes += (bUri?.length || 0) + (cUri?.length || 0) + (dUri?.length || 0);
 
-  sections.push({ page: page.name, diffPct, b: b.width + '×' + b.height, c: c.width + '×' + c.height, bUri, cUri, dUri });
+  sections.push({
+    page: page.name,
+    diffPct,
+    b: b.width + "×" + b.height,
+    c: c.width + "×" + c.height,
+    bUri,
+    cUri,
+    dUri,
+  });
 }
 
 sections.sort((a, b) => b.diffPct - a.diffPct);
@@ -82,15 +92,21 @@ const html = `<!doctype html>
 </style></head><body>
 <h1>Visual regression — flagged pages (desktop viewport)</h1>
 <p class="lede">${sections.length} pages with &gt;1% pixel diff. Sorted by diff %, descending. <em>All flagged diffs below are intended changes from the modernization.</em></p>
-${sections.map(s => `<section>
+${sections
+  .map(
+    (s) => `<section>
   <h2>${s.page} <small>${s.diffPct.toFixed(2)}% diff · ${s.b} → ${s.c}</small></h2>
   <div class="row">
-    <figure><figcaption>baseline</figcaption>${s.bUri ? `<img src="${s.bUri}" loading="lazy">` : ''}</figure>
-    <figure><figcaption>current</figcaption>${s.cUri ? `<img src="${s.cUri}" loading="lazy">` : ''}</figure>
-    <figure><figcaption>diff (red = changed pixels)</figcaption>${s.dUri ? `<img src="${s.dUri}" loading="lazy">` : ''}</figure>
+    <figure><figcaption>baseline</figcaption>${s.bUri ? `<img src="${s.bUri}" loading="lazy">` : ""}</figure>
+    <figure><figcaption>current</figcaption>${s.cUri ? `<img src="${s.cUri}" loading="lazy">` : ""}</figure>
+    <figure><figcaption>diff (red = changed pixels)</figcaption>${s.dUri ? `<img src="${s.dUri}" loading="lazy">` : ""}</figure>
   </div>
-</section>`).join('\n')}
+</section>`,
+  )
+  .join("\n")}
 </body></html>`;
 
 fs.writeFileSync(outPath, html);
-console.log(`Flagged sections: ${sections.length}, base64 payload ~${(totalBytes / 1024 / 1024).toFixed(1)} MB, file on disk ${(fs.statSync(outPath).size / 1024 / 1024).toFixed(1)} MB`);
+console.log(
+  `Flagged sections: ${sections.length}, base64 payload ~${(totalBytes / 1024 / 1024).toFixed(1)} MB, file on disk ${(fs.statSync(outPath).size / 1024 / 1024).toFixed(1)} MB`,
+);

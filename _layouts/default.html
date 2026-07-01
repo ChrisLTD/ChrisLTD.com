@@ -1,123 +1,139 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-<!--
+    <!--
   / ____/ /_  _____(_)____/ / /_  __/ __ \
  / /   / __ \/ ___/ / ___/ /   / / / / / /
 / /___/ / / / /  / (__  ) /___/ / / /_/ /
 \____/_/ /_/_/  /_/____/_____/_/ /_____/
 -->
 
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
-	{% if page.class == 'home' %}
-	  <meta name="description" content="{{ site.description }}">
-	{% elsif page.excerpt %}
-	  <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 40, '' }}">
-	{% endif %}
+    {% if page.class == 'home' %}
+    <meta name="description" content="{{ site.description }}" />
+    {% elsif page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 40, '' }}" />
+    {% endif %}
 
+    <meta name="author" content="Chris Johnson" />
 
-  <meta name="author" content="Chris Johnson">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
-	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
-	<link rel="shortcut icon" href="/favicon.ico">
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="article" />
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    {% endif %} {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 40 }}" />
+    {% else %}
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %} {% if page.class == 'home' %}
+    <meta
+      property="og:image"
+      content="https://mugshotbot.com/m?mode=light&color=d74824&pattern=hideout&hide_watermark=true&url={{ site.url }}"
+    />
+    {% else %}
+    <meta
+      property="og:image"
+      content="https://mugshotbot.com/m?mode=light&color=d74824&pattern=hideout&hide_watermark=true&url={{ site.url }}{{ page.url }}"
+    />
+    {% endif %}
 
-  {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:type" content="article">
-  {% else %}
-    <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:type" content="website">
-  {% endif %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@chrisltd" />
 
-  {% if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 40 }}">
-  {% else %}
-    <meta property="og:description" content="{{ site.description }}">
-  {% endif %}
+    <meta name="viewport" content="width=device-width" />
 
-  {% if page.class == 'home' %}
-    <meta property="og:image" content="https://mugshotbot.com/m?mode=light&color=d74824&pattern=hideout&hide_watermark=true&url={{ site.url }}">
-  {% else %}
-    <meta property="og:image" content="https://mugshotbot.com/m?mode=light&color=d74824&pattern=hideout&hide_watermark=true&url={{ site.url }}{{ page.url }}">
-  {% endif %}
+    <link rel="alternate" type="application/rss+xml" title="Chris Johnson's Blog Feed" href="{{ site.feed_url }}" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@chrisltd">
+    <link rel="stylesheet" href="https://use.typekit.net/hsh4zpp.css" />
+    <link rel="stylesheet" href="/css/styles.css?v={{ site.assets_version }}" />
+    <!-- You can find the uncompressed SCSS file list at scss/styles.scss -->
+  </head>
 
-  <meta name="viewport" content="width=device-width">
+  <body class="{{ page.class }} {% if page.layout == 'post' %}blog{% endif %}">
+    <div id="accessibility" class="hide">
+      <a href="#main">Skip to content</a>
+    </div>
 
-	<link rel="alternate" type="application/rss+xml" title="Chris Johnson's Blog Feed" href="{{ site.feed_url }}">
+    <div id="wrapper">
+      <header role="banner" id="header">
+        <div class="container">
+          <a href="/" class="logo" data-content="Chris Johnson"
+            ><img src="/img/logo@2x.png" width="330" alt="Chris Johnson"
+          /></a>
+          <div class="tagline">{{ site.tagline }}</div>
 
-  <link rel="stylesheet" href="https://use.typekit.net/hsh4zpp.css">
-  <link rel="stylesheet" href="/css/styles.css?v={{ site.assets_version }}">
-  <!-- You can find the uncompressed SCSS file list at scss/styles.scss -->
-
-</head>
-
-<body class="{{ page.class }} {% if page.layout == 'post' %}blog{% endif %}">
-
-  <div id="accessibility" class="hide">
-    <a href="#main">Skip to content</a>
-  </div>
-
-  <div id="wrapper">
-    <header role="banner" id="header">
-      <div class="container">
-
-        <a href="/" class="logo" data-content="Chris Johnson"><img src="/img/logo@2x.png" width="330" alt="Chris Johnson"></a>
-        <div class="tagline">{{ site.tagline }}</div>
-
-        <nav class="main_nav" role="navigation">
-          <ul>
-            <li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li>
-            <li><a href="/portfolio" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li>
-            <li><a href="/projects" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li>
-            <li><a href="/blog" class="{% if page.class == 'blog' %}active{% endif %}">Blog</a></li>
-            <li><a href="/about" class="{% if page.class == 'about' %}active{% endif %}">About</a></li>
-          </ul>
-        </nav>
-
-      </div><!--/.container-->
-    </header>
-
-    <main role="main" id="main">
-			<div class="container">
-
-        {{ content }}
-
-      </div><!--/.container-->
-    </main>
-
-    <footer id="footer">
-      <div class="container">
-
-        <ul class="social_icons">
-          <li><a href="{{ site.feed_url }}" title="Blog RSS">{% include icons/rss.svg %}<b>RSS</b></a></li>
-          <li><a href="https://pinboard.in/u:chrisltd" title="Pinboard">{% include icons/pinboard.svg %}<b>Pinboard</b></a></li>
-          <li><a href="https://github.com/chrisltd" title="GitHub">{% include icons/github.svg %}<b>GitHub</b></a></li>
-          {% comment %}
-            <li><a href="https://twitter.com/chrisltd"><i class="ss-icon ss-social-circle ss-twitter" title="Twitter"></i><b>Twitter</b></a></li>
-            <li><a href="https://alpha.app.net/chrisltd" rel="me"><i class="ss-icon ss-social-circle ss-appdotnet" title="App.net"></i><b>App.net</b></a></li>
-						<li><a href="http://www.last.fm/user/ChrisLTD"><i class="ss-icon ss-social-circle ss-lastfm" title="Last.fm"></i><b>Last.fm</b></a></li>
-					{% endcomment %}
-        </ul>
-
-        <div class="copyright" role="contentinfo">
-          <span>Hosted by <a href="https://m.do.co/c/ff20142d018a">Digital Ocean</a></span>
-          <span>&copy; {{ site.time | date: "%Y" }}</span>
+          <nav class="main_nav" role="navigation">
+            <ul>
+              <li><a href="/" class="{% if page.class == 'home' %}active{% endif %}">Home</a></li>
+              <li><a href="/portfolio" class="{% if page.class == 'portfolio' %}active{% endif %}">Portfolio</a></li>
+              <li><a href="/projects" class="{% if page.class == 'projects' %}active{% endif %}">Projects</a></li>
+              <li><a href="/blog" class="{% if page.class == 'blog' %}active{% endif %}">Blog</a></li>
+              <li><a href="/about" class="{% if page.class == 'about' %}active{% endif %}">About</a></li>
+            </ul>
+          </nav>
         </div>
+        <!--/.container-->
+      </header>
 
-      </div><!--/.container-->
-    </footer>
-  </div> <!-- /#wrapper -->
+      <main role="main" id="main">
+        <div class="container">{{ content }}</div>
+        <!--/.container-->
+      </main>
 
-</body>
+      <footer id="footer">
+        <div class="container">
+          <ul class="social_icons">
+            <li>
+              <a href="{{ site.feed_url }}" title="Blog RSS">{% include icons/rss.svg %}<b>RSS</b></a>
+            </li>
+            <li>
+              <a href="https://pinboard.in/u:chrisltd" title="Pinboard"
+                >{% include icons/pinboard.svg %}<b>Pinboard</b></a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/chrisltd" title="GitHub">{% include icons/github.svg %}<b>GitHub</b></a>
+            </li>
+            {% comment %}
+            <li>
+              <a href="https://twitter.com/chrisltd"
+                ><i class="ss-icon ss-social-circle ss-twitter" title="Twitter"></i><b>Twitter</b></a
+              >
+            </li>
+            <li>
+              <a href="https://alpha.app.net/chrisltd" rel="me"
+                ><i class="ss-icon ss-social-circle ss-appdotnet" title="App.net"></i><b>App.net</b></a
+              >
+            </li>
+            <li>
+              <a href="http://www.last.fm/user/ChrisLTD"
+                ><i class="ss-icon ss-social-circle ss-lastfm" title="Last.fm"></i><b>Last.fm</b></a
+              >
+            </li>
+            {% endcomment %}
+          </ul>
+
+          <div class="copyright" role="contentinfo">
+            <span>Hosted by <a href="https://m.do.co/c/ff20142d018a">Digital Ocean</a></span>
+            <span>&copy; {{ site.time | date: "%Y" }}</span>
+          </div>
+        </div>
+        <!--/.container-->
+      </footer>
+    </div>
+    <!-- /#wrapper -->
+  </body>
 </html>

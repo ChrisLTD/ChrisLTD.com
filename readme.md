@@ -51,8 +51,8 @@ Create a file at `_posts/YYYY/YYYY-MM-DD-slug.md` with front matter:
 ---
 layout: post
 title: My Post Title
-date: 2026-06-28 11:00:00 -04:00     # optional; defaults to 11:00am
-categories: [tech, design]           # optional
+date: 2026-06-28 11:00:00 -04:00 # optional; defaults to 11:00am
+categories: [tech, design] # optional
 excerpt: Optional short summary used in the description meta tag.
 ---
 ```
