@@ -10,8 +10,7 @@ contained.
   legacy `@import` form. Dart Sass deprecates it but still supports it.
   Converting requires namespacing every variable access (`$orange` →
   `vars.$orange`) across `_default.scss`, `_resume.scss`, `_grid.scss`,
-  `_animation.scss`, `_helpers.scss`, etc. Large mechanical change with
-  no visible payoff.
+  `_helpers.scss`, etc. Large mechanical change with no visible payoff.
 
 - **Float-based grid → CSS Grid**: `scss/_grid.scss` is a 12-column
   float grid. `.col-2-3`, `.col-1-3`, `.col-1-2` are used pervasively
