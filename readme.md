@@ -88,6 +88,10 @@ Baselines are gitignored. Generate them locally against whatever "before" state 
 
 Auto-deploys via Cloudflare Pages / Vercel from `master` (build settings are managed in the respective dashboards). `deploy_example.sh` in the repo is a historical rsync recipe kept for reference.
 
+## Cache busting
+
+Stylesheet links carry a `?h=<hash>` query string computed by `_plugins/assets_hash.rb` from the SHA-1 of every `.scss` file under `scss/`. Any SCSS edit rotates the hash and browsers refetch. No manual bumping.
+
 ## Markdown gotchas
 
 A couple of authoring rules that catch me out often enough to be worth writing down:
