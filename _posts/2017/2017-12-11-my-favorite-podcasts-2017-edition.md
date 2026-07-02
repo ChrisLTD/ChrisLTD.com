@@ -3,6 +3,7 @@ layout: post
 title: My Favorite Podcasts, 2017 Edition
 categories: life
 ---
+
 My favorite podcasts of 2017, in no particular order:
 
 <table>

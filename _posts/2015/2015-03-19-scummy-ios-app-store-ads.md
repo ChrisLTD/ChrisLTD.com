@@ -2,6 +2,7 @@
 layout: post
 title: Scummy ads redirecting iOS users to the App Store
 ---
+
 From [9 to 5 Mac](http://9to5mac.com/2015/03/18/safari-app-store-redirect/):
 
 > Website advertisement companies have found a way to circumvent the protections introduced in iOS 8 to stop users from being kicked to the App Store because of certain cleverly-coded JavaScript advertisements.

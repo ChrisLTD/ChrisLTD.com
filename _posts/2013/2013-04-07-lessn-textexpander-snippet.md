@@ -10,16 +10,16 @@ This is the AppleScript for the snippet:
 {% highlight applescript %}
 set api_key to "xxxxxxxxx"
 set domain to "yourdomain.net"
- 
+
 set the longURL to (the clipboard as string)
- 
-if ((characters 1 through 4 of longURL as string) is not "http") then 
-  return "Not a valid URL" 
-else 
-  set shellScript to ("curl --url \"http://" & domain & "/-/?api=" & api_key & "&url=" & longURL & "\"")
-  set shortURL to (do shell script shellScript)
-  return shortURL
-end if 
+
+if ((characters 1 through 4 of longURL as string) is not "http") then
+return "Not a valid URL"
+else
+set shellScript to ("curl --url \"http://" & domain & "/-/?api=" & api_key & "&url=" & longURL & "\"")
+set shortURL to (do shell script shellScript)
+return shortURL
+end if
 {% endhighlight %}
 
 If you have any bug fixes or changes, fork [this gist](https://gist.github.com/ChrisLTD/5332850).

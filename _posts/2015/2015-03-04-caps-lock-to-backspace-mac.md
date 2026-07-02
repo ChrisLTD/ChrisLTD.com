@@ -9,7 +9,7 @@ Here’s how you can do it on a Mac running Yosemite.
 
 ## Step 1: Disable your caps lock key
 
-Go into your System Preferences, select the Keyboard pane, and then click the button labeled Modifier Keys. There you can set your caps lock to *No Action*. You’ll likely want to do this for all your keyboards in the Select Keyboard dropdown.
+Go into your System Preferences, select the Keyboard pane, and then click the button labeled Modifier Keys. There you can set your caps lock to _No Action_. You’ll likely want to do this for all your keyboards in the Select Keyboard dropdown.
 
 ![System Preferences screenshot](/blog/images/2015/03/caps-lock-system-prefs.png)
 

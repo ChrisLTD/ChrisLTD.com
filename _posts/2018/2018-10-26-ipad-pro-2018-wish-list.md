@@ -3,6 +3,7 @@ layout: post
 title: iPad Pro 2018 wish list
 categories: tech
 ---
+
 According to [rumors](https://www.macrumors.com/2018/10/18/apple-event-new-york-city/), Apple is likely to announce new iPads on Tuesday. As an owner of an iPad Pro from last year, I’ve been thinking about what upgrades I’d like to see in a new model, and I’ve come down to two big wishes. Now to be clear, I’m not making predictions, this is purely me dreaming.
 
 ## Precision pointer support

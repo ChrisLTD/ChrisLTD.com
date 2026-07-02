@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Hello, world 
+title: Hello, world
 ---
-When customizing [Drupal](http://drupal.org) for clients, I often need to setup repeatable sections of content within a page. 
+
+When customizing [Drupal](http://drupal.org) for clients, I often need to setup repeatable sections of content within a page.
 Sometimes you need repeatable content fields[^acf] like these promos:
 
 ![Promos](images/2013/10/d7-field-collection-promos.png)
@@ -28,44 +29,46 @@ The big trick is getting data out of your collections. To help I wrote this PHP 
 
 {% highlight php %}
 /*
-*  Returns array of single level Field Collection data
-*
-*  Modified from: https://drupal.org/node/1155752#comment-7379610
-*  Params: $node = set to the current $node
-*               $field_collection_name = string name of the field collection field
-*               $field_names_array = array of field name strings
+
+- Returns array of single level Field Collection data
+-
+- Modified from: https://drupal.org/node/1155752#comment-7379610
+- Params: $node = set to the current $node
+-               $field_collection_name = string name of the field collection field
+-               $field_names_array = array of field name strings
+
 */
 function get_field_collection_array($field_collection_name, $field_names_array) {
-  // Get node object if possible
-  $node = menu_get_object();
+// Get node object if possible
+$node = menu_get_object();
   if(!$node){
-    return null;
-  }
+return null;
+}
 
-  $field_data_array = array();
+$field_data_array = array();
 
-  $field_collection = field_get_items('node', $node, $field_collection_name);
+$field_collection = field_get_items('node', $node, $field_collection_name);
   if( empty($field_collection)) {
-    return null;
-  }
+return null;
+}
 
-  foreach($field_collection as $field_collection_set){
-    $field = field_view_value('node',$node, $field_collection_name, $field_collection_set);
-    foreach ($field['entity']['field_collection_item'] as $id => $field_collection){
+foreach($field_collection as $field_collection_set){
+$field = field_view_value('node',$node, $field_collection_name, $field_collection_set);
+foreach ($field['entity']['field_collection_item'] as $id => $field_collection){
       // load the field collection item entity
       $field_collection_item = field_collection_item_load($id);
       // wrap the entity and make it easier to get the values of fields
       $field_wrapper = entity_metadata_wrapper('field_collection_item', $field_collection_item);
       // all values from a field collection
       $new_item = array();
-      foreach($field_names_array as $name){
-        $new_item[$name] = $field_wrapper->$name->value();
-      }
-      $field_data_array[] = $new_item;
-    }
-  }
+foreach($field_names_array as $name){
+$new_item[$name] = $field_wrapper->$name->value();
+}
+$field_data_array[] = $new_item;
+}
+}
 
-  return $field_data_array;
+return $field_data_array;
 }
 {% endhighlight %}
 
@@ -80,12 +83,12 @@ Will return an array you can then loop through yourself and output however you'd
 {% highlight text %}
 Array
 (
-    [0] => Array
-        (
-            [field_title] => Promo 1
-            [field_url] => http://nytimes.com
-            [field_short_description] => Lorem ipsum dolor sit amet
-        )
+[0] => Array
+(
+[field_title] => Promo 1
+[field_url] => http://nytimes.com
+[field_short_description] => Lorem ipsum dolor sit amet
+)
 
     [1] => Array
         (
@@ -96,6 +99,5 @@ Array
 
 )
 {% endhighlight %}
-
 
 [^acf]: Wordpress has an awesome payware plugin for this called [Advanced Custom Fields](http://www.advancedcustomfields.com/) [repeater](http://www.advancedcustomfields.com/add-ons/repeater-field/) field

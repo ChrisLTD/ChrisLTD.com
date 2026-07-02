@@ -3,6 +3,7 @@ layout: post
 title: Starting a digital declutter
 categories: tech life
 ---
+
 Over the weekend, I finished Cal Newport's latest book, [Digital Minimalism: Choosing a Focused Life in a Noisy World](https://www.amazon.com/Digital-Minimalism-Choosing-Focused-Noisy/dp/0525536515/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=chrisltd-20&linkId=56c9f0da6049d6b25d1482a4b3d8c9dd&language=en_US). In the book, Newport lays out a convincing argument that we have become captives of our digital tools, and that we need strategies to regain control of our time and attention. Over the next 30 days, I'm going to give his advice a shot.
 
 Personally, I know that social networks have slowly replaced a lot of my free time in the evenings and on the weekends. Scrolling through posts on Twitter or Instagram seems fun, and it's easy, but I never feel quite satisfied when I'm done. Newport thinks that to truly feel satisfied with how you spend your free time, you need a mix of true solitude [^solitude], deep social interactions [^deepsocial], and working with your hands.

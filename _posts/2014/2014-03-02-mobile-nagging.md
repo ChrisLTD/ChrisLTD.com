@@ -2,13 +2,14 @@
 layout: post
 title: Mobile nagging
 ---
+
 ![Permissions requests and mobile version request](/blog/images/2014/03/app-nags.jpg)
 
 As the mobile web and app ecosystems get older, they are also getting more spammy. If a mobile site has a companion app for iOS or Android, you can bet you’ll be reminded to download it every single time you visit that site. [Jeff Atwood wrote a superb rant](http://www.codinghorror.com/blog/2014/02/app-pocalypse-now.html) on just this subject:
 
-> I’m getting pretty sick of being nagged to install your damn apps. &#91;...&#93; The more apps out there, the more the app stores are clogged with mediocre junk, the more the overall noise level keeps going up, which leads directly to this profligate nagging. Companies keep asking *how can we get people to find and install our amazing app* instead of the one question they really should have asked.
+> I’m getting pretty sick of being nagged to install your damn apps. &#91;...&#93; The more apps out there, the more the app stores are clogged with mediocre junk, the more the overall noise level keeps going up, which leads directly to this profligate nagging. Companies keep asking _how can we get people to find and install our amazing app_ instead of the one question they really should have asked.
 >
-> *Why the hell are we building an app in the first place?*
+> _Why the hell are we building an app in the first place?_
 
 It’s amazing to me that we’re facing an onslaught of advertising to access a service we’re already using in a slightly different (and often inferior) way. I’m already using your product, leave me alone[^hulu]. If your app has an amazing feature I can’t access through a web browser, tell me about it once, and then leave me alone.
 
@@ -20,4 +21,4 @@ In an era of [frequent](http://www.nytimes.com/2014/01/11/business/target-breach
 
 I hope these perpetual nags are just a fad that web and app developers move past soon. Otherwise, we’ve got some annoying years ahead of us.
 
-[^hulu]: It reminds me of being served ads for Hulu Plus while I’m watching shows on Hulu Plus. 
+[^hulu]: It reminds me of being served ads for Hulu Plus while I’m watching shows on Hulu Plus.

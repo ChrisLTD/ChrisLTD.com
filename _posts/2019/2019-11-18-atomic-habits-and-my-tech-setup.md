@@ -3,6 +3,7 @@ layout: post
 title: Atomic Habits and my tech setup
 categories: tech life
 ---
+
 A few weeks back I read James Clear's book [Atomic Habits](https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=chrisltd-20&linkId=8bc310aebba46fcf6462ed180a6a2bba&language=en_US) and while I don't think the book is a must-read, Clear made some interesting points that have led me to re-evaluate my relationship to my work computers.
 
 The key insight from Atomic Habits is that even small percentage improvements in your life and work can lead to major changes as the benefits accrue over time [^attractive]. Going to bed 10 minutes earlier might only make you feel 1% better during your next morning workout, but that 1% added up across a year's worth of workouts might be difference between you having six-pack abs or not.

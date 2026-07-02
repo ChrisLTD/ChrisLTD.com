@@ -2,6 +2,7 @@
 layout: post
 title: Asus Memo Pad HD 7 review
 ---
+
 ![Asus Memo Pad HD 7](/blog/images/2013/11/asus-memo-pad-hd-7.jpg)
 
 Before plunking down $400+ for a [Retina iPad Mini](https://www.apple.com/ipad-mini/) to replace my iPad 3, I wanted to give a cheap Android tablet a chance. So, when Amazon dropped the price of the [Asus Memo Pad HD 7](http://www.amazon.com/gp/product/B00E0EY7Z6/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00E0EY7Z6&linkCode=as2&tag=chrisltd-20) down to $130, I ordered one in blue.
@@ -18,11 +19,11 @@ The processor was quick, and I didn’t notice any red flags in terms of battery
 
 Android itself has come a long ways since the last time I used It a few years ago. I was particularly impressed with [Press](https://play.google.com/store/apps/details?id=com.twentyfivesquares.press), a RSS reader, and [Dash](https://play.google.com/store/apps/details?id=com.themodernink.hooha), an [App.net](http://alpha.app.net/) client that’s better than anything I’ve used on iOS. I also enjoyed using apps that could tie more directly into the OS than is allowed on iOS. For example, there is an app called [Twilight](https://play.google.com/store/apps/details?id=com.themodernink.hoohaf) that changes the color temperature of your screen when the sun sets, much like the desktop app [Flux](http://justgetflux.com/).
 
-The system share panel[^share] and notifications[^notifications] are much better than their counterparts on iOS. Multitasking was easy to use with the dedicated button and less aggressive than iOS when it comes to killing background apps[^irc]. Google’s speech recognition was astonishingly quick and accurate, especially compared to Apple’s Siri. 
+The system share panel[^share] and notifications[^notifications] are much better than their counterparts on iOS. Multitasking was easy to use with the dedicated button and less aggressive than iOS when it comes to killing background apps[^irc]. Google’s speech recognition was astonishingly quick and accurate, especially compared to Apple’s Siri.
 
 ## The bad
 
-The Memo Pad screen seems to have no [oleophobic](https://en.wikipedia.org/wiki/Lipophobicity) coating. Touch it with a finger and you *will* leave a greasy spot on the screen.  This issue annoyed me enough to return the device. I’m spoiled by recent iPhones and iPads that have a great resistance to finger prints. The Memo Pad screen is more on par with what I remember from using my first generation iPhone and iPad. I don’t want to return to the days where I had to wipe the screen every five minutes with a microfiber cloth. I understand that a cheap device is going to have compromises, but I’d recommend Asus drop the rear camera instead of skimping on the usability of the screen.
+The Memo Pad screen seems to have no [oleophobic](https://en.wikipedia.org/wiki/Lipophobicity) coating. Touch it with a finger and you _will_ leave a greasy spot on the screen. This issue annoyed me enough to return the device. I’m spoiled by recent iPhones and iPads that have a great resistance to finger prints. The Memo Pad screen is more on par with what I remember from using my first generation iPhone and iPad. I don’t want to return to the days where I had to wipe the screen every five minutes with a microfiber cloth. I understand that a cheap device is going to have compromises, but I’d recommend Asus drop the rear camera instead of skimping on the usability of the screen.
 
 The front facing camera was acceptable for Skype and Google Hangouts, but unfortunately you’re limited to using the external microphones because the headphone jack does not support headsets. I didn’t test the rear camera.
 
@@ -34,15 +35,14 @@ Ultimately, I can’t recommend the [Memo Pad HD 7](http://www.amazon.com/gp/pro
 
 **Update:** As of January 14th, 2014, Asus has not yet upgraded the Memo Pad HD 7 to Android 4.3 or greater.
 
-
 [^colors]: Some of the other colors use a shiny and what I would guess is a more slippery plastic.
 
-[^share]: The share panel in Android lists all the apps that can use the type of content you’re trying to share. You don’t have to rely on app developers to implement popular sharing services like [Instapaper](http://instapaper.com) or [Pinboard](http://pinboard.in/) in their apps. 
+[^share]: The share panel in Android lists all the apps that can use the type of content you’re trying to share. You don’t have to rely on app developers to implement popular sharing services like [Instapaper](http://instapaper.com) or [Pinboard](http://pinboard.in/) in their apps.
 
 [^notifications]: I like being able to interact with notifications without leaving your current app. For example, you can archive a new email right from the notification shade.
 
 [^irc]: A chat client like [Andchat](https://play.google.com/store/apps/details?id=net.andchat) can keep a persistent connection with your chat room. On iOS, a similar app like [Colloquy](https://itunes.apple.com/app/colloquy-irc-client/id302000478?mt=8&at=11l5Li) will disconnect once every 10 minutes if it’s not in the foreground.
 
-[^idevices]: 
+[^idevices]:
 
 [^TRIM]: [TRIM](https://en.wikipedia.org/wiki/TRIM_%28SSD_command%29) is necessary to keep SSD and flash based storage devices working quickly. Essentially, it periodically recovers space from deleted files.

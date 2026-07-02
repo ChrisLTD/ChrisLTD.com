@@ -7,9 +7,9 @@ I recently switched to reading RSS feeds through [Fever](http://feedafever.com/)
 
 What I did is create a copy of Fever’s iPhone theme that is already optimized for touch screens, and modified it work on an iPad. So far, it does three things:
 
-* Fills the width of an iPad screen in portrait or landscape[^iphone].
-* Increases the size of the article text.
-* Disables interface animations[^animations].
+- Fills the width of an iPad screen in portrait or landscape[^iphone].
+- Increases the size of the article text.
+- Disables interface animations[^animations].
 
 **You can [read more and download the theme on GitHub](https://github.com/ChrisLTD/fever_ipad_theme).**
 

@@ -2,7 +2,7 @@
 layout: post
 title: Microsoft Visual Studio for Mac
 ---
-  
+
 It’s interesting that at a time when Apple’s own Mac software is going stale, Microsoft is betting big on the Mac.
 
 From [Microsoft’s press release](https://blogs.msdn.microsoft.com/visualstudio/2016/11/16/visual-studio-for-mac/):

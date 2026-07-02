@@ -17,6 +17,19 @@
     { "name": "post-with-footnotes", "path": "/blog/2013/05/adobe-subscription-pricing/" },
     { "name": "post-with-iframe", "path": "/blog/2014/07/google-map-polymer-web-component/" },
     { "name": "styles", "path": "/styles/" },
-    { "name": "404", "path": "/404.html" }
+    { "name": "404", "path": "/404.html" },
+    { "name": "post-2012-fix-widows-indesign", "path": "/blog/2012/03/fix-widows-indesign/" },
+    { "name": "post-2014-google-images-thumbnail-gallery", "path": "/blog/2014/01/google-images-thumbnail-gallery/" },
+    { "name": "post-2014-facebook-buys-oculus-vr", "path": "/blog/2014/03/facebook-buys-oculus-vr/" },
+    { "name": "post-2014-else-on-its-own-line", "path": "/blog/2014/11/else-on-its-own-line/" },
+    { "name": "post-2015-internet-2060", "path": "/blog/2015/07/internet-2060/" },
+    { "name": "post-2017-wwdc-2017-keynote-highlights", "path": "/blog/2017/06/wwdc-2017-keynote-highlights/" },
+    { "name": "post-2020-stop-reading-the-news-every-day", "path": "/blog/2020/09/stop-reading-the-news-every-day/" },
+    { "name": "post-2021-my-2020-media-diet", "path": "/blog/2021/01/my-2020-media-diet/" },
+    { "name": "post-2023-my-2022-media-diet", "path": "/blog/2023/01/my-2022-media-diet/" },
+    {
+      "name": "post-2023-disabling-intercom-during-playwright-tests",
+      "path": "/blog/2023/11/disabling-intercom-during-playwright-tests/"
+    }
   ]
 }

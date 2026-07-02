@@ -3,19 +3,19 @@ layout: post
 title: Set Duck Duck Go as your search engine on an iPhone or iPad without jailbreaking
 ---
 
-**Update:** As of iOS 8 you can use Duck Duck Go without resorting to tricks. Go to the iOS Settings app, tap *Safari*, then tap *Search Engine* and select Duck Duck Go. If you’re stuck on iOS 7 or earlier, read on.
+**Update:** As of iOS 8 you can use Duck Duck Go without resorting to tricks. Go to the iOS Settings app, tap _Safari_, then tap _Search Engine_ and select Duck Duck Go. If you’re stuck on iOS 7 or earlier, read on.
 
 <hr>
 
-With the current version of Safari on iOS, you can’t set your default search engine to something other than Google, Yahoo, or Bing. So if you want to use [Duck Duck Go](https://duckduckgo.com/)[^ddg]  without resorting to [jailbreaking](http://help.duckduckgo.com/customer/portal/articles/472033-safari-ios-), you have to get a bit clever. What I did was switch my default search engine to Yahoo[^yahoo] and set my router to divert traffic intended for Yahoo to Duck Duck Go.
+With the current version of Safari on iOS, you can’t set your default search engine to something other than Google, Yahoo, or Bing. So if you want to use [Duck Duck Go](https://duckduckgo.com/)[^ddg] without resorting to [jailbreaking](http://help.duckduckgo.com/customer/portal/articles/472033-safari-ios-), you have to get a bit clever. What I did was switch my default search engine to Yahoo[^yahoo] and set my router to divert traffic intended for Yahoo to Duck Duck Go.
 
-*Don't try this if you're not comfortable changing your router settings. Even if you are, be safe and backup your working router configuration.*
+_Don't try this if you're not comfortable changing your router settings. Even if you are, be safe and backup your working router configuration._
 
 This is how you can do it on a [DD-WRT](http://www.dd-wrt.com/) router:
 
-1. Go to the *Services* page in the router admin:<br>
+1. Go to the _Services_ page in the router admin:<br>
    ![Services Page](/blog/images/2013/04/ddg-router1.png)
-2. Enter this redirect in the *Additional DNSMasq Options* field: {% highlight text %}address=/search.yahoo.com/184.72.115.86{% endhighlight %}
+2. Enter this redirect in the _Additional DNSMasq Options_ field: {% highlight text %}address=/search.yahoo.com/184.72.115.86{% endhighlight %}
    ![Services Page](/blog/images/2013/04/ddg-router2.png)
 3. Apply the new settings.
 4. On your iOS device[^desktop], set your default search engine to Yahoo. Go into the Settings app, and scroll down to Safari. The setting will be in there:<br>

@@ -2,11 +2,12 @@
 layout: post
 title: Wordpress shortcode for HTML tags
 ---
-In some circumstances you may need to use HTML tags in the [Wordpress](http://wordpress.org/) content editor. The easiest way is to switch into *Text* mode and add your custom code:
+
+In some circumstances you may need to use HTML tags in the [Wordpress](http://wordpress.org/) content editor. The easiest way is to switch into _Text_ mode and add your custom code:
 
 ![Wordpress Text mode](/blog/images/2014/05/wordpress-text-mode.gif)
 
-However, you may have users that aren’t comfortable editing raw HTML, or they may get lost without the styling cues of the *Visual* editor. In those cases you can add this [shortcode](http://codex.wordpress.org/Shortcode) to the `functions.php` file in your theme:
+However, you may have users that aren’t comfortable editing raw HTML, or they may get lost without the styling cues of the _Visual_ editor. In those cases you can add this [shortcode](http://codex.wordpress.org/Shortcode) to the `functions.php` file in your theme:
 
 {% highlight php %}
 <?php

@@ -2,10 +2,11 @@
 layout: post
 title: Beware of outside Javascript
 ---
+
 Be choosy about what third-party Javascript you include on your site, because each is a potential security risk. The wrong script might even turn your visitors into [unwilling attack bots](http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub):
 
 > China is using their active and passive network infrastructure in order to perform a man-on-the-side attack against GitHub. (...)
-> 
+>
 > 1. An innocent user is browsing the internet from outside China.
 > 2. One website the user visits loads a javascript from a server in China, for example the Badiu Analytics script that often is used by web admins to track visitor statistics (much like Google Analytics).
 > 3. The web browser's request for the Baidu javascript is detected by the Chinese passive infrastructure as it enters China.

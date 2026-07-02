@@ -2,9 +2,11 @@
 layout: post
 title: Testing Ajax calls with QUnit
 ---
+
 The [QUnit](http://api.qunitjs.com/asyncTest/) JavaScript testing framework has the ability to run tests on asynchronous code[^async] using `asyncTest`. In this post, I’ll walk you through running a simple test on an Ajax call.
 
 ## Setup
+
 Since we’re testing Ajax calls, the tests will need to be run on a local or remote webserver[^server]. On your server create three files: `test-response.html`, `tests.html` and `tests.js`.
 
 We will be calling `test-response.html` using Ajax from our `tests.html` file. We’ll need the `test-response.html` file filled with some sample content:
@@ -31,10 +33,10 @@ Our `tests.html` is where we will run the actual QUnit tests. It will need to lo
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
-  
+
   <script src="//Ajax.googleapis.com/Ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
-  <script src="tests.js"></script>  
+  <script src="tests.js"></script>
 </body>
 </html>
 {% endhighlight %}
@@ -43,7 +45,7 @@ In `tests.js` let’s add a sample synchronous test just to make sure we’ve go
 
 {% highlight js %}
 test('Example test', function(){
-	equal(1, 1, 'One is one');
+equal(1, 1, 'One is one');
 })
 {% endhighlight %}
 
@@ -57,18 +59,18 @@ Above your example test, add this `asyncTest` that will pull in `test-response.h
 
 {% highlight js %}
 asyncTest('Ajax tests', function(){
-	expect(1); // we have one async test to run
-	
-	var xhr = $.ajax({
-		type: 'GET',
-		url: 	'test-response.html'
-	})
-	.always(function(data, status){
-		var $data = $(data);
-		var pageTitle = $data.filter('title').text();
-		equal(pageTitle, 'Test Page', 'Title of test-response.html should be \'Test Page\'');
-		start(); // we have our answer for this assertion, continue testing other assertions
-	});
+expect(1); // we have one async test to run
+
+    var xhr = $.ajax({
+    	type: 'GET',
+    	url: 	'test-response.html'
+    })
+    .always(function(data, status){
+    	var $data = $(data);
+    	var pageTitle = $data.filter('title').text();
+    	equal(pageTitle, 'Test Page', 'Title of test-response.html should be \'Test Page\'');
+    	start(); // we have our answer for this assertion, continue testing other assertions
+    });
 
 });
 {% endhighlight %}

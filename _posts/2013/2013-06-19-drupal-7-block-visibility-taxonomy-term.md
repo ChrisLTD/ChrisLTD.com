@@ -2,6 +2,7 @@
 layout: post
 title: Display blocks on nodes tagged with a taxonomy term in Drupal 7
 ---
+
 In [Drupal 7](https://drupal.org) it is pretty easy to display or not display blocks on specific nodes. It gets more tricky if you want to display blocks according to other criteria, like nodes tagged with a taxonomy term. In that case you can use this bit of PHP in your block visibility settings:
 
 {% highlight php %}
@@ -28,6 +29,7 @@ if (arg(0) == 'node' && arg(1) && is_numeric(arg(1))) {
 
 return $make_block_visible;
 ?>
+
 {% endhighlight %}
 
 This code will also display the block on taxonomy term list pages. Just be sure to change the `$term_id_to_trigger_show_block` to the taxonomy term ID you want to match and the `$taxonomy_to_search` to the machine name of the taxonomy you want to search[^help]. Also, when you put this in your block visibility settings, make sure you have the radio button set to “Pages on which this PHP code returns TRUE”:

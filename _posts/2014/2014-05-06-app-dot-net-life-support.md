@@ -2,6 +2,7 @@
 layout: post
 title: App.net is on life support
 ---
+
 Today [App.net](https://app.net), the paid[^paid] alternative to Twitter, [announced they are scaling back operations](http://blog.app.net/2014/05/06/app-net-state-of-the-union/) because of poor renewal numbers:
 
 > (...) After carefully considering a few different options, we are making the difficult decision to no longer employ any salaried employees, including founders. Dalton and Bryan will continue to be responsible for the operation of App.net, but no longer as employees. Additionally, as part of our efforts to ensure App.net is generating positive cash flow, we are winding down the Developer Incentive Program. We will be reaching out to developers currently enrolled in the program with more information.

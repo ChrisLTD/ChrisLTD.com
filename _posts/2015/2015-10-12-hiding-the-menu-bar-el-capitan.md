@@ -12,4 +12,3 @@ I’ve been testing it out for the last few days, and menu bar hiding has really
 If you want to try it out, go into System Preferences &gt; General and click the checkbox next to “Automatically hide and show the menu bar”.
 
 ![Menu Bar System Preferences screenshot](/blog/images/2015/10/hide-menu-bar-el-capitan.png)
-

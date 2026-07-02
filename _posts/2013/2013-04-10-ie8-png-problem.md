@@ -9,12 +9,12 @@ My solution – for now – is to hide the logo image for old IE versions, and p
 
 {% highlight html %}
 <a href="/" class="logo" data-content="Chris Johnson">
-  <img src="/img/logo@2x.png" width="330" alt="Chris Johnson">
+<img src="/img/logo@2x.png" width="330" alt="Chris Johnson">
 </a>
 {% endhighlight %}
 {% highlight css %}
 /* Use your favorite method to restrict these styles to IE8 */
-.logo img { display: none; } 
+.logo img { display: none; }
 .logo:before { content:attr(data-content); }
 {% endhighlight %}
 

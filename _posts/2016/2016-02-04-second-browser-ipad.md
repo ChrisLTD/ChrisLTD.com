@@ -13,9 +13,8 @@ Since Apple released iOS 9 with the ability to run two apps simultaneously, I’
 
 If you have any comments or suggestions, please reach out to me <a href="mailto:secondbrowser@yoeyo.com?subject=Question about Second Browser" class="support">here</a>.
 
-You can [download Second Browser](https://itunes.apple.com/us/app/second-browser/id1061436721?ls=1&mt=8&at=11l5Li) to your iPad for free or read more about it on [SecondBrowser.com](http://www.secondbrowser.com). 
+You can [download Second Browser](https://itunes.apple.com/us/app/second-browser/id1061436721?ls=1&mt=8&at=11l5Li) to your iPad for free or read more about it on [SecondBrowser.com](http://www.secondbrowser.com).
 
 [^sorta]: Second Browser has been available for a few weeks, but I wanted to release a couple bug fixes before I announced it here.
 
 [^SVC]: Programmer types can read more about Safari View Controllers in [Apple’s developer documentation](https://developer.apple.com/library/prerelease/ios/documentation/SafariServices/Reference/SFSafariViewController_Ref/index.html).
-

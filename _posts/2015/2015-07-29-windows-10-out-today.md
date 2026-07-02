@@ -9,6 +9,6 @@ I’ve been a Windows user since [3.1](https://en.wikipedia.org/wiki/Windows_3.1
 
 With Windows 10, Microsoft has fixed the worst excesses of 8. According to reviews from [Ars Technica](http://arstechnica.com/gadgets/2015/07/review-windows-10-is-the-best-version-yet-once-the-bugs-get-fixed/) and [The Verge](http://www.theverge.com/2015/7/28/9045331/microsoft-windows-10-review), desktop users will get a desktop focused UI, and tablet users will get a touch UI [^manual].
 
-[^mac]: I wait just as long when new versions of Mac OS X come out. 
+[^mac]: I wait just as long when new versions of Mac OS X come out.
 
 [^manual]: With the option to switch manually between modes if you so desire.

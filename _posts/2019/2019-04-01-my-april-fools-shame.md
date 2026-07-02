@@ -3,6 +3,7 @@ layout: post
 title: I guess I’m the April Fool
 categories: life
 ---
+
 First, I was seriously worried about the survival of my mom’s cat:
 
 ![Text from mom](/blog/images/2019/04/mom-text.jpg)

@@ -2,6 +2,7 @@
 layout: post
 title: Ad blocking coming to Safari on iOS
 ---
+
 Browsing the web can be a maddening experience. You’re often forced to close or sit through advertisement after page blocking advertisement. It seems that the Safari team at Apple agrees. A few years back, they introduced [Reader view](http://www.gottabemobile.com/2013/11/23/use-safaris-reader-mode-ios-7/), a browsing mode that stripped a web page of all but the essential text and images. Now, [Safari is gaining another page cleansing capability](http://9to5mac.com/2015/06/10/block-ads-ios-9-safari-iphone/):
 
 > With iOS 9, Apple has added a special case of extension for ad blockers. Apps can now include ‘content blocker’ extensions that define resources (like images and scripts) for Safari to not load. For the first time, this architecture makes ad blockers a real possibility for iOS developers to make and iOS customers to install and use.

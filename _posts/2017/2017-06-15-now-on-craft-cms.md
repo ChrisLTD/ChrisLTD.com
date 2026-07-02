@@ -3,6 +3,7 @@ layout: post
 title: Now on Craft CMS
 categories: dev
 ---
+
 Over the last couple weeks, I’ve migrated ChrisLTD.com from [Jekyll](http://jekyllrb.com) to [Craft CMS](https://craftcms.com). Jekyll continues to be an amazingly quick platform for static sites. However, as I move to doing more writing on my mobile devices, I want the ability to publish from those devices as well. My current Jekyll workflow requires building the site using a Mac, and I’d rather not deal with an on server build process. That meant moving to a traditional database powered CMS like Craft.
 
 ![Craft CMS in action](/blog/images/2017/06/craft-cms-in-progress.png)

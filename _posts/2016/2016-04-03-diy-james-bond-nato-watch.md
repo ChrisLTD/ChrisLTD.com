@@ -3,7 +3,7 @@ layout: post
 title: DIY James Bond NATO watch
 ---
 
-Ever since I first saw [Goldfinger](http://amzn.to/25Dwq58), I've wanted the Rolex watch and strap combination that James Bond wears in the film [^spectre]. 
+Ever since I first saw [Goldfinger](http://amzn.to/25Dwq58), I've wanted the Rolex watch and strap combination that James Bond wears in the film [^spectre].
 
 ![Rolex NATO watch in Goldfinger](/blog/images/2016/04/goldfinger-rolex-nato-watch.jpg)
 
@@ -17,6 +17,6 @@ With all that done [^applewatch], here was the result:
 
 ![My Invicta NATO watch](/blog/images/2016/04/invicta-james-bond-nato-watch.jpg)
 
-[^spectre]:  It's such a great style that MGM brought it back for the latest Bond film, [Spectre](http://amzn.to/25DwIJq). The big difference is that the Spectre watch is an Omega rather than a Rolex. A Spectre edition can be [yours for $7,500](http://www.omegawatches.com/watches/seamaster/seamaster-300/master-co-axial-41-mm/23332412101001/).
+[^spectre]: It's such a great style that MGM brought it back for the latest Bond film, [Spectre](http://amzn.to/25DwIJq). The big difference is that the Spectre watch is an Omega rather than a Rolex. A Spectre edition can be [yours for $7,500](http://www.omegawatches.com/watches/seamaster/seamaster-300/master-co-axial-41-mm/23332412101001/).
 
 [^applewatch]: It's a far cry from how easy it is to put on an [Apple Watch nylon band](http://www.apple.com/shop/product/MM9L2/38mm-black-woven-nylon).

@@ -5,7 +5,7 @@ title: iPhone 6 review
 
 ![iPhone 6 (left) next to iPhone 5. Photo by LWYang.](/blog/images/2014/09/iphone6-iphone5.jpg)
 
-After two years with an iPhone 5, I was excited to get an iPhone 6 (not 6 *Plus*) last Friday[^colorsize]. One week in, these are my thoughts:
+After two years with an iPhone 5, I was excited to get an iPhone 6 (not 6 _Plus_) last Friday[^colorsize]. One week in, these are my thoughts:
 
 ## Size
 
@@ -29,7 +29,7 @@ The lines are less forgivable. They are there because the iPhone antennas need s
 
 ## Features
 
-My last iPhone was an iPhone 5, so this is my first experience with [Touch ID](http://en.wikipedia.org/wiki/Touch_ID). So far the accuracy and speed have been stellar.  I’ve trained it to recognize both my thumbs and pointer fingers, and the there has only been one time the last few days where my phone didn’t immediately recognize my print. I can’t wait to use it with [Apple Pay](http://www.apple.com/apple-pay/) in the future.
+My last iPhone was an iPhone 5, so this is my first experience with [Touch ID](http://en.wikipedia.org/wiki/Touch_ID). So far the accuracy and speed have been stellar. I’ve trained it to recognize both my thumbs and pointer fingers, and the there has only been one time the last few days where my phone didn’t immediately recognize my print. I can’t wait to use it with [Apple Pay](http://www.apple.com/apple-pay/) in the future.
 
 The new camera is a nice upgrade. Check out [this Verge article](http://www.theverge.com/2014/9/18/6339583/iphone-6-and-6-plus-camera-test-iceland) for some sample shots of what is capable with the new lens and sensor. I’m particularly enamored with the slo-mo feature:
 
@@ -48,18 +48,19 @@ iOS 8 is available for older iPhones as well as the 6, and it adds a few compell
 iOS 8 now let’s you install custom keyboards. I haven’t used them much, but if you’d like to know more, check out this [custom keyboard round-up at MacStories](http://www.macstories.net/roundups/my-favorite-ios-8-keyboards-so-far/).
 
 There’s also some cool little features:
-* You can set [Duck Duck Go](https://duckduckgo.com) as your default search engine.
-* Siri is faster and more accurate.
-* Safari has a mode to try and load desktop versions of websites.
-* The default keyboard has an uncanny new [prediction bar](http://www.apple.com/ios/whats-new/quicktype/).
+
+- You can set [Duck Duck Go](https://duckduckgo.com) as your default search engine.
+- Siri is faster and more accurate.
+- Safari has a mode to try and load desktop versions of websites.
+- The default keyboard has an uncanny new [prediction bar](http://www.apple.com/ios/whats-new/quicktype/).
 
 ## Conclusion
 
 As upgrades go, the iPhone 6 is a substantial improvement over the 5. The new size is a bit unwieldy, especially when holding it with one hand. However, the added screen real estate, Touch ID, and the better camera are improvements that will enhance your experience with the phone every single day.
 
-*iPhone 5 and 6 comparison photo by [LWYang](https://www.flickr.com/photos/lwy/15317639442). Licensed under [Creative Commons](https://creativecommons.org/licenses/by/2.0/).*
+_iPhone 5 and 6 comparison photo by [LWYang](https://www.flickr.com/photos/lwy/15317639442). Licensed under [Creative Commons](https://creativecommons.org/licenses/by/2.0/)._
 
-*iPhone 6 back photo by [William Hook](https://www.flickr.com/photos/williamhook/15266216746). Licensed under [Creative Commons](https://creativecommons.org/licenses/by/2.0/).*
+_iPhone 6 back photo by [William Hook](https://www.flickr.com/photos/williamhook/15266216746). Licensed under [Creative Commons](https://creativecommons.org/licenses/by/2.0/)._
 
 [^colorsize]: I bought the Verizon 64 GB model in ‘space’ gray. I would have bought a 32 GB model if Apple made one, but they decided to only offer 16, 64 and 128 GB models. Presumably they know people like me will have to spend the extra $100 to get a usable model, because 16 GB just isn’t enough space, unless you never take photos or download apps/music/videos.
 

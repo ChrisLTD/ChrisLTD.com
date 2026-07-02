@@ -2,6 +2,7 @@
 layout: post
 title: PHP proportional image resizing math
 ---
+
 Recently I needed to enlarge and shrink images proportionally[^proportionally] in Wordpress[^wp], so I wrote a couple PHP functions to help with the math[^credit]. In both, you supply the original height and width, and then maximum or minimum dimensions. If the original height and width fit within your maximum or minimum, the functions return `null`, if not they return an array with new proportional dimensions.
 
 {% highlight php %}
@@ -36,6 +37,7 @@ function image_resize_down($orig_w, $orig_h, $MAX_W, $MAX_H){
     return null;
 }
 ?>
+
 {% endhighlight %}
 
 [^wp]: In Wordpress you can use [registered image sizes](http://codex.wordpress.org/Function_Reference/add_image_size) to shrink images proportionally, but there is nothing for enlarging them.

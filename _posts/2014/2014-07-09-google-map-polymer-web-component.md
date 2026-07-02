@@ -2,6 +2,7 @@
 layout: post
 title: Google Map Polymer web component
 ---
+
 Google has been doing incredible work to advance the [proposed web component standard](http://www.w3.org/TR/components-intro/) with their [Polymer project](http://www.polymer-project.org). Web components let web developers define their own HTML tags, and Polymer is a framework for creating and using those components[^infoq].
 
 Of [special interest to me](/blog/2013/08/google-map-random-color-pins/) is the [Polymer Google Map component](http://polymerlabs.github.io/google-map/components/google-map/#google-map). Normally, adding custom map widgets to your page is an annoying mix of CSS, Javascript and HTML. Here is a an [example from the Google Maps documentation](https://developers.google.com/maps/documentation/javascript/tutorial#HelloWorld) of how you have to initialize a Google Map today[^mod]:
@@ -30,6 +31,7 @@ If you’re using Polymer’s Google Map component, the code gets a lot simpler[
 <style>
   google-map { display: block; height: 100%; }
 </style>
+
 <google-map latitude="37.77493" longitude="-122.41942" zoom="8"></google-map>
 {% endhighlight %}
 

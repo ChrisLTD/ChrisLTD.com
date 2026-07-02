@@ -37,4 +37,3 @@ My favorite podcasts of 2016, in no particular order:
 ## Past picks
 
 This is my fourth year writing up my favorite podcasts. If you’re curious, you can read the lists from [2015](/blog/2015/12/favorite-podcasts/), [2014](/blog/2014/12/favorite-podcasts/) and [2013](/blog/2013/10/favorite-podcasts/).
-
