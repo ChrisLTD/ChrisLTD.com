@@ -1,0 +1,32 @@
+# DigitalOcean App Platform spec for chrisltd.com.
+# Source of truth for the static-site build config; the App Platform
+# dashboard reads this file on every deploy.
+#
+# Docs: https://docs.digitalocean.com/products/app-platform/reference/app-spec/
+#
+# Sibling deploy configs live in `vercel.json` (Vercel) and `_headers`
+# (Cloudflare Pages). Only one of these should be the active production
+# target; the others are kept alongside for parity while the hosts are
+# being evaluated.
+
+name: chrisltd-com
+region: nyc
+
+static_sites:
+  - name: web
+    github:
+      repo: ChrisLTD/ChrisLTD.com
+      branch: master
+      deploy_on_push: true
+
+    source_dir: /
+    build_command: bundle install && bundle exec jekyll build
+    output_dir: _site
+    environment_slug: ruby
+
+    # Ruby version is read from `.ruby-version` (currently 3.3.4).
+    # Bump both files in lockstep if the Ruby version changes.
+
+    # Serve 404.html for missing paths so the styled error page loads
+    # instead of DO's default plaintext 404.
+    error_document: 404.html

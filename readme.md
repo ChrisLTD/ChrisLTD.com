@@ -86,7 +86,7 @@ Baselines are gitignored. Generate them locally against whatever "before" state 
 
 ## Deployment
 
-Auto-deploys via Cloudflare Pages / Vercel from `master` (build settings are managed in the respective dashboards). `deploy_example.sh` in the repo is a historical rsync recipe kept for reference.
+Deployed on [Netlify](https://www.netlify.com/) from `master`. `netlify.toml` handles build config; `_headers` sets security headers. `vercel.json` and `.do/app.yaml` are parallel stubs for Vercel and DigitalOcean App Platform, only Netlify is live. `deploy_example.sh` and `.htaccess` linger from the earlier Apache/DigitalOcean Droplet era.
 
 ## Cache busting
 
