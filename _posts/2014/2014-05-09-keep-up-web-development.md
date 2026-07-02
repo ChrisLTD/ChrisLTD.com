@@ -2,30 +2,32 @@
 layout: post
 title: Running to keep up with web development
 ---
+
 Scott Williams [laments the ever changing field of web development](http://blog.swilliams.me/words/2014/05/06/oh-cool-you-want-to-be-a-web-developer/):
 
 > Oh cool you want to be a web developer? Just go and learn any or all of these:
-> * HTML 5
-> * CSS 3
-> * JavaScript
-> * CoffeeScript
-> * SASS
-> * Less
-> * jQuery
-> * Angular
-> * Ember
-> * Grunt
-> * Gulp
-> * Bower
-> * Yeoman
-> * node.js
-> * Bourbon
-> * Bitters
-> * Compass
-> * Bootstrap
-> * Foundation
-> * Handlebars
-> * Mustache
+>
+> - HTML 5
+> - CSS 3
+> - JavaScript
+> - CoffeeScript
+> - SASS
+> - Less
+> - jQuery
+> - Angular
+> - Ember
+> - Grunt
+> - Gulp
+> - Bower
+> - Yeoman
+> - node.js
+> - Bourbon
+> - Bitters
+> - Compass
+> - Bootstrap
+> - Foundation
+> - Handlebars
+> - Mustache
 
 I feel Scott’s pain. I just finished integrating [Grunt](http://gruntjs.com/) into my workflow, and now I’ve found out I’m supposed to switch to [Gulp](http://gulpjs.com/)[^gruntgulp]. While I may be a late adopter of Grunt, it’s still only about two years old. Gulp has been around for less than a year.
 

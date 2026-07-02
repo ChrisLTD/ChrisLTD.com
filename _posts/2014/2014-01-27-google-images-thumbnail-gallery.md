@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Google Images-esque thumbnail gallery jQuery plugin 
+title: Google Images-esque thumbnail gallery jQuery plugin
 ---
+
 I’ve been making an effort to package more of my front-end code into reusable JavaScript and jQuery plugins. My latest creation is the [Yo Thumbnail Gallery](https://github.com/ChrisLTD/yo_thumbnail_gallery)[^Yo]. It’s inspired by what you find in the Google Images [search results](https://www.google.com/search?tbm=isch&q=doge)[^doge].
 
 ![Example of the thumbnail gallery plugin](/blog/images/2014/01/image-gallery.gif)

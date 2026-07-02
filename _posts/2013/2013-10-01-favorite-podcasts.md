@@ -2,6 +2,7 @@
 layout: post
 title: My Favorite Podcasts, 2013 Edition
 ---
+
 While I’m working, I like to hear little voices in my head. So, I often put on headphones[^headphones] and fire up a podcast[^app]. These are the shows I listen to each week:
 
 <table>
@@ -27,6 +28,6 @@ While I’m working, I like to hear little voices in my head. So, I often put on
 
 **[Back to Work](http://5by5.tv/b2w)**. Merlin Mann and Dan Benjamin’s show about productivity. At this point, the show has devolved into a hilarious series of in-jokes with only some sprinkles of wisdom. You’ll probably be lost if you don’t go back and listen to some of the first shows.
 
-[^headphones]: [This headset from Klipsch](http://www.amazon.com/gp/product/B00452TDSY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00452TDSY&linkCode=as2&tag=chrisltd-20) has good sound quality and noise isolation for the price. 
+[^headphones]: [This headset from Klipsch](http://www.amazon.com/gp/product/B00452TDSY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00452TDSY&linkCode=as2&tag=chrisltd-20) has good sound quality and noise isolation for the price.
 
 [^app]: My podcast app of choice is [Downcast](https://itunes.apple.com/us/app/downcast/id393858566?mt=8&uo=4&at=11l5Li) for iOS.

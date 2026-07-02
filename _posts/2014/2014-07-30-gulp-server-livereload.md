@@ -1,16 +1,17 @@
 ---
 layout: post
-title: 'Gulp: Running a local server with Tiny LiveReload'
+title: "Gulp: Running a local server with Tiny LiveReload"
 ads: true
 ---
+
 This is my [Gulp](http://gulpjs.com)[^whygulp] recipe for compiling [SASS](http://sass-lang.com) into CSS, loading a local web server, and refreshing the browser when the SASS files are changed and recompiled. To follow along, you’ll need at least an introductory understanding of Gulp. If you need a basic primer, check out the [official documentation](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) or [this excellent blog post from Mark Goodyear](http://markgoodyear.com/2014/01/getting-started-with-gulp/).
 
 ## The plugins we’ll need
 
-* **[gulp-webserver](https://github.com/schickling/gulp-webserver)** — Runs the local webserver and sets up Tiny LiveReload
-* **[gulp-sass](https://github.com/dlmanning/gulp-sass)** — Compiles SCSS into CSS files
-* **[gulp-plumber](https://github.com/floatdrop/gulp-plumber)** — Keeps Gulp watch from dying when one of the tasks has an error
-* **[Node opn](https://github.com/sindresorhus/opn)** — Opens your browser to view the webserver
+- **[gulp-webserver](https://github.com/schickling/gulp-webserver)** — Runs the local webserver and sets up Tiny LiveReload
+- **[gulp-sass](https://github.com/dlmanning/gulp-sass)** — Compiles SCSS into CSS files
+- **[gulp-plumber](https://github.com/floatdrop/gulp-plumber)** — Keeps Gulp watch from dying when one of the tasks has an error
+- **[Node opn](https://github.com/sindresorhus/opn)** — Opens your browser to view the webserver
 
 ## Installing the plugins
 
@@ -31,48 +32,48 @@ Go ahead and put some actual SCSS into `styles.scss` and HTML into `index.html`.
 ## The gulpfile.js
 
 {% highlight js %}
-var gulp      = require('gulp');
-var plumber   = require('gulp-plumber');
-var sass      = require('gulp-sass');
+var gulp = require('gulp');
+var plumber = require('gulp-plumber');
+var sass = require('gulp-sass');
 var webserver = require('gulp-webserver');
-var opn       = require('opn');
+var opn = require('opn');
 
 var sourcePaths = {
-  styles: ['scss/**/*.scss']
+styles: ['scss/**/*.scss']
 };
 
 var distPaths = {
-  styles: 'css'
+styles: 'css'
 };
 
 var server = {
-  host: 'localhost',
-  port: '8001'
+host: 'localhost',
+port: '8001'
 }
 
 gulp.task('sass', function () {
-  gulp.src( sourcePaths.styles )
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(gulp.dest( distPaths.styles ));
+gulp.src( sourcePaths.styles )
+.pipe(plumber())
+.pipe(sass())
+.pipe(gulp.dest( distPaths.styles ));
 });
 
 gulp.task('webserver', function() {
-  gulp.src( '.' )
-    .pipe(webserver({
-      host:             server.host,
-      port:             server.port,
-      livereload:       true,
-      directoryListing: false
-    }));
+gulp.src( '.' )
+.pipe(webserver({
+host: server.host,
+port: server.port,
+livereload: true,
+directoryListing: false
+}));
 });
 
 gulp.task('openbrowser', function() {
-  opn( 'http://' + server.host + ':' + server.port );
+opn( 'http://' + server.host + ':' + server.port );
 });
 
 gulp.task('watch', function(){
-  gulp.watch(sourcePaths.styles, ['sass']);
+gulp.watch(sourcePaths.styles, ['sass']);
 });
 
 gulp.task('build', ['sass']);

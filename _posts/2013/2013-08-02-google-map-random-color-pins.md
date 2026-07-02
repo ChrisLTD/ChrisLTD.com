@@ -3,6 +3,7 @@ layout: post
 title: Generating a Google Map with multiple markers and info windows
 ads: true
 ---
+
 I recently needed to generate a Google Map with multiple markers and popup info windows. Easy, right? The twist was that I also wanted the marker pins to be different colors and I needed the map to auto center.
 
 Here’s the script I pulled together to make it happen:
@@ -17,7 +18,7 @@ Here’s the script I pulled together to make it happen:
 </head> 
 <body>
   <div id="map" style="width: 500px; height: 400px;"></div>
-  
+
   <script>
     // Define your locations: HTML content for the info window, latitude, longitude
     var locations = [
@@ -97,7 +98,7 @@ Here’s the script I pulled together to make it happen:
       map.fitBounds(bounds);
     }
     autoCenter();
-  </script> 
+  </script>
 </body>
 </html>
 {% endhighlight %}

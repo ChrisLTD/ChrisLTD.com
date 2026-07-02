@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Get rid of splash screens in video games 
+title: Get rid of splash screens in video games
 ---
+
 [Kas Thomas writes](http://asserttrue.blogspot.com/2012/02/splash-screens-sloth.html):
 
 > I’m so f\*\*\*ing tired of looking at splash screens (whether Adobe’s, Microsoft’s, or anybody else’s). A splash screen basically tells me, in very clear-cut terms, that my time is worth nothing whatsoever. It’s a fresh reminder that users’ needs don’t count as much as programmer convenience does. The customer can wait—we’ve got more important things to do . . . like show you this test-pattern with our programmers’ names on it.

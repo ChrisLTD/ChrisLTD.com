@@ -2,6 +2,7 @@
 layout: post
 title: Apple including Duck Duck Go in iOS 8 and OS X Yosemite
 ---
+
 From the [Duck Duck Go blog](https://duck.co/blog/safari):
 
 > (...) at WWDC, [Apple announced](http://www.apple.com/pr/library/2014/06/02Apple-Announces-OS-X-Yosemite.html) that DuckDuckGo will be included as a built-in search option in future versions of Safari on iOS and OS X. We are thrilled to be included in Safari and it’s great that Apple is making it easy for people to access our anonymous search option. This makes DuckDuckGo the first privacy-focused search engine to be added to one of the top four browsers and is a huge milestone for both us and privacy supporters. (...)

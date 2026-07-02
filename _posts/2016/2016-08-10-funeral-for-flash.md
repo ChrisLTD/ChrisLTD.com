@@ -7,4 +7,4 @@ title: Funeral for Flash
 
 > Today, more than 90% of Flash on the web loads behind the scenes to support things like page analytics. This kind of Flash slows you down, and starting this September, Chrome 53 will begin to block it. HTML5 is much lighter and faster, and publishers are switching over to speed up page loading and save you more battery life. You’ll see an improvement in responsiveness and efficiency for many sites.
 
-Flash made sense in a world of desktop computers plugged into a wall outlet. But with more and more computing done on devices that rely exclusively on batteries, Flash either needed to become more power efficient or it needed to go away.  
+Flash made sense in a world of desktop computers plugged into a wall outlet. But with more and more computing done on devices that rely exclusively on batteries, Flash either needed to become more power efficient or it needed to go away.

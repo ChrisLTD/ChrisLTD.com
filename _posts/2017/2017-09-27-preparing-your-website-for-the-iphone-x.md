@@ -3,6 +3,7 @@ layout: post
 title: Preparing your website for the iPhone X
 categories: dev
 ---
+
 Apple’s latest and greatest iPhone, the [iPhone X](https://www.apple.com/iphone-x/), will be here soon and it’s going to change how we design and develop for the web, whether we like it or not [^toopopular]. The iPhone X screen is no longer square, it has a notch at the top that houses a camera and other sensors, a floating home indicator at the bottom of the screen that replaces the now-defunct home button, and rounded corners at the edges of the screen.
 
 ![iPhone X notch and home indicator](/blog/images/2017/09/iphone-x-annotated.png)
@@ -19,7 +20,7 @@ If you want to extend your site’s background color to the sides, the simplest 
 
 ```css
 .body {
-	background-color: darkred;
+  background-color: darkred;
 }
 ```
 
@@ -43,12 +44,12 @@ For my test webpage, the following CSS did the trick to keep the text away from 
 
 ```css
 .container {
-	padding-left: env(safe-area-inset-left);
-	padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .footer {
-	padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 ```
 
@@ -56,13 +57,12 @@ For my test webpage, the following CSS did the trick to keep the text away from 
 
 ![iPhone X landscape fixed footer](/blog/images/2017/09/iphone-x-fixed-footer.png)
 
-
 ## Testing
 
 Until the official release of the iPhone X, the best way to test is with the simulator included in the latest version of [Xcode](https://developer.apple.com/xcode/). Xcode is free, but you will need a computer running MacOS to use it.
 
 ## Further reading
 
-If you’d like to learn more, check out [Stephen Radford’s blog post](http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/) where I first learned about these techniques, or  read [the official Webkit primer on the iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/).
+If you’d like to learn more, check out [Stephen Radford’s blog post](http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/) where I first learned about these techniques, or read [the official Webkit primer on the iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/).
 
 [^toopopular]: iPhones are simply too popular to ignore.

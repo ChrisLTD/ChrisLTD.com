@@ -29,7 +29,7 @@ If there is a framework you want to use, it’s a good idea to check to see if t
 
 **[NSScreencast videos](http://www.nsscreencast.com)**
 
-High quality guidance for using specific frameworks or techniques you might want to use in your apps. 
+High quality guidance for using specific frameworks or techniques you might want to use in your apps.
 
 **[Sketch](http://www.sketchapp.com)**
 

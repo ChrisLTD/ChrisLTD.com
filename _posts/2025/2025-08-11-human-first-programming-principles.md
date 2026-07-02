@@ -3,6 +3,7 @@ layout: post
 title: Human-First Programming Principles
 category: dev
 ---
+
 After years of writing code, reviewing pull requests, debugging tricky production issues, I've developed a few opinions on how to write maintainable software. I'm not going to claim that any of these ideas are particularly revolutionary, but I wanted a document that outlines the principles I use for my records and as a resource for those who work for and with me on projects.
 
 ## 1. Names matter more than you think
@@ -27,7 +28,7 @@ A function called `validateInput()` shouldn't also send an email, update the d
 
 My last principle is about code organization. I prefer to keep types and utility functions in the same file as modules or components until they need to be shared.
 
- Too often I see projects where every type lives in a `types` directory and every utility function lives in a `utils` directory, even when these pieces are only used by a single component. This kind of premature optimization creates unnecessary cognitive overhead. Instead of scrolling through a single file from top to bottom, now I'm switching between a handful of tabs. It makes creating a mental model needlessly difficult.
+Too often I see projects where every type lives in a `types` directory and every utility function lives in a `utils` directory, even when these pieces are only used by a single component. This kind of premature optimization creates unnecessary cognitive overhead. Instead of scrolling through a single file from top to bottom, now I'm switching between a handful of tabs. It makes creating a mental model needlessly difficult.
 
 ## Code isn't just for machines
 

@@ -3,6 +3,7 @@ layout: post
 title: Mazda ditching touch screen controls
 categories: tech design
 ---
+
 According to [Motor Authority](https://www.motorauthority.com/news/1121372_why-mazda-is-purging-touchscreens-from-its-vehicles), Mazda is removing touch screens from their future car models.
 
 > “Doing our research, when a driver would reach towards a touch-screen interface in any vehicle, they would unintentionally apply torque to the steering wheel, and the vehicle would drift out of its lane position,” said Matthew Valbuena, Mazda North America’s lead engineer for HMI and infotainment.

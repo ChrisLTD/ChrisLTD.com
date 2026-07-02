@@ -12,6 +12,7 @@ Try this experiment from [the blog at MyFitnessPal](http://blog.myfitnesspal.com
 If that made you want to improve your posture, [MyFitnessPal suggests](http://blog.myfitnesspal.com/phone-killing-posture/) this “head ramping” exercise:
 
 > 1. Take a seat with your spine tall.
+
 2. Tuck your chin so that your ears are straight above your shoulders.
 3. Inhale deeply through your nose, then exhale slowly out.
 4. Treat your neck as if it were made of something precious.

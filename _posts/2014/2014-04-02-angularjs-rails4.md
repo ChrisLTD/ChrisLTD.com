@@ -3,6 +3,7 @@ layout: post
 title: Using AngularJS with Rails 4
 ads: true
 ---
+
 Using [AngularJS](http://angularjs.org/) with Rails 4 should be pretty easy. Include the AngularJS library in your asset pipeline and start coding away. Unfortunately, it’s not quite that simple. You may have trouble...
 
 ## Compressing AngularJS code in your asset pipeline
@@ -31,14 +32,14 @@ In your AngularJS `$http` GET calls, you’ll also need to pass along a specific
 {% highlight js %}
 $scope.exampleAjax = function(ajaxUrl, var) {
   $http({
-    method: 'GET',
-    url: ajaxUrl + '?v=' + var,
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-    }
-  }).success(function(data) {
-    console.log( data );
-  });
+method: 'GET',
+url: ajaxUrl + '?v=' + var,
+headers: {
+"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+}
+}).success(function(data) {
+console.log( data );
+});
 };
 {% endhighlight %}
 
@@ -50,7 +51,7 @@ If you’re going to leave [Turbolinks](https://github.com/rails/turbolinks) ena
 var app = angular.module('MyApp', []);
 
 $(document).on('ready page:load', function(){
-  angular.bootstrap(document.body, ['MyApp']);
+angular.bootstrap(document.body, ['MyApp']);
 });
 {% endhighlight %}
 
@@ -67,7 +68,7 @@ Can just be:
 {% endhighlight %}
 
 ## To be continued
-        
+
 I’ll be sure to update this post as I learn more about using AngularJS with Rails 4.
 
 [^beryllium]: Big thanks to [Beryllium Work](http://blog.berylliumwork.com/2013/07/tips-on-rails-4-assets-compression-with.html) for the fix.

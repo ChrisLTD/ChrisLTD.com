@@ -3,6 +3,7 @@ layout: post
 title: Get Featured Images from the WordPress REST API
 categories: dev
 ---
+
 WordPress has a REST API. Really! There is even a pretty good [official handbook](https://developer.wordpress.org/rest-api/) on how to use it.
 
 It’s a much cleaner and straightforward solution to dealing with WordPress content from JavaScript than the old [Admin AJAX](https://codex.wordpress.org/AJAX_in_Plugins) functionality. But there can be a few gotchas. One I recently ran into was having to make a separate query to get the source URL for a post’s [Featured Image](https://codex.wordpress.org/Post_Thumbnails) [^thumbnail].
@@ -11,7 +12,7 @@ It’s a much cleaner and straightforward solution to dealing with WordPress con
 
 Let’s look at a normal post endpoint. For our example, we’re going to retrieve information about a post with the ID 521 [^retrievepost].
 
-``` bash
+```bash
 GET /wp-json/wp/v2/posts/521
 ```
 
@@ -43,7 +44,7 @@ All you get back is the ID of the Featured Media and a href where you can get mo
 
 Simply add `?embed` to the endpoint and WordPress will include the Featured Media object inside of your post object.
 
-``` bash
+```bash
 GET /wp-json/wp/v2/posts/521?_embed
 ```
 

@@ -2,6 +2,7 @@
 layout: post
 title: Stop forcing links to open in a new window
 ---
+
 From <a href="http://www.marco.org/2014/01/10/target-blank">Marco Arment</a>:
 <blockquote>
   Forcing links to open in new windows has two main purposes:

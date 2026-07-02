@@ -7,10 +7,10 @@ By default all [Swift](http://developer.apple.com/swift/) variables must contain
 
 {% highlight swift %}
 var bestCaptain:String = "Sisko" // this works
-bestCaptain = nil                // throws an error
+bestCaptain = nil // throws an error
 {% endhighlight %}
 
-However, Swift has to work with a lot of Objective-C code and design patterns[^patterns] where variables can and are often set to nil. That’s where optionals come in. Optionals are protective wrappers around your variables. The wrapper itself tells you whether or not the variable within is set to nil, but that’s all it says. If the variable inside isn’t nil, and you want to access it, you have to *unwrap* the optional.
+However, Swift has to work with a lot of Objective-C code and design patterns[^patterns] where variables can and are often set to nil. That’s where optionals come in. Optionals are protective wrappers around your variables. The wrapper itself tells you whether or not the variable within is set to nil, but that’s all it says. If the variable inside isn’t nil, and you want to access it, you have to _unwrap_ the optional.
 
 ## Defining optionals
 
@@ -31,9 +31,9 @@ The safest way to access your optional value is with [optional binding](https://
 
 {% highlight swift %}
 if let unwrappedOptional = myOptional {
-    print("\(unwrappedOptional)")
+print("\(unwrappedOptional)")
 } else {
-    print("optional was nil")
+print("optional was nil")
 }
 {% endhighlight %}
 
@@ -61,10 +61,10 @@ print("\(myOptional?.lowercaseString)") // prints nil
 
 Swift optionals can be a bit confusing[^me], and a lot of other people have tried to explain them:
 
-* [Apple's documentation](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
-* [Matt Bridges](https://medium.com/@rrridges/swift-optionals-a10dcfd8aab5)
-* [Nevan King via Stack Overflow](http://stackoverflow.com/a/24026093)
-* [AppCoda](http://www.appcoda.com/beginners-guide-optionals-swift/)
+- [Apple's documentation](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
+- [Matt Bridges](https://medium.com/@rrridges/swift-optionals-a10dcfd8aab5)
+- [Nevan King via Stack Overflow](http://stackoverflow.com/a/24026093)
+- [AppCoda](http://www.appcoda.com/beginners-guide-optionals-swift/)
 
 Big thanks to [Scott Williams](http://swilliams.me) for his valuable feedback on this post. Check out [his blog](http://blog.swilliams.me).
 

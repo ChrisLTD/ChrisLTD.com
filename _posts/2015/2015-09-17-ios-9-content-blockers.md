@@ -3,7 +3,7 @@ layout: post
 title: Ad blockers arrive on iOS
 ---
 
-**Update:** Not long after I posted this article, Marco Arment [pulled Peace from the App Store](http://www.marco.org/2015/09/18/just-doesnt-feel-good).  Crystal is still for sale, and I've also been testing **Purify**, a blocker from the folks who made uBlock for desktop browsers.
+**Update:** Not long after I posted this article, Marco Arment [pulled Peace from the App Store](http://www.marco.org/2015/09/18/just-doesnt-feel-good). Crystal is still for sale, and I've also been testing **Purify**, a blocker from the folks who made uBlock for desktop browsers.
 
 <hr>
 

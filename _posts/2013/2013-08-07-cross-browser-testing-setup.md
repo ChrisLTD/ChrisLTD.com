@@ -2,17 +2,18 @@
 layout: post
 title: My cross browser testing setup
 ---
+
 ![VirtualBox Screenshot](/blog/images/2013/08/virtualbox.png)
 
-As web developers we have a [moral obligation](http://www.w3.org/WAI/intro/accessibility.php) to make our sites accessible[^accessibility] to as many people as possible. That means testing our sites in different browsers and on different devices. 
+As web developers we have a [moral obligation](http://www.w3.org/WAI/intro/accessibility.php) to make our sites accessible[^accessibility] to as many people as possible. That means testing our sites in different browsers and on different devices.
 
 This is my baseline testing setup:
 
-* The latest versions of Firefox, Chrome[^Opera], and Safari.
-* [Lynx](https://en.wikipedia.org/wiki/Lynx_%28web_browser%29) installed with [MacPorts](http://osxdaily.com/2011/07/26/get-lynx-for-mac-os-x-10-7-lion/). Lynx is a text browser and it’s a great bit of software for understanding how screen readers and search bots interpret your site.
-* Internet Explorer 6 and newer running in [VirtualBox](https://www.virtualbox.org/). I use a single Windows 7 virtual machine with [IETester](http://my-debugbar.com/wiki/IETester/HomePage) to test old versions of Internet Explorer[^ms].
-* The Android browser using [AndroVM](http://androvm.org/blog/) in VirtualBox[^genymotion].
-* Mobile Safari on an iPhone and iPad[^simulator].
+- The latest versions of Firefox, Chrome[^Opera], and Safari.
+- [Lynx](https://en.wikipedia.org/wiki/Lynx_%28web_browser%29) installed with [MacPorts](http://osxdaily.com/2011/07/26/get-lynx-for-mac-os-x-10-7-lion/). Lynx is a text browser and it’s a great bit of software for understanding how screen readers and search bots interpret your site.
+- Internet Explorer 6 and newer running in [VirtualBox](https://www.virtualbox.org/). I use a single Windows 7 virtual machine with [IETester](http://my-debugbar.com/wiki/IETester/HomePage) to test old versions of Internet Explorer[^ms].
+- The Android browser using [AndroVM](http://androvm.org/blog/) in VirtualBox[^genymotion].
+- Mobile Safari on an iPhone and iPad[^simulator].
 
 If you’re working on an existing site, check the logs and see if you should be focusing your testing on a specific browser. You might find you have a lot of Blackberry or Nintendo Wii users you need to help.[^not]
 

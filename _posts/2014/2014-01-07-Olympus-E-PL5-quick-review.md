@@ -27,7 +27,7 @@ It’s not all good news. The E-PL5 is a bit on the pricey side. You can find si
 
 Overall, I’m comfortable recommending the [Olympus E-PL5](http://www.amazon.com/gp/product/B0096WDMGC/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0096WDMGC&linkCode=as2&tag=chrjohsblo-20) on size and image quality alone. If you’re in the market for a good companion lens, I’ve enjoyed using the [Panasonic 14mm pancake lens](http://www.amazon.com/gp/product/B0043VE29C/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0043VE29C&linkCode=as2&tag=chrjohsblo-20). It’s [fast](http://en.wikipedia.org/wiki/Lens_speed), sharp, and extremely small. Just what I needed to make my setup even [smaller](http://farm8.staticflickr.com/7407/11404736063_34c5d6c815_z.jpg) and lighter.
 
-[^weight]: The Canon Rebel T5i weighs 580g while the E-PL5 weighs 325g. 
+[^weight]: The Canon Rebel T5i weighs 580g while the E-PL5 weighs 325g.
 
 [^selfies]: You can even tilt the screen all the way around so it’s facing the same direction as the lens. Awesome for [selfies](http://farm6.staticflickr.com/5545/11610394005_c355343607_z.jpg). If you’re into that sort of thing.
 

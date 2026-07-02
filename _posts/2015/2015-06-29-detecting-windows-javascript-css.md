@@ -2,9 +2,10 @@
 layout: post
 title: Detecting Windows with JavaScript and CSS
 ---
+
 Recently, I wanted Microsoft Windows users to see different CSS styles from users on other platforms. [^font] My solution was to use JavaScript to add the class `windows` to the root `html` element if the user was on Windows and `not-windows` if they weren’t. With that class in place, I could write platform specific CSS.
 
-The JavaScript is simple, all it has to do is check the handy `navigator.platform` property for the substring `win`, and add the class to the `html` element depending on the result. 
+The JavaScript is simple, all it has to do is check the handy `navigator.platform` property for the substring `win`, and add the class to the `html` element depending on the result.
 
 Here’s the working script I added to my HTML document `<head>` above my CSS styles [^abovecss]:
 
@@ -23,6 +24,7 @@ else {
   htmlEl.className += ' ' + className;
 }
 </script>
+
 {% endhighlight %}
 
 With that JavaScript in place I could write CSS code like this:
@@ -30,10 +32,10 @@ With that JavaScript in place I could write CSS code like this:
 {% highlight css %}
 /* Use Comic Sans on Windows and Helvetica Neue everywhere else */
 .windows body {
-  font-family: 'Comic Sans MS', sans-serif;
+font-family: 'Comic Sans MS', sans-serif;
 }
 .not-windows body {
-  font-family: 'Helvetica Neue', Arial;
+font-family: 'Helvetica Neue', Arial;
 }
 {% endhighlight %}
 

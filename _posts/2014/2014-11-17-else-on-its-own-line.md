@@ -7,9 +7,9 @@ Until a couple weeks ago, I always put my `else` statements on the same line as 
 
 {% highlight c %}
 if( condition ){
-  // Do something
+// Do something
 } else {
-  // Do something else
+// Do something else
 }
 {% endhighlight %}
 
@@ -17,10 +17,10 @@ However, after watching a few of [Eliot Arntz’s](https://twitter.com/EliotArnt
 
 {% highlight c %}
 if( condition ){
-  // Do something
+// Do something
 }
 else {
-  // Do something else
+// Do something else
 }
 {% endhighlight %}
 

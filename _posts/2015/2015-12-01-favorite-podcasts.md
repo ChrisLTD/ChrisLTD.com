@@ -37,4 +37,3 @@ These are the podcasts I’m thankful for in 2015:
 ## Past “winners”
 
 This is my third year writing up my favorite podcasts. If you’re curious, you can read the lists from [2014](/blog/2014/12/favorite-podcasts/) and [2013](/blog/2013/10/favorite-podcasts/).
-

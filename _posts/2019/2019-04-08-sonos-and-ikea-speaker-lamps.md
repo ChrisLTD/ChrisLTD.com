@@ -3,6 +3,7 @@ layout: post
 title: Sonos and Ikea speaker lamps
 categories: tech
 ---
+
 Today [Sonos and Ikea announced a hybrid speaker lamp](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea?utm_source=Vox+Media&utm_medium=affiliate&utm_campaign=cj-5040886&source=cj&cjevent=f7dd88ed5a4411e9813c00300a240610) called the Symfonisk that looks both beautiful and useful. It will cost $179 and be available in August.
 
 Here’s the black version, but there is also a white model:

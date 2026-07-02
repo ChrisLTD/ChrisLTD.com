@@ -15,7 +15,7 @@ The Watch didn’t see much love either, but it is getting a Siri watch face tha
 
 ## Mac
 
-The software story for the Mac seems to be non-existent, but Mac users can look forward to some new hardware: faster iMacs, faster laptops, and new souped-up iMac Pro starting at $5,000. 
+The software story for the Mac seems to be non-existent, but Mac users can look forward to some new hardware: faster iMacs, faster laptops, and new souped-up iMac Pro starting at $5,000.
 
 Apple recently revealed that they are working on new displays and a new standalone Mac Pro, both of which cast a shadow on the new iMac Pro. The new Mac Pro will certainly be faster, and might even allow for hardware upgrades which will be nearly impossible with this iMac Pro.
 

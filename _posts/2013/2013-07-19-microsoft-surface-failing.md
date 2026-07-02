@@ -2,11 +2,12 @@
 layout: post
 title: Why the Microsoft Surface is failing
 ---
+
 Yesterday [Microsoft announced](http://www.cbc.ca/news/business/story/2013/07/18/business-microsoft.html) it lost $900 million due to the dismal performance of their [Surface tablets](https://en.wikipedia.org/wiki/Microsoft_Surface). From what I’ve seen, the Surface should be a decent competitor in the tablet market. So why has it underperformed? I have a theory:
 
 ## Consumers don’t want a Microsoft or Windows branded tablet
 
-Sure, Microsoft and Windows are successful *products*, but they aren’t beloved *brands* like Google, Apple, and Amazon.
+Sure, Microsoft and Windows are successful _products_, but they aren’t beloved _brands_ like Google, Apple, and Amazon.
 
 Despite great strides by Microsoft programmers, Windows is still synonymous with malware and crashes. It’s a product people use and buy not because they are delighted by it, but because it’s what they use at work[^biz] or because they don't care to switch. Microsoft itself carries a stigma from their [antitrust abuses](https://en.wikipedia.org/wiki/United_States_v._Microsoft) in the 1990s.
 
