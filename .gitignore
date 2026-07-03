@@ -1,6 +1,5 @@
 .DS_Store
 resources/*
-.sass-cache*
 css/*
 !css/.gitkeep
 *-ck.js
@@ -8,7 +7,6 @@ css/*
 _site/*
 *.zip
 deploy.sh
-.jekyll-cache/*
 .idea
 .vscode
 node_modules/

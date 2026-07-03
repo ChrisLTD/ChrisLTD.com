@@ -4,19 +4,19 @@ title: Blog Archive
 class: blog
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>{{ title }}</h1>
 
 {% include search_form.html %}
 
 <br />
 
 <ul class="link_list">
-  {% for post in site.posts %} {% unless post.draft %}
+  {% for post in collections.posts %} {% unless post.data.draft %}
   <li>
     <a href="{{ post.url }}">
       <h3>
-        <span class="title">{{ post.title }}</span>
-        <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%Y" }}</span>
+        <span class="title">{{ post.data.title }}</span>
+        <span class="inner_subhead">{{ post.date | date: "%-m/%-d/%Y" }}</span>
       </h3>
     </a>
   </li>

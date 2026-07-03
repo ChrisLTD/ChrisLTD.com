@@ -20,12 +20,9 @@ static_sites:
       deploy_on_push: true
 
     source_dir: /
-    build_command: bundle install && bundle exec jekyll build
+    build_command: npm ci && npm run build
     output_dir: _site
-    environment_slug: ruby
-
-    # Ruby version is read from `.ruby-version` (currently 3.3.4).
-    # Bump both files in lockstep if the Ruby version changes.
+    environment_slug: node-js
 
     # Serve 404.html for missing paths so the styled error page loads
     # instead of DO's default plaintext 404.

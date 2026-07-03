@@ -12,7 +12,7 @@ npm install
 
 # 1. Establish a baseline from the current site. Do this on a clean branch
 #    (usually master) BEFORE the changes you want to inspect.
-bundle exec jekyll serve --port=8080 &
+npx @11ty/eleventy --serve --port=8080 &
 npm run visual:baseline
 
 # 2. Apply your changes, rebuild, then diff:
