@@ -64,14 +64,14 @@ class: home
     <h1><a href="/blog">Blog posts</a></h1>
 
     <ul class="link_list">
-      {% for post in site.posts limit:4 %}
+      {% for post in collections.posts limit:4 %}
       <li>
         <a href="{{ post.url }}">
           <h3>
-            <span class="title">{{ post.title }}</span>
-            <span class="inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span>
+            <span class="title">{{ post.data.title }}</span>
+            <span class="inner_subhead">{{ post.date | date: "%-m/%-d/%y" }}</span>
           </h3>
-          {{ post.content | strip_html | truncatewords: 16, ' &hellip;' }}
+          {{ post.templateContent | strip_html | truncatewords: 16, ' &hellip;' }}
         </a>
       </li>
       {% endfor %}

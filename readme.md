@@ -4,10 +4,10 @@ Source for [chrisltd.com](https://chrisltd.com), a personal portfolio + blog by 
 
 ## Stack
 
-- **[Jekyll](https://jekyllrb.com/) 4.3.x**: static site generator.
-- **[kramdown](https://kramdown.gettalong.org/)** with **[Rouge](https://rouge.jneen.net/)**: Markdown + syntax highlighting.
-- **[jekyll-archives](https://github.com/jekyll/jekyll-archives)**: powers `/blog/category/…` pages.
-- **Dart Sass** via `jekyll-sass-converter`, no separate build step.
+- **[Eleventy](https://www.11ty.dev/) 3.x**: static site generator (Liquid templates, migrated from Jekyll with byte-level output parity).
+- **[markdown-it](https://github.com/markdown-it/markdown-it)** configured for kramdown-compatible output (smart quotes, auto header IDs, kramdown-style footnotes) — see `_config/markdown.js`.
+- **[Prism](https://prismjs.com/)** tokenizing into Pygments/Rouge class names so the existing `scss/_pygments.scss` theme keeps working — see `_config/highlight.js`.
+- **Dart Sass** compiled by Eleventy itself (`scss/styles.scss` → `/css/styles.css`), no separate build step.
 - **Zero client-side JavaScript.** No jQuery, no bundler, no minifier.
 
 Deploys as a static site. Server-side config (redirects, cache headers, HSTS, X-Frame-Options, etc.) lives in `.htaccess`.
@@ -15,32 +15,35 @@ Deploys as a static site. Server-side config (redirects, cache headers, HSTS, X-
 ## Local dev
 
 ```sh
-bundle install
-bash start.sh                 # bundle exec jekyll serve --drafts --port=8080 --livereload
+npm install
+npm start                     # BUILD_DRAFTS=1 eleventy --serve --port=8080 (live reload)
 ```
 
 For a one-shot production build:
 
 ```sh
-bundle exec jekyll build      # writes to ./_site/
+npm run build                 # writes to ./_site/
 ```
 
-Draft posts live in `_drafts/` and only render when the server is started with `--drafts` (which `start.sh` does).
+Draft posts live in `_drafts/` and only render when `BUILD_DRAFTS` is set (which `npm start` / `start.sh` does).
 
 ## Directory layout
 
 ```
-_layouts/       Page templates (default, post, category-archive)
-_includes/      Reusable partials
-  icons/        Inline-SVG icon set used across templates
-_posts/         Blog posts, one file per entry, organised by year
-_drafts/        Unpublished posts (require --drafts to render)
-_plugins/       Ruby Jekyll plugins (footnote helpers, RSS URL rewriter)
-scss/           SCSS partials; scss/styles.scss is the entry point that
-                Jekyll compiles to _site/css/styles.css
-img/, portfolio/, projects/, fonts/  Static asset directories
-_config.yml     Jekyll config (permalinks, sass, jekyll-archives, …)
-.htaccess       Apache redirects, cache headers, and security headers
+eleventy.config.js  Eleventy config: collections, Jekyll-compatible filters,
+                    the {% highlight %} tag, SCSS pipeline, passthrough copies
+_config/            markdown-it (kramdown-compat) + syntax highlighting setup
+_data/site.js       Site-wide settings (site.title, site.url, assets hash, …)
+_layouts/           Page templates (default, post, category-archive)
+_includes/          Reusable partials
+  icons/            Inline-SVG icon set used across templates
+_posts/             Blog posts, one file per entry, organised by year
+_drafts/            Unpublished posts (require BUILD_DRAFTS to render)
+blog/category.liquid  Paginated /blog/category/… archives (one page per category)
+scss/               SCSS partials; scss/styles.scss is the entry point that
+                    Eleventy compiles to _site/css/styles.css
+img/, portfolio/, projects/  Static asset directories
+.htaccess           Apache redirects, cache headers, and security headers
 ```
 
 ## Authoring posts
@@ -51,19 +54,14 @@ Create a file at `_posts/YYYY/YYYY-MM-DD-slug.md` with front matter:
 ---
 layout: post
 title: My Post Title
-date: 2026-06-28 11:00:00 -04:00 # optional; defaults to 11:00am
-categories: [tech, design] # optional
+categories: tech design # optional, space separated
 excerpt: Optional short summary used in the description meta tag.
 ---
 ```
 
-Post URLs follow the `permalink: /blog/:year/:month/:title/` pattern set in `_config.yml`.
+Post URLs follow the `/blog/:year/:month/:title/` pattern (see `_posts/_posts.11tydata.js`). When no `excerpt` is set, the first paragraph of the post is used, matching Jekyll's excerpt behavior.
 
-Fenced code blocks use standard triple-backtick markdown:
-
-<pre>```ruby
-puts "hello"
-```</pre>
+Code blocks can use standard triple-backtick markdown or the Jekyll-style `{% highlight lang %} … {% endhighlight %}` tag — both render Rouge-compatible markup styled by `scss/_pygments.scss`.
 
 ## Front matter conventions
 
@@ -90,11 +88,12 @@ Deployed on [Netlify](https://www.netlify.com/) from `master`. `netlify.toml` ha
 
 ## Cache busting
 
-Stylesheet links carry a `?h=<hash>` query string computed by `_plugins/assets_hash.rb` from the SHA-1 of every `.scss` file under `scss/`. Any SCSS edit rotates the hash and browsers refetch. No manual bumping.
+Stylesheet links carry a `?h=<hash>` query string computed in `_data/site.js` from the SHA-1 of every `.scss` file under `scss/`. Any SCSS edit rotates the hash and browsers refetch. No manual bumping.
 
 ## Markdown gotchas
 
 A couple of authoring rules that catch me out often enough to be worth writing down:
 
-- **Parentheses in link URLs**: URL-encode them as `%28` / `%29` so kramdown doesn't get confused.
-- **Literal square brackets in body copy**: use the HTML entities `&#91;` and `&#93;` so kramdown doesn't try to parse them as a footnote reference.
+- **Parentheses in link URLs**: URL-encode them as `%28` / `%29` so the markdown parser doesn't get confused.
+- **Literal square brackets in body copy**: use the HTML entities `&#91;` and `&#93;` so they aren't parsed as a footnote or link reference.
+- **Blank lines inside `{% highlight %}` blocks** are fine (handled via a post-render substitution), but raw block-level HTML in markdown ends at a blank line — keep hand-written HTML blocks blank-line free.

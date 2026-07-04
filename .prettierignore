@@ -8,3 +8,4 @@ tests/visual/report-inline.html
 css/
 Gemfile.lock
 package-lock.json
+blog/feed.liquid

@@ -4,19 +4,19 @@ title: Blog
 class: blog
 ---
 
-{% for post in site.posts limit:10 %}
+{% for post in collections.posts limit:10 %}
 
 <article>
   <header>
     <h1>
-      <a href="{{ post.url }}"><span class="title">{{ post.title }}</span></a>
-      <span class="date inner_subhead">{{ post.date | date: "%-1m/%-1d/%y" }}</span>
+      <a href="{{ post.url }}"><span class="title">{{ post.data.title }}</span></a>
+      <span class="date inner_subhead">{{ post.date | date: "%-m/%-d/%y" }}</span>
     </h1>
 
     <div class="author hide">By {{ site.author }}</div>
   </header>
 
-  {{ post.content | rename_footnote_link: post.slug }}
+  {{ post.templateContent | rename_footnote_link: post.fileSlug }}
 </article>
 
 {% endfor %}

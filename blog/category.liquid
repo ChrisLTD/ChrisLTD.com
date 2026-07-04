@@ -1,0 +1,13 @@
+---
+# One archive page per category at /blog/category/:name/ (replaces the
+# jekyll-archives plugin). The category-archive layout renders the list.
+pagination:
+  data: collections.categoryList
+  size: 1
+  alias: category
+permalink: "/blog/category/{{ category.name }}/"
+layout: category-archive
+eleventyComputed:
+  title: "{{ category.name }}"
+eleventyExcludeFromCollections: true
+---
