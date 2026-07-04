@@ -486,17 +486,18 @@ iframe[src*="vimeo"] {
   line-height: 1;
 
   &--inline {
-    margin-left: 4px;
-    color: $orange;
+    margin-left: 6px;
+    vertical-align: -0.15em;
+    color: currentColor;
   }
 
   &--social {
-    display: block;
+    // inline-block from .icon; kept white via .social_icons a { color: #fff }
   }
 
   &--contact {
-    margin-right: 4px;
-    vertical-align: -3px;
+    margin-right: 6px;
+    vertical-align: -0.2em;
     color: $orange;
   }
 }
