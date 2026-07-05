@@ -14,7 +14,10 @@ Deploys as a static site. Server-side config (redirects, cache headers, HSTS, X-
 
 ## Local dev
 
+Runtime versions are pinned in `mise.toml` (Ruby 3.3.4, Node 22). `.ruby-version` is kept alongside for rbenv / RVM / chruby fallback.
+
 ```sh
+mise install                  # if you use mise; skip if rbenv/nodenv handle it
 bundle install
 bash start.sh                 # bundle exec jekyll serve --drafts --port=8080 --livereload
 ```
